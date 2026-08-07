@@ -202,13 +202,14 @@
   .info-footer {
     @include flexbox();
 
+    flex-wrap: wrap;
     margin-top: auto;
     border-top: 2px solid darken($brand-secondary-dark, 3%);
 
     a {
       @include transition(all .1s ease-out);
 
-      width: 50%;
+      flex: 1 1 50%;
       padding: 20px;
       background-color: $brand-secondary-dark;
       color: #fff;
