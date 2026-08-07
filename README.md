@@ -43,4 +43,4 @@ The upstream API repo ships schema migrations but **no Pokémon data** — the
 dataset only ever lived in the upstream production/staging databases. This fork
 reconstructs a seed dataset from the public read endpoints of the live API
 (games, dex types, Pokémon, dexes) so the database can be stood up from
-scratch. See `tools/scrape/` once that lands.
+scratch. See [`tools/scrape/`](tools/scrape/) for the scraper and `cd api && make db:seed` to load the generated seed.

@@ -40,6 +40,11 @@ db\:migrate:
 	@echo "---> Migrating"
 	DATABASE_PORT=${DATABASE_PORT} go run cmd/migrations/*.go migrate
 
+.PHONY: db\:seed
+db\:seed:
+	@echo "---> Seeding"
+	psql -h localhost -p ${DATABASE_PORT} -U ${DATABASE_USER} -d ${DEVELOPMENT_DATABASE_NAME} -v ON_ERROR_STOP=1 -f seeds/data.sql
+
 .PHONY: db\:migrate\:create
 db\:migrate\:create:
 	@echo "---> Creating new migration"
