@@ -195,8 +195,10 @@ if (uncovered().length > 0) {
 
 // --- Captures per dex type ------------------------------------------------
 const pokemonIds = new Set();
+const captureCountByDexType = {};
 await Promise.all(Object.entries(dexmap).map(async ([typeId, { username, slug }]) => {
   const captures = await get(`/users/${username}/dexes/${slug}/captures`, `captures/${typeId}.json`);
+  captureCountByDexType[typeId] = (captures || []).length;
   for (const capture of captures || []) {
     pokemonIds.add(capture.pokemon.id);
   }
@@ -204,6 +206,44 @@ await Promise.all(Object.entries(dexmap).map(async ([typeId, { username, slug }]
 log(`pokemon ids seen in captures: ${pokemonIds.size}`);
 
 // --- Pokemon details ------------------------------------------------------
+// /pokemon/:id requires a dex_type param, and the response's locations and
+// evolution edges are filtered by it. There is a single shared pokemon row
+// set (pokemon.game_family is the family of introduction, not a per-family
+// copy), so the most inclusive fetch for every pokemon is the largest HOME
+// dex type: HOME's generation is the highest, so its national-dex location
+// filter keeps every game's locations, and its dex membership is the widest
+// so evolution edges survive the dex-type join.
+let homeDexType = null;
+for (const dt of dexTypes) {
+  const count = captureCountByDexType[dt.id] || 0;
+  if (dt.game_family_id === 'home' && (!homeDexType || count > homeDexType.count)) {
+    homeDexType = { id: dt.id, count };
+  }
+}
+if (!homeDexType) {
+  homeDexType = { id: dexTypes[0].id, count: 0 };
+  log('WARNING: no HOME dex types found; falling back to an arbitrary dex type — locations/evolutions may be filtered');
+}
+
+async function fetchPokemon (id) {
+  const finalFile = join(CACHE, `pokemon/${id}.json`);
+  const finalMarker = `${finalFile}.404`;
+  if (await exists(finalFile)) return JSON.parse(await readFile(finalFile, 'utf8'));
+  if (await exists(finalMarker)) return null;
+
+  const dt = homeDexType.id;
+  const data = await get(`/pokemon/${id}?dex_type=${dt}`, `pokemon-raw/${id}-${dt}.json`);
+  if (data === null) {
+    await mkdir(dirname(finalMarker), { recursive: true });
+    await writeFile(finalMarker, '');
+    return null;
+  }
+
+  await mkdir(dirname(finalFile), { recursive: true });
+  await writeFile(finalFile, JSON.stringify({ ...data, _scrape_dex_type: dt }, null, 2));
+  return data;
+}
+
 // Fetch every id seen in captures, plus every id below the max (ids are a
 // serial column, so the space is dense), plus probe past the max until we hit
 // a long run of 404s.
@@ -213,7 +253,7 @@ for (let id = 1; id <= maxSeen; id++) pokemonIds.add(id);
 const ids = [...pokemonIds].sort((a, b) => a - b);
 let fetched = 0;
 await Promise.all(ids.map(async (id) => {
-  await get(`/pokemon/${id}`, `pokemon/${id}.json`);
+  await fetchPokemon(id);
   fetched++;
   if (fetched % 250 === 0) log(`pokemon: ${fetched}/${ids.length}`);
 }));
@@ -222,7 +262,7 @@ let probeId = maxSeen;
 let misses = 0;
 while (misses < PROBE_404_RUN) {
   probeId++;
-  const found = await get(`/pokemon/${probeId}`, `pokemon/${probeId}.json`);
+  const found = await fetchPokemon(probeId);
   misses = found === null ? misses + 1 : 0;
 }
 log(`probed up to pokemon id ${probeId}`);

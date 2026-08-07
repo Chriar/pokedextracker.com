@@ -2,22 +2,23 @@
 // Turns the cache written by scrape.mjs into api/seeds/data.sql — a full seed
 // of every data table in the API's schema (users/dexes/captures stay empty).
 //
-// Two columns can't be read back off the wire and are reconstructed:
+// Data-model notes discovered from the live data:
+//  - There is a single shared pokemon row set; pokemon.game_family is the
+//    family of INTRODUCTION (including unpublished families like red_blue
+//    that /games doesn't list — those are reconstructed from the family
+//    objects embedded in pokemon responses, marked published=false).
+//  - Every pokemon was scraped with the largest HOME dex type, which keeps
+//    all locations and evolution edges (see scrape.mjs).
 //
-//  - pokemon.evolution_family_id: synthesized as the smallest pokemon id in
-//    the family (each /pokemon/:id response embeds the full family member
-//    list, so grouping is exact even though upstream's numeric ids differ).
-//  - pokemon.national_order: synthesized as the rank within the game family
-//    ordered by (national_id, base form first, form name). Upstream only uses
-//    it as an ordering tie-break for branched evolutions, so a differing
-//    value at worst reorders two branches of an evolution tree.
-//
-// Evolution rows also need their (evolving, evolved) pairing re-derived,
-// since the API serializes evolutions without pokemon ids. Pairing uses index
-// alignment against the family's stage arrays (exact for linear families;
-// for branched families it relies on both arrays being built in the same
-// order, which holds for the upstream query's ordering). Ambiguous families
-// are listed in the run summary for manual review.
+// Two things can't be read back off the wire exactly and are synthesized:
+//  - pokemon.national_order: rank over (national_id, base form first, form
+//    name). Upstream only uses it as an ordering tie-break for branched
+//    evolutions, so a differing value at worst reorders two branches.
+//  - evolution (evolving → evolved) pairings for branched families: the API
+//    serializes evolutions without pokemon ids, so pairing uses index
+//    alignment against the family's stage arrays (exact for linear families,
+//    which is nearly all of them). Ambiguous families are listed in the run
+//    summary for manual review.
 //
 // Usage:
 //   node tools/scrape/generate-sql.mjs \
@@ -81,8 +82,13 @@ function insert (table, columns, rows) {
 }
 
 // --- game_families + games ------------------------------------------------
+// /games only returns published families; unpublished ones (rows' families
+// of introduction like red_blue) come from pokemon responses.
 
 const familiesById = {};
+for (const p of pokemon) {
+  familiesById[p.game_family.id] = p.game_family;
+}
 for (const game of games) {
   familiesById[game.game_family.id] = game.game_family;
 }
@@ -109,18 +115,12 @@ for (const p of pokemon) {
   familyIdByPokemon[p.id] = members.length > 0 ? Math.min(...members) : p.id;
 }
 
-// national_order: rank within game family by (national_id, base form first).
-const byFamily = {};
-for (const p of pokemon) {
-  (byFamily[p.game_family.id] ||= []).push(p);
-}
+// national_order: global rank over (national_id, base form first, form name).
 const nationalOrder = {};
-for (const group of Object.values(byFamily)) {
-  group
-    .slice()
-    .sort((a, b) => a.national_id - b.national_id || (a.form === null ? -1 : b.form === null ? 1 : a.form.localeCompare(b.form)))
-    .forEach((p, i) => { nationalOrder[p.id] = i + 1; });
-}
+pokemon
+  .slice()
+  .sort((a, b) => a.national_id - b.national_id || (a.form === null ? -1 : b.form === null ? 1 : a.form.localeCompare(b.form)))
+  .forEach((p, i) => { nationalOrder[p.id] = i + 1; });
 
 insert('pokemon', ['id', 'national_id', 'name', 'game_family_id', 'form', 'national_order', 'evolution_family_id'],
   pokemon.map((p) => [lit(p.id), lit(p.national_id), lit(p.name), lit(p.game_family.id), lit(p.form), lit(nationalOrder[p.id]), lit(familyIdByPokemon[p.id])]));
@@ -142,27 +142,35 @@ for (const p of pokemon) {
     const from = family.pokemon[i] || [];
     const to = family.pokemon[i + 1] || [];
 
+    // The upstream query orders a stage's evolutions by counterpart pokemon,
+    // then trigger DESC — so several evolutions can share one counterpart
+    // (e.g. Tyrogue→Hitmonlee level-up + Hitmonlee→Tyrogue breed). A group
+    // boundary is guaranteed wherever the trigger ordering ascends again;
+    // when that yields exactly one group per counterpart, use it for pairing.
+    const groupIndex = [];
+    let groupCount = 0;
+    stageEvolutions.forEach((evo, j) => {
+      if (j === 0 || evo.trigger > stageEvolutions[j - 1].trigger) groupCount++;
+      groupIndex[j] = groupCount - 1;
+    });
+
     stageEvolutions.forEach((evo, j) => {
       // The serializer swaps the pair for breed triggers so the baby renders
       // at the earlier stage: JSON `from` holds the evolved (baby) and `to`
       // holds the evolving (parent). Undo that swap here.
-      let evolvingSide = from;
-      let evolvedSide = to;
-      if (evo.trigger === 'breed') {
-        [evolvingSide, evolvedSide] = [to, from];
-      }
+      const evolvingSide = evo.trigger === 'breed' ? to : from;
+      const evolvedSide = evo.trigger === 'breed' ? from : to;
 
       const pick = (side) => {
         if (side.length === 1) return side[0];
         if (side.length === stageEvolutions.length) return side[j];
+        if (side.length === groupCount) return side[groupIndex[j]];
         ambiguousFamilies.add(familyId);
         return side[Math.min(j, side.length - 1)];
       };
 
-      // For breed rows the "evolved" (baby) is what JSON stage i holds, so
-      // resolve each side against its own array, not by j-index symmetry.
-      const evolving = evo.trigger === 'breed' ? pick(evolvingSide) : pick(from);
-      const evolved = evo.trigger === 'breed' ? pick(evolvedSide) : pick(to);
+      const evolving = pick(evolvingSide);
+      const evolved = pick(evolvedSide);
       if (!evolving || !evolved) {
         ambiguousFamilies.add(familyId);
         return;
@@ -230,7 +238,7 @@ await mkdir(dirname(OUT), { recursive: true });
 await writeFile(OUT, sql);
 
 console.log(`wrote ${OUT}`);
-console.log(`  game_families:     ${families.length}`);
+console.log(`  game_families:     ${families.length} (${games.length ? Object.keys(familiesById).length - new Set(games.map((g) => g.game_family.id)).size : 0} unpublished, from pokemon rows)`);
 console.log(`  games:             ${games.length}`);
 console.log(`  dex_types:         ${dexTypes.length} (${Object.keys(capturesByDexType).length} with pokemon lists)`);
 console.log(`  pokemon:           ${pokemon.length}`);
