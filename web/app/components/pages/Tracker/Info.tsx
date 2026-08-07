@@ -30,6 +30,8 @@ const SEREBII_LINKS: Record<string, string> = {
   legends_arceus: 'pokedex-swsh',
   scarlet_violet: 'pokedex-sv',
   scarlet_violet_expansion_pass: 'pokedex-sv',
+  legends_z_a: 'pokedex-sv',
+  legends_z_a_mega_dimension: 'pokedex-sv',
   home: 'pokedex-sv',
 };
 

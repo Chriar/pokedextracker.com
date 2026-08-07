@@ -44,6 +44,7 @@ db\:migrate:
 db\:seed:
 	@echo "---> Seeding"
 	psql -h localhost -p ${DATABASE_PORT} -U ${DATABASE_USER} -d ${DEVELOPMENT_DATABASE_NAME} -v ON_ERROR_STOP=1 -f seeds/data.sql
+	psql -h localhost -p ${DATABASE_PORT} -U ${DATABASE_USER} -d ${DEVELOPMENT_DATABASE_NAME} -v ON_ERROR_STOP=1 -f seeds/za.sql
 
 .PHONY: db\:migrate\:create
 db\:migrate\:create:
