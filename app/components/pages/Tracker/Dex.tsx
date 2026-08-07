@@ -22,6 +22,8 @@ const DEFER_CUTOFF = 1;
 
 interface Props {
   hideCaught: boolean;
+  hideDuplicateForms: boolean;
+  hideDuplicates: boolean;
   onScrollButtonClick: MouseEventHandler<HTMLDivElement>;
   query: string;
   setHideCaught: Dispatch<SetStateAction<boolean>>;
@@ -32,6 +34,8 @@ interface Props {
 
 export function Dex ({
   hideCaught,
+  hideDuplicateForms,
+  hideDuplicates,
   onScrollButtonClick,
   query,
   setHideCaught,
@@ -78,10 +82,12 @@ export function Dex ({
         <div className="percentage">
           <Progress caught={caught} total={total} />
         </div>
-        {query.length > 0 || hideCaught ?
+        {query.length > 0 || hideCaught || hideDuplicates ?
           <SearchResults
             captures={captures}
             hideCaught={hideCaught}
+            hideDuplicateForms={hideDuplicateForms}
+            hideDuplicates={hideDuplicates}
             query={query}
             setHideCaught={setHideCaught}
             setQuery={setQuery}

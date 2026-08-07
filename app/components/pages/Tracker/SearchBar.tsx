@@ -8,12 +8,25 @@ import type { ChangeEvent, Dispatch, SetStateAction } from 'react';
 
 interface Props {
   hideCaught: boolean;
+  hideDuplicateForms: boolean;
+  hideDuplicates: boolean;
   query: string;
   setHideCaught: Dispatch<SetStateAction<boolean>>;
+  setHideDuplicateForms: Dispatch<SetStateAction<boolean>>;
+  setHideDuplicates: Dispatch<SetStateAction<boolean>>;
   setQuery: Dispatch<SetStateAction<string>>;
 }
 
-export function SearchBar ({ hideCaught, query, setHideCaught, setQuery }: Props) {
+export function SearchBar ({
+  hideCaught,
+  hideDuplicateForms,
+  hideDuplicates,
+  query,
+  setHideCaught,
+  setHideDuplicateForms,
+  setHideDuplicates,
+  setQuery,
+}: Props) {
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -31,6 +44,13 @@ export function SearchBar ({ hideCaught, query, setHideCaught, setQuery }: Props
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => setQuery(e.target.value);
   const handleHideCaughtChange = (e: ChangeEvent<HTMLInputElement>) => setHideCaught(e.target.checked);
+  const handleHideDuplicatesChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setHideDuplicates(e.target.checked);
+    if (!e.target.checked) {
+      setHideDuplicateForms(false);
+    }
+  };
+  const handleHideDuplicateFormsChange = (e: ChangeEvent<HTMLInputElement>) => setHideDuplicateForms(e.target.checked);
 
   const handleClearClick = () => {
     setQuery('');
@@ -78,6 +98,37 @@ export function SearchBar ({ hideCaught, query, setHideCaught, setQuery }: Props
               </label>
             </div>
           </div>
+          <div className="form-group">
+            <div className="checkbox">
+              <label>
+                <input
+                  checked={hideDuplicates}
+                  id="hide-duplicates"
+                  name="hide-duplicates"
+                  onChange={handleHideDuplicatesChange}
+                  type="checkbox"
+                />
+                <span className="checkbox-custom"><span /></span>Hide Duplicate Pokémon
+              </label>
+            </div>
+          </div>
+          {hideDuplicates ?
+            <div className="form-group">
+              <div className="checkbox">
+                <label>
+                  <input
+                    checked={hideDuplicateForms}
+                    id="hide-duplicate-forms"
+                    name="hide-duplicate-forms"
+                    onChange={handleHideDuplicateFormsChange}
+                    type="checkbox"
+                  />
+                  <span className="checkbox-custom"><span /></span>Also Hide Duplicate Forms
+                </label>
+              </div>
+            </div> :
+            null
+          }
         </div>
       </div>
     </div>

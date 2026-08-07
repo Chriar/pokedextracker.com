@@ -39,6 +39,8 @@ export function TrackerInner () {
 
   const [query, setQuery] = useState('');
   const [hideCaught, setHideCaught] = useState(false);
+  const [hideDuplicates, setHideDuplicates] = useState(false);
+  const [hideDuplicateForms, setHideDuplicateForms] = useState(false);
   const [showScroll, setShowScroll] = useState(false);
   const [selectedPokemon, setSelectedPokemon] = useState(0);
 
@@ -89,13 +91,19 @@ export function TrackerInner () {
         <div className="dex-wrapper">
           <SearchBar
             hideCaught={hideCaught}
+            hideDuplicateForms={hideDuplicateForms}
+            hideDuplicates={hideDuplicates}
             query={query}
             setHideCaught={setHideCaught}
+            setHideDuplicateForms={setHideDuplicateForms}
+            setHideDuplicates={setHideDuplicates}
             setQuery={setQuery}
           />
           <div className="dex-column" onScroll={handleScroll} ref={trackerRef}>
             <Dex
               hideCaught={hideCaught}
+              hideDuplicateForms={hideDuplicateForms}
+              hideDuplicates={hideDuplicates}
               onScrollButtonClick={handleScrollButtonClick}
               query={query}
               setHideCaught={setHideCaught}
