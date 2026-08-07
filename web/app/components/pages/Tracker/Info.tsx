@@ -7,6 +7,7 @@ import { useMemo } from 'react';
 import { useParams } from 'react-router';
 
 import { EvolutionFamily } from './EvolutionFamily';
+import { TECHNOTRAINER_PLAYLISTS } from '../../../data/technotrainer';
 import { InfoLocations } from './InfoLocations';
 import { PokemonName } from '../../library/PokemonName';
 import { ReactGA } from '../../../utils/analytics';
@@ -130,6 +131,17 @@ export function Info ({ selectedPokemon, setSelectedPokemon }: Props) {
           >
             Serebii <FontAwesomeIcon icon={faLongArrowAltRight} />
           </a>
+          {(TECHNOTRAINER_PLAYLISTS[dex.game.game_family.id] || []).map(({ label, url }) => (
+            <a
+              href={url}
+              key={url}
+              onClick={() => ReactGA.event({ action: 'open TechnoTrainer link', category: 'Info', label: dex.game.game_family.id })}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              {label} <FontAwesomeIcon icon={faLongArrowAltRight} />
+            </a>
+          ))}
         </div>
       </div>
     </div>
