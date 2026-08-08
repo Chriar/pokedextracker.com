@@ -249,6 +249,11 @@ function listGames (db: DB): Game[] {
 function listDexTypes (db: DB): DexType[] {
   return db.dexTypes
   .filter((dt) => db.gameFamiliesById[dt.game_family_id].published)
+  .sort((a, b) => {
+    return db.gameFamiliesById[a.game_family_id].order - db.gameFamiliesById[b.game_family_id].order ||
+      a.order - b.order ||
+      a.id - b.id;
+  })
   .map((dt) => serializeDexType(dt));
 }
 

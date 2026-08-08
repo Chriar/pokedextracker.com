@@ -61,10 +61,35 @@ if (nationalDexType) {
 
 const FAMILY_BASE = 'legends_z_a';
 const FAMILY_DLC = 'legends_z_a_mega_dimension';
+
+// The combined dex mirrors S/V's "Full Paldea": base dex first, then the DLC
+// dex as its own section with restarted numbering (the reset: box marker is
+// what makes the tracker render a section header with local numbers). Species
+// that appear in both sections need distinct pokemon rows — the join table's
+// primary key is (dex_type_id, pokemon_id) — so duplicates are cloned into a
+// reserved id band (900000+), exactly like upstream does for Full Paldea.
+const DUPLICATE_ID_BASE = 900000;
+const lumioseNationalIds = new Set(lumiose.map((e) => e.national_id));
+let nextDuplicateId = DUPLICATE_ID_BASE + 1;
+const duplicateRows = []; // { id, sourceId }
+const combined = [
+  ...lumiose.map((e) => ({ ...e, box: null, pokemonId: rowByNationalId[e.national_id] })),
+  ...hyperspace.map((e) => {
+    let pokemonId = rowByNationalId[e.national_id];
+    if (lumioseNationalIds.has(e.national_id)) {
+      const id = nextDuplicateId++;
+      duplicateRows.push({ id, sourceId: pokemonId });
+      pokemonId = id;
+    }
+    return { ...e, box: 'reset:231:Hyperspace', pokemonId };
+  }),
+];
+
 const DEX_TYPES = [
   { id: 101, name: 'Regional', family: FAMILY_BASE, order: 0, entries: lumiose },
-  { id: 102, name: 'Lumiose', family: FAMILY_DLC, order: 0, entries: lumiose },
-  { id: 103, name: 'Hyperspace', family: FAMILY_DLC, order: 1, entries: hyperspace },
+  { id: 104, name: 'Full Lumiose', family: FAMILY_DLC, order: 0, entries: combined, description: 'Includes the Lumiose base dex AND the Mega Dimension Hyperspace dex' },
+  { id: 102, name: 'Lumiose', family: FAMILY_DLC, order: 1, entries: lumiose },
+  { id: 103, name: 'Hyperspace', family: FAMILY_DLC, order: 2, entries: hyperspace },
 ];
 
 const lines = [
@@ -89,16 +114,26 @@ const lines = [
   `('legends_z_a', 'Legends: Z-A', '${FAMILY_BASE}', 42),`,
   `('legends_z_a_mega_dimension', 'Legends: Z-A (Mega Dimension)', '${FAMILY_DLC}', 43);`,
 
-  'INSERT INTO dex_types (id, name, game_family_id, "order", tags) VALUES',
-  DEX_TYPES.map((dt) => `(${dt.id}, '${dt.name}', '${dt.family}', ${dt.order}, ARRAY['regional']::text[])`).join(',\n') + ';',
+  'INSERT INTO dex_types (id, name, description, game_family_id, "order", tags) VALUES',
+  DEX_TYPES.map((dt) => `(${dt.id}, '${dt.name}', ${dt.description ? `'${dt.description}'` : 'NULL'}, '${dt.family}', ${dt.order}, ARRAY['regional']::text[])`).join(',\n') + ';',
 ];
+
+// Clone the duplicated species' rows (and their DLC-game locations) so the
+// Hyperspace section of the combined dex has its own pokemon ids. The reused
+// evolution_family_id keeps the info panel's evolution chain working.
+lines.push(`DELETE FROM pokemon WHERE id > ${DUPLICATE_ID_BASE};`);
+for (const { id, sourceId } of duplicateRows) {
+  lines.push(
+    `INSERT INTO pokemon (id, national_id, name, game_family_id, form, national_order, evolution_family_id) SELECT ${id}, national_id, name, game_family_id, form, national_order, evolution_family_id FROM pokemon WHERE id = ${sourceId};`
+  );
+}
 
 const missing = [];
 for (const dt of DEX_TYPES) {
   const rows = dt.entries.map((e, i) => {
-    const pokemonId = rowByNationalId[e.national_id];
+    const pokemonId = e.pokemonId ?? rowByNationalId[e.national_id];
     if (!pokemonId) missing.push(`${dt.name} #${e.dex_number} ${e.name} (national ${e.national_id})`);
-    return `(${dt.id}, ${pokemonId}, NULL, ${i}, ${e.dex_number})`;
+    return `(${dt.id}, ${pokemonId}, ${e.box ? `'${e.box}'` : 'NULL'}, ${i}, ${e.dex_number})`;
   });
   lines.push(`INSERT INTO dex_types_pokemon (dex_type_id, pokemon_id, box, "order", dex_number) VALUES\n${rows.join(',\n')};`);
 }
@@ -127,6 +162,13 @@ for (const nationalId of dlcSpecies) {
 }
 if (locationRows.length > 0) {
   lines.push(`INSERT INTO locations (game_id, pokemon_id, value, "values") VALUES\n${locationRows.join(',\n')};`);
+}
+
+// The cloned duplicate rows get a copy of their source's DLC-game locations.
+for (const { id, sourceId } of duplicateRows) {
+  lines.push(
+    `INSERT INTO locations (game_id, pokemon_id, value, "values") SELECT game_id, ${id}, value, "values" FROM locations WHERE game_id = 'legends_z_a_mega_dimension' AND pokemon_id = ${sourceId};`
+  );
 }
 
 lines.push("SELECT setval('dex_types_id_seq', GREATEST((SELECT MAX(id) FROM dex_types), 103));");

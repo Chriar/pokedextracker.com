@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useRef } from 'react';
 
+import { ImportFromDexesButton } from './ImportFromDexesButton';
 import { MarkDuplicatesButton } from './MarkDuplicatesButton';
 import { ReactGA } from '../../../utils/analytics';
 
@@ -136,6 +137,7 @@ export function SearchBar ({
             </div> :
             null
           }
+          <ImportFromDexesButton />
         </div>
       </div>
     </div>
