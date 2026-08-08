@@ -46,6 +46,13 @@ jobs:
         working-directory: web
         run: npx capacitor-assets generate --android
 
+      # Debug builds are signed with ~/.android/debug.keystore, which CI
+      # runners regenerate per run — giving every APK a different signature
+      # and breaking install-over-existing updates. Use the keystore
+      # committed in the repo so the signature is stable across builds.
+      - name: Use stable debug keystore
+        run: mkdir -p ~/.android && cp .github/android-debug.keystore ~/.android/debug.keystore
+
       - name: Build APK
         working-directory: web/android
         run: ./gradlew assembleDebug --no-daemon
