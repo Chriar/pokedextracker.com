@@ -1,0 +1,1363 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Route 6 - Galar - Serebii.net Pok&eacute;arth</title>
+
+<script data-cfasync="false">
+  window.ramp = window.ramp || {};
+  window.ramp.que = window.ramp.que || [];
+</script>
+
+<meta http-equiv="imagetoolbar" CONTENT="no">
+	<link rel="stylesheet" type="text/css" href="/style/layout.css" />
+<meta name="viewport" content="width=device-width,initial-scale=1" id="viewport-meta">
+
+<!-- GDPR Compliancy -->
+<style>
+body {
+	--cmpBgColor: #507C36;
+	--cmpTextColor: #000000;
+	--cmpLinkColor: #ffffff;
+	--cmpPurposesColor: #000000;
+	--cmpBrandColor: #000000;
+	--cmpLogo: url('https://www.serebii.net/extralogo.png');
+}
+</style>
+<!-- GDPR Compliancy -->
+
+<link rel="search" href="/serebii-opensearch.xml" type="application/opensearchdescription+xml" title="Serebii Open Search" />
+<link rel="shortcut icon" href="/favicon.ico" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128947957-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-128947957-1');
+</script>
+<!-- Place the below code anywhere you like in the <head> (higher is better) -->
+
+
+
+<meta name="keywords" content="Pokemon, Pok&eacute;arth, LocationDex Route 6,Galar, Pok&eacute;mon Sword, Pok&eacute;mon Shield" />
+<meta property="og:image" content="https://www.serebii.net/pokearth/maps/galar/6.jpg">
+<link rel="canonical" href="https://www.serebii.net/pokearth/galar/route6.shtml" />
+<meta property="og:title" content="Route 6 - Serebii.net Pok&eacute;arth">
+<meta property="og:description" content="Route 6 in the Galar Region in Pok&eacute;mon Sword & Shield. Details all available Pok&eacute;mon, Trainers and Items">
+<meta name="description" content="Route 6 in the Galar Region in Pok&eacute;mon Sword & Shield. Details all available Pok&eacute;mon, Trainers and Items">
+<meta name="twitter:card" content="summary_large_image">
+<style type="text/css">h1 {font-size:14pt;font-weight:bold;margin-bottom:0px;} h2 {font-size:12pt;font-weight:bold;text-decoration:underline;margin-bottom:0px;} h3 { font-size:1em;font-weight:bold;margin-top:0px;margin-bottom:0px; } </style>
+
+
+
+
+<link rel="stylesheet" href="/style/tablenew.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/style/pokearthnew.css" type="text/css" media="screen" />
+
+<link rel="stylesheet" href="/css/lightbox.css" type="text/css" media="screen" />
+
+
+
+</head>
+<body>
+<script type="text/javascript">
+	var viewport_meta = document.getElementById('viewport-meta');
+	var viewport_timer;
+
+	// these body*Class are reused in the lbar mobile menu
+	function bodyAddClass(className){
+		if(document.body) document.body.classList.add(className);
+	}
+	function bodyRemoveClass(className){
+		if(document.body) document.body.className = document.body.className.replace(className,"");
+	}
+
+	function viewport_set() {
+		// Define our viewport meta values
+		var viewports = {
+			default: viewport_meta.getAttribute('content'),
+			mobileL: 'width=device-width,initial-scale=0.75',
+			mobileM: 'width=device-width,initial-scale=0.5',
+			mobileS: 'width=device-width,initial-scale=0.4'
+		};
+
+		// Change the viewport value based on screen.width
+		if(screen.width < 370){
+			viewport_meta.setAttribute('content', viewports.mobileS);
+			bodyAddClass("nav_mobileS");
+			bodyRemoveClass("nav_mobileM");
+			bodyRemoveClass("nav_mobileL");
+		} else if(screen.width < 505){
+			viewport_meta.setAttribute('content', viewports.mobileM);
+			bodyRemoveClass("nav_mobileS");
+			bodyAddClass("nav_mobileM");
+			bodyRemoveClass("nav_mobileL");
+		} else if (screen.width < 760){
+			viewport_meta.setAttribute('content', viewports.mobileL);
+			bodyRemoveClass("nav_mobileS");
+			bodyRemoveClass("nav_mobileM");
+			bodyAddClass("nav_mobileL");
+		} else{
+			viewport_meta.setAttribute('content', viewports.default);
+			bodyRemoveClass("nav_mobileS");
+			bodyRemoveClass("nav_mobileM");
+			bodyRemoveClass("nav_mobileL");
+		}
+	}
+
+	// Set the correct viewport value on page load
+	viewport_set();
+
+	/* attach listener to (delay) set the correct viewport after device orientation change or resize. also onload so the nav_mobile* class gets added to body AFTER <body> has loaded */
+	if(window.addEventListener){
+		window.addEventListener('load', viewport_set);
+		window.addEventListener('resize', function(){
+			clearTimeout(viewport_timer);
+			viewport_timer = setTimeout(viewport_set, 100);
+		})
+	} else{
+		window.attachEvent('onload', viewport_set)
+		window.attachEvent('onresize', function(){
+			clearTimeout(viewport_timer);
+			viewport_timer = setTimeout(viewport_set, 100);
+		})
+	}
+
+</script>
+
+
+<header id="header">
+	<div class="banner">
+		<a href="/"><img src="/Banner.jpg" alt="Serebii.net Header" style="height:139px"></a>
+	</div>
+
+	<nav class="quicklinks">
+		<ul>
+			<li><b>Quick Links</b></li>
+			<li><a href="/index2.shtml">Home</a></li>
+			<li><a href="https://forums.serebii.net/" target="blank">Forums</a></li>
+			<li><a href="mailto:webmaster@serebii.net">Contact</a></li>
+			<li><a href="/discord.shtml">Discord</a></li>
+			<li><a href="/pokemon">Pokédex Hub</a></li>
+			<li><a href="/pokedex-sv">Scarlet & Violet Pokédex</a></li>
+			<li><a href="/pokedex-champions">Champions Pokédex</a></li>
+			<li><a href="/pokearth">Pokéarth</a></li>
+
+			<li class="search">
+				<form id="searchbox_018410473690156091934:6gahkiyodbi" action="/search.shtml" style="margin:0px;">
+					<input type="hidden" name="cx" value="018410473690156091934:6gahkiyodbi" />
+					<input type="hidden" name="cof" value="FORID:11" />
+					<input name="q" type="text" size="20" />
+					<input type="submit" name="sa" value="Search" />
+				</form>
+				<script type="text/javascript" src="//www.google.com/coop/cse/brand?form=searchbox_018410473690156091934%3A6gahkiyodbi"></script>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+
+
+
+<div id="wrapper">
+
+<ul id="tbar_sticky">
+	<li>
+		<a href="#lbar" class="navheader" id="tbar_lbar_open"><img src="/hidden/2019-04/burger.svg"></a>
+	</li>
+	<li>
+		<form id="searchbox_018410473690156091934:6gahkiyodbi" action="/search.shtml" style="margin:0px;">
+			<input type="hidden" name="cx" value="018410473690156091934:6gahkiyodbi" />
+			<input type="hidden" name="cof" value="FORID:11" />
+			<input name="q" type="search" placeholder="Search Serebii.net..." />
+		</form>
+	</li>
+	<li>
+		<a href="#rbar" class="navheader" id="tbar_rbar_open" style="padding-right:20px"><img src="/hidden/2019-04/burger.svg"></a>
+	</li>
+</ul>
+<div id="tbar_backdrop"></div>
+
+<nav id="lbar">
+	<ul id="lbar_ul">
+		<li>
+			<a href="/" class="navheader">Databases</a>
+			<ul>
+				<li><a href="/index2.shtml">News</a>
+				<li><a href="/archive.shtml">Archived news</a></li>
+				<li><a href="/pokemon/"><b>Pokédex</b></a></li>
+				<li><a href="/pokedex/">-Red/Blue Pokédex</a></li>
+				<li><a href="/pokedex-gs/">-Gold/Silver Pokédex</a></li>
+				<li><a href="/pokedex-rs/">-Ruby/Sapphire Pokédex</a></li>
+				<li><a href="/pokedex-dp/">-Diamond/Pearl Pokédex</a></li>
+				<li><a href="/pokedex-bw/">-Black/White Pokédex</a></li>
+				<li><a href="/pokedex-xy/">-X & Y Pokédex</a></li>
+				<li><a href="/pokedex-sm/">-Sun & Moon Pokédex</a></li>
+				<li><a href="/pokedex-sm/">-Let's Go Pokédex</a></li>
+				<li><a href="/pokedex-swsh/">-Sword & Shield Pokédex</a></li>
+				<li><a href="/pokedex-swsh/">-BDSP Pokédex</a></li>
+				<li><a href="/pokedex-swsh/">-Legends: Arceus Pokédex</a></li>
+				<li><a href="/pokemongo/pokemon/">-GO Pokédex</a></li>
+				<li><a href="/pokedex-sv/">-Scarlet & Violet Pokédex</a></li>
+				<li><a href="/pokedex-sv/">-Legends: Z-A Pokédex</a></li>
+				<li><a href="/pokedex-champions/">-Champions Pokédex</a></li>
+
+				<li><strong>Attackdex</strong></li>
+				<li><a href="/attackdex-rby/">-Gen 1 Attackdex</a></li>
+				<li><a href="/attackdex-gs/">-Gen 2 Attackdex</a></li>
+				<li><a href="/attackdex/">-Gen 3 Attackdex</a></li>
+				<li><a href="/attackdex-dp/">-Gen 4 Attackdex</a></li>
+				<li><a href="/attackdex-bw/">-Gen 5 Attackdex</a></li>
+				<li><a href="/attackdex-xy/">-Gen 6 Attackdex</a></li>
+				<li><a href="/attackdex-sm/">-Gen 7 Attackdex</a></li>
+				<li><a href="/attackdex-swsh/">-Gen 8 Attackdex</a></li>
+				<li><a href="/attackdex-sv/">-Gen 9 Attackdex</a></li>
+				<li><a href="/attackdex-champions/">-Champions Attackdex</a></li>
+				<li><a href="/itemdex/">ItemDex</a></li>
+				<li><a href="/pokearth/">Pokéarth</a></li>
+				<li><a href="/abilitydex/">Abilitydex</a></li>
+				<li><a href="/spindex/">Spin-Off Pokédex</a></li>
+				<li><a href="/spindex-dp/">Spin-Off Pokédex DP</a></li>
+				<li><a href="/spindex-bw/">Spin-Off Pokédex BW</a></li>
+				<li><a href="/card/dex/">Cardex</a></li>
+				<li><a href="/movies/dex/">Cinematic Pokédex</a></li>
+				<li><a href="/games/mechanics.shtml">Game Mechanics</a></li>
+				<li><a href="/games/iv-calcsv.shtml">-Scarlet/Violet IV Calc.</a></li>
+				<li><a href="/potw-champions">Pokémon of the Week</a></li>
+				<li><a href="/potw-champions/">-Champions</a></li>
+				<li><a href="/potw-sv/">-9th Gen</a></li>
+				<li><a href="/potw-swsh/">-8th Gen</a></li>
+				<li><a href="/potw-sm/">-7th Gen</a></li>
+				<li><a href="/pokemon/timeline.shtml">Pokémon Timeline</a></li>
+				<li><a href="/pokemoncenter/">Pokémon Centers</a></li>
+				<li><a href="/playpokemon">Pokémon Championship Series</a></li>
+				<li><a href="/pokemonxp/">PokémonXP</a></li>
+
+				<li><a href="/music/projectvoltage">Hatsune Miku Project Voltage</a></li>
+				<li><a href="/museums/">Pokémon in Museums & Exhibitions</a></li>
+				<li><a href="/pokemon/vangoghmuseum/">-Pokémon x Van Gogh</a></li>
+				<li><a href="/pokemonday/">Pokémon Day</a></li>
+				<li><a href="/presentations">Pokémon Presentations</a></li>
+				<li><a href="/lego/">LEGO Pokémon</a></li>
+				<li><a href="/pokemonshirts/">Pokémon Shirts</a></li>
+				<li><a href="/themeparks/">Theme Parks</a></li>
+				<li><a href="https://forums.serebii.net" target="blank">Forums</a></li>
+				<li><a href="/discord.shtml">Discord Chat</a></li>		
+				<li><a href="/games/currentevents.shtml">Current & Upcoming Events</a></li>
+				<li><a href="/events">Event Database</a></li>
+				<li><a href="/scarletviolet/pokemon.shtml">9th Generation Pokémon</a></li>
+				<li><a href="/scarletviolet/dlc-pokemon.shtml">-New Pokémon in DLC</a></li>
+				<li><a href="/scarletviolet/paldeanforms.shtml">-Paldean Form Pokémon</a></li>
+
+			</ul>
+		</li>
+
+
+		<li>
+			<a href="/anime/" class="navheader">Anime & TV</a>
+			<ul>
+				<li><a href="/anime/epiguide/">Episode Listings & Pictures</a></li>
+				<li><a href="/anime/dex/">AniméDex</a></li>
+				<li><a href="/anime/characters/">Character Bios</a></li>
+				<li><a href="/anime/epiguide/indigo/">The Indigo League</a></li>
+				<li><a href="/anime/epiguide/orange/">The Orange League</a></li>
+				<li><a href="/anime/epiguide/johto/">The Johto Saga</a></li>
+				<li><a href="/anime/epiguide/houen/">The Saga in Hoenn!</a></li>
+				<li><a href="/anime/epiguide/kanto/">Kanto Battle Frontier Saga!</a></li>
+				<li><a href="/anime/epiguide/shinou/">The Sinnoh Saga!</a></li>
+				<li><a href="/anime/epiguide/bestwishes/">Best Wishes - Unova Saga</a></li>
+				<li><a href="/anime/epiguide/xy/">XY - Kalos Saga</a></li>
+				<li><a href="/anime/epiguide/sunmoon/">Sun & Moon - Alola Saga</a></li>
+				<li><a href="/anime/epiguide/pokemon/">Pokémon Journeys - Galar Saga</a></li>
+				<li><a href="/anime/epiguide/pokemonmaster/">Pokémon Aim To Be A Pokémon Master</a></li>
+				<li><a href="/anime/epiguide/pokemon2023/">Pokémon Horizons - Paldea Saga</a></li>
+				<li><a href="/anime/epiguide/chronicles/">Pokémon Chronicles</a></li>	
+				<li><a href="/anime/epiguide/specials/">The Special Episodes</a></li>
+				<li><a href="/anime/banned.shtml">The Banned Episodes</a></li>
+				<li><a href="/anime/shiny/">Shiny Pokémon</a></li>
+<li><b>Other Web Series</b></li>
+				<li><a href="/anime/epiguide/generations/">Pokémon Generations</a></li>
+				<li><a href="/anime/epiguide/twilightwings/">Pokémon Twilight Wings</a></li>
+				<li><a href="/anime/epiguide/evolutions/">Pokémon Evolutions</a></li>
+				<li><a href="/anime/hisuiansnow/">Pokémon: Hisuian Snow</a></li>
+				<li><a href="/anime/paldeanwinds/">Pokémon: Paldean Winds</a></li>
+				<li><a href="/anime/poketoon/">PokéToon</a></li>
+				<li><a href="/anime/other/pathtothepeak/">Path to the Peak</a></li>
+				<li><a href="/anime/other/pokeminutes/">PokéMinutes</a></li>
+				<li><a href="/anime/other/pokevideodex/">PokéVideoDex</a></li>
+				<li><a href="/anime/other/goodmorningwithpokemon/">Good Morning with Pokémon</a></li>
+				<li><a href="/anime/other/">Other Animations</a></li>
+				<li><b>Other Series</b></li>
+				<li><a href="/pokemonconcierge/">Pokémon Concierge</a></li>
+				<li><a href="/pokemontales/">Pokémon Tales: The Misadventures of Sirfetch'd & Pichu</a></li>
+
+				<li><b>Live Action</b></li>
+				<li><a href="/poketsume/">PokéTsume</a></li>
+
+
+			</ul>
+		</li>
+
+		<li>
+			<a href="/games/" class="navheader">Video Games</a>
+			<ul>
+				<li><a href="/pokemon/generation10.shtml"><b>Gen X</b></li>
+				<li><a href="/windswaves/">Winds & Waves</a></li>
+
+				<li><a href="/pokemon/generation9.shtml"><b>Gen IX</b></a></li>
+				<li><a href="/scarletviolet/">Scarlet & Violet</a></li>
+				<li><a href="/legendsz-a/">Legends: Z-A</a></li>
+				<li><a href="/pokemonchampions/">Pokémon Champions</a></li>
+				<li><a href="/pokemonpokopia/">Pokémon Pokopia</a></li>
+				<li><a href="/pokemonfriends/">Pokémon Friends</a></li>
+				<li><a href="/pokemongo/">Pokémon GO</a></li>
+				<li><a href="/cafemix/">Pokémon Café ReMix</a></li>
+				<li><a href="/pokemonmasters/">Pokémon Masters EX</a></li>
+				<li><a href="/pokemonunite/">Pokémon UNITE</a></li>
+				<li><a href="/pokemonsleep/">Pokémon Sleep</a></li>
+				<li><a href="/detectivepikachureturns/">Detective Pikachu Returns</a></li>
+				<li><a href="/tcgpocket/">Pokémon TCG Pocket</a></li>
+
+				<li><a href="/pokemon/generation8.shtml"><b>Gen VIII</b></a></li>
+				<li><a href="/swordshield/">Sword & Shield</a></li>
+				<li><a href="/brilliantdiamondshiningpearl/">Brilliant Diamond & Shining Pearl</a></li>
+				<li><a href="/legendsarceus/">Pokémon Legends: Arceus</a></li>
+				<li><a href="/pokemonhome/">Pokémon HOME</a></li>
+				<li><a href="/pokemongo/">Pokémon GO</a></li>
+				<li><a href="/pokemonmasters/">Pokémon Masters EX</a></li>
+				<li><a href="/dungeonrescueteamdx/">Pokémon Mystery Dungeon Rescue Team DX</a></li>
+				<li><a href="/pokemonsmile/">Pokémon Smile</a></li>
+				<li><a href="/cafemix/">Pokémon Café ReMix</a></li>
+				<li><a href="/newpokemonsnap/">New Pokémon Snap</a></li>
+				<li><a href="/pokemonunite/">Pokémon UNITE</a></li>
+				<li><a href="/tcglive/">Pokémon TCG Live</a></li>
+
+				<li><a href="/pokemon/generation7.shtml"><b>Gen VII</b></a></li>
+				<li><a href="/sunmoon/">Sun & Moon</a></li>
+				<li><a href="/ultrasunultramoon/">Ultra Sun & Ultra Moon</a></li>
+				<li><a href="/letsgopikachueevee/">Let's Go, Pikachu! & Let's Go, Eevee!</a></li>
+				<li><a href="/pokemongo/">Pokémon GO</a></li>
+				<li><a href="/magikarpjump/">Pokémon: Magikarp Jump</a></li>
+				<li><a href="/rumblerush/">Pokémon Rumble Rush</a></li>
+				<li><a href="/pokkendx/">Pokkén Tournament DX</a></li>
+				<li><a href="/detective/">Detective Pikachu</a></li>
+				<li><a href="/quest/">Pokémon Quest</a></li>
+				<li><a href="/smashbrosultimate/">Super Smash Bros. Ultimate</a></li>
+				<li><a href="/pokemon/generation6.shtml"><b>Gen VI</b></a></li>
+				<li><a href="/xy/">X & Y</a></li>
+				<li><a href="/omegarubyalphasapphire/">Omega Ruby & Alpha Sapphire</a></li>
+				<li><a href="/bank/">Pokémon Bank</a></li>
+				<li><a href="/battletrozei/">Pokémon Battle TrozeiPokémon Link: Battle</a></li>
+				<li><a href="/artacademy/">Pokémon Art Academy</a></li>
+				<li><a href="/bandofthieves/">The Band of Thieves & 1000 Pokémon</a></li>
+				<li><a href="/shuffle/">Pokémon Shuffle</a></li>
+				<li><a href="/rumbleworld/">Pokémon Rumble World</a></li>
+				<li><a href="/supermysterydungeon/">Pokémon Super Mystery Dungeon</a></li>
+				<li><a href="/picross/">Pokémon Picross</a></li>
+				<li><a href="/detective/">Detective Pikachu</a></li>
+				<li><a href="/pokken/">Pokkén Tournament</a></li>
+				<li><a href="/duel/">Pokémon Duel</a></li>
+				<li><a href="/smashbros3dswiiu/">Smash Bros for 3DS/Wii U</a></li>
+				<li><a href="/games/badge/">Nintendo Badge Arcade</a></li>
+				<li><a href="/pokemon/generation5.shtml"><b>Gen V</b></a></li>
+				<li><a href="/blackwhite/">Black & White</a></li>
+				<li><a href="/black2white2/">Black 2 & White 2</a></li>
+				<li><a href="/dreamradar/">Pokémon Dream Radar</a></li>
+				<li><a href="/trettalab/">Pokémon Tretta Lab</a></li>
+				<li><a href="/rumbleu/">Pokémon Rumble U</a></li>
+				<li><a href="/dungeoninfinity/">Mystery Dungeon: Gates to Infinity</a></li>
+				<li><a href="/conquest/">Pokémon Conquest</a></li>
+				<li><a href="/pokepark2/">PokéPark 2: Wonders Beyond</a></li>
+				<li><a href="/rumble2/">Pokémon Rumble Blast</a></li>
+				<li><a href="/pokedex3d/">Pokédex 3D</a></li>
+				<li><a href="/pokedex3dpro/">Pokédex 3D Pro</a></li>
+				<li><a href="/typingds/">Learn With Pokémon: Typing Adventure</a></li>
+				<li><a href="/card/howtoplayds/">TCG How to Play DS</a></li>
+				<li><a href="/pokedexios/">Pokédex for iOS</a></li>
+				<li><a href="/pokemon/generation4.shtml"><b>Gen IV</b></a></li>
+				<li><a href="/diamondpearl/">Diamond & Pearl</a></li>
+				<li><a href="/platinum/">Platinum</a></li>
+				<li><a href="/heartgoldsoulsilver/">Heart Gold & Soul Silver</a></li>
+				<li><a href="/ranger3/">Pokémon Ranger: Guardian Signs</a></li>
+				<li><a href="/melee/">Pokémon Rumble</a></li>
+				<li><a href="/dungeon3/">Mystery Dungeon: Blazing, Stormy & Light Adventure Squad</a></li>
+				<li><a href="/pokepark/">PokéPark Wii - Pikachu's  Adventure</a></li>
+				<li><a href="/battle/">Pokémon Battle Revolution</a></li>
+				<li><a href="/dungeonsky/">Mystery Dungeon - Explorers of Sky</a></li>
+				<li><a href="/ranger2/">Pokémon Ranger: Shadows of Almia</a></li>
+				<li><a href="/dungeon2/">Mystery Dungeon - Explorers of Time & Darkness</a></li>
+				<li><a href="/ranch/">My Pokémon Ranch</a></li>
+				<li><a href="/ssbb/">Smash Bros Brawl</a></li>
+				<li><a href="/pokemon/generation3.shtml"><b>Gen III</b></a></li>
+				<li><a href="/rubysapphire/">Ruby & Sapphire</a></li>
+				<li><a href="/fireredleafgreen/">Fire Red & Leaf Green</a></li>
+				<li><a href="/emerald/">Emerald</a></li>
+				<li><a href="/colosseum/">Pokémon Colosseum</a></li>
+				<li><a href="/xd/">Pokémon XD: Gale of Darkness</a></li>
+				<li><a href="/dash/">Pokémon Dash</a></li>
+				<li><a href="/pokemon_channel/">Pokémon Channel</a></li>
+				<li><a href="/pokemon_box/">Pokémon Box: RS</a></li>
+				<li><a href="/pinball_rs/">Pokémon Pinball RS</a></li>
+				<li><a href="/ranger/">Pokémon Ranger</a></li>
+				<li><a href="/mysteriousdungeon/">Mystery Dungeon Red & Blue</a></li>
+				<li><a href="/torouze/">PokémonTrozei</a></li>
+				<li><a href="/pikachu/">Pikachu DS Tech Demo</a></li>
+				<li><a href="/pokeparkfish/">PokéPark Fishing Rally</a></li>
+				<li><a href="/e-reader/">The E-Reader</a></li>
+				<li><a href="/pokemate/">PokéMate</a></li>
+				<li><a href="/pokemon/generation2.shtml"><b>Gen II</b></a></li>
+				<li><a href="/gs/">Gold/Silver</a></li>
+				<li><a href="/crystal/">Crystal</a></li>
+				<li><a href="/stadium2/">Pokémon Stadium 2</a></li>
+				<li><a href="/puzzlechallenge/">Pokémon Puzzle Challenge</a></li>
+				<li><a href="/mini/">Pokémon Mini</a></li>
+				<li><a href="/smash_bros_2/">Super Smash Bros. Melee</a></li>
+				<li><a href="/pokemon/generation1.shtml"><b>Gen I</b></a></li>
+				<li><a href="/rb/">Red, Blue & Green</a></li>
+				<li><a href="/yellow/">Yellow</a></li>
+				<li><a href="/puzzleleague/">Pokémon Puzzle League</a></li>
+				<li><a href="/snap/">Pokémon Snap</a></li>
+				<li><a href="/pinball/">Pokémon Pinball</a></li>
+				<li><a href="/stadiumjp/">Pokémon Stadium (Japanese)</a></li>
+				<li><a href="/stadium/">Pokémon Stadium</a></li>
+				<li><a href="/tradingcardgamegb/">Pokémon Trading Card Game GB</a></li>
+				<li><a href="/smash_bros/">Super Smash Bros.</a></li>
+
+				<li><strong>Miscellaneous</strong></li>
+				<li><a href="/games/mechanics.shtml">Game Mechanics</a></li>
+				<li><a href="/playpokemon">Pokémon Championship Series</a></li>
+				<li><a href="/games/others.shtml">In Other Games</a></li>
+				<li><a href="/games/virtualconsole.shtml">Virtual Console</a></li>
+				<li><a href="/games/consoles.shtml">Special Edition Consoles</a></li>
+				<li><a href="/games/themes.shtml">Pokémon 3DS Themes</a></li>
+				<li><a href="/apps">Smartphone & Tablet Apps</a></li>
+				<li><a href="/virtualpet">Virtual Pets</a></li>
+				<li><a href="/amiibo">amiibo</a></li>
+				<li><a href="/nintendoswitchonline/">Nintendo Switch Online & Icons</a></li>
+				<li><strong>Board Game</strong></li>
+				<li><a href="/pokemongoita">Pokémon Goita</a></li>
+				<li><strong>Arcade</strong></li>
+				<li><a href="/frienda">Pokémon FRIENDA</a></li>
+			</ul>
+		</li>
+
+		<li>
+			<a href="/manga/" class="navheader">Manga</a>
+			<ul>
+				<li><a href="/manga/">General Information</a>
+				<li><a href="/manga/dex">MangaDex</a></li>
+				<li><a href="/manga/characters">Character BIOs</a></li>
+				<li><a href="/manga/characters-new">Detailed BIOs</a></li>
+				<li><a href="/manga/chapter.shtml">Chapter Guides</a></li>
+				<li><a href="/manga/volume.shtml">Volume Guides</a></li>
+				<li><a href="/manga/rby/">RBG Series</a></li>
+				<li><a href="/manga/yellow/">Yellow Series</a></li>
+				<li><a href="/manga/gsc/">GSC Series</a></li>
+				<li><a href="/manga/rs/">RS Series</a></li>
+				<li><a href="/manga/frlg/">FRLG Series</a></li>
+				<li><a href="/manga/bf/">Emerald Series</a></li>
+				<li><a href="/manga/dp/">DP Series</a></li>
+				<li><a href="/manga/pt/">Platinum Series</a></li>
+				<li><a href="/manga/hgss/">HGSS Series</a></li>
+				<li><a href="/manga/bw/">BW Series</a></li>
+				<li><a href="/manga/b2w2/">B2W2 Series</a></li>
+				<li><a href="/manga/xy/">XY Series</a></li>
+				<li><a href="/manga/oras/">ORAS Series</a></li>
+				<li><a href="/manga/sunmoon/">SM Series</a></li>
+			</ul>
+		</li>
+
+		<li>
+			<a href="/movies/" class="navheader">Movies</a>
+			<ul>
+				<li><strong>Anime</strong></li>
+				<li><a href="/movies/mewtwo/origin/">The Origin of Mewtwo</a></li>
+				<li><a href="/movies/mewtwo/">Mewtwo Strikes Back</a></li>
+				<li><a href="/movies/lugia/">The Power of One</a></li>
+				<li><a href="/movies/entei/">Spell Of The Unown</a></li>
+				<li><a href="/anime/epiguide/specials/002.shtml">Mewtwo Returns</a></li>
+				<li><a href="/movies/serebii/">Celebi: Voice of the Forest</a></li>
+				<li><a href="/movies/latias_latios/">Pokémon Heroes</a></li>
+				<li><a href="/movies/jirachi/">Jirachi - Wish Maker</a></li>
+				<li><a href="/movies/deoxys/">Destiny Deoxys!</a></li>
+				<li><a href="/movies/mew/">Lucario and the Mystery of Mew!</a></li>
+				<li><a href="/movies/kyogre/">Pokémon Ranger & The Temple of the Sea!</a></li>
+				<li><a href="/movies/dp/">The Rise of Darkrai!</a></li>
+				<li><a href="/movies/giratina/">Giratina & The Sky Warrior!</a></li>
+				<li><a href="/movies/arceus/">Arceus and the Jewel of Life</a></li>
+				<li><a href="/movies/celebi/">Zoroark - Master of Illusions</a></li>
+				<li><a href="/movies/victini/">Black: Victini & ReshiramWhite: Victini & Zekrom</a></li>
+				<li><a href="/movies/kyurem/">Kyurem VS The Sword of Justice</a></li>
+				<li><a href="/movies/meloetta/">-Meloetta's Midnight Serenade</a></li>
+				<li><a href="/movies/genesect/">Genesect and the Legend Awakened</a></li>
+				<li><a href="/movies/xy/">Diancie & The Cocoon of Destruction</a></li>
+				<li><a href="/movies/hoopa/">Hoopa & The Clash of Ages</a></li>
+				<li><a href="/movies/volcanion/">Volcanion and the Mechanical Marvel</a></li>
+				<li><a href="/movies/pokemon20/">Pokémon I Choose You!</a></li>
+				<li><a href="/movies/thepowerofus/">Pokémon The Power of Us</a></li>
+				<li><a href="/movies/mewtwoevolution/">Mewtwo Strikes Back Evolution</a></li>
+				<li><a href="/movies/secretsofthejungle/">Secrets of the Jungle</a></li>
+				<li><strong>Live Action</strong></li>
+				<li><a href="/movies/detectivepikachu/">Pokémon Detective Pikachu</a></li>
+			</ul>
+		</li>
+
+		<li>
+			<a href="/movies/" class="navheader">Pikachu Shorts</a>
+			<ul>
+				<li><a href="/movies/pikachu1/">Pikachu's Summer Vacation</a></li>
+				<li><a href="/movies/pikachu2/">Pikachu's Rescue Adventure</a></li>
+				<li><a href="/movies/pikachu3/">Pikachu And Pichu</a></li>
+				<li><a href="/movies/pikachu4/">Pikachu's PikaBoo</a></li>
+				<li><a href="/movies/pikachu5/">Camp Pikachu!</a></li>
+				<li><a href="/movies/pikachu6/">Gotta Dance!!</a></li>
+				<li><a href="/movies/pikachu7/">Pikachu's Summer Festival!</a></li>
+				<li><a href="/movies/pikachu8/">Pikachu's Ghost Festival!</a></li>
+				<li><a href="/movies/pikachu9/">Pikachu's Island Adventure!</a></li>
+				<li><a href="/movies/pikachu10/">Pikachu's Exploration Club</a></li>
+				<li><a href="/movies/pikachu11/">Pikachu's Great Ice Adventure</a></li>
+				<li><a href="/movies/pikachu12/">Pikachu's Sparkling Search</a></li>
+				<li><a href="/movies/pikachu13/">Pikachu's Really Mysterious Adventure</a></li>
+				<li><a href="/movies/eevee/">Eevee & Friends</a></li>
+				<li><a href="/movies/klefki/">Pikachu, What's This Key?</a></li>
+				<li><a href="/movies/pikachumusic/">Pikachu & The Pokémon Music Squad</a></li>
+			</ul>
+		</li>
+
+		<li>
+			<a href="/card/" class="navheader">Trading Cards</a>
+			<ul>
+				<li><a href="/tcglive/">Pokémon TCG Live</a></li>
+				<li><a href="/card/dex/">Cardex</a></li>
+				<li><a href="/card/dex/extra">-Extra Pokémon Types</a></li>
+				<li><a href="/card/dex/trainers">Trainer Cards</a></li>
+				<li><a href="/card/dex/energy">Energy Cards</a></li>
+				<li><a href="/card/dex/extra/altart.shtml">Alternate Art Cards</a></li>
+				<li><a href="/card/raidbattles">Raid Battles</a></li>
+				<li><a href="/card/classic/">Pokémon TCG Classic</a></li>
+				<li><a href="/card/english.shtml"><b>English Sets</b></a></li>
+				<li><a href="/card/deltareign/">-Delta Reign</a></li>
+				<li><a href="/card/30thcelebration/">-30th Celebration</a></li>
+				<li><a href="/card/pitchblack/">-Pitch Black</a></li>
+				<li><a href="/card/chaosrising/">-Chaos Rising</a></li>
+				<li><a href="/card/perfectorder/">-Perfect Order</a></li>
+				<li><a href="/card/ascendedheroes/">-Ascended Heroes</a></li>
+				<li><a href="/card/phantasmalflames/">-Phantasmal Flames</a></li>
+				<li><a href="/card/megaevolution/">-Mega Evolution</a></li>
+				<li><a href="/card/blackbolt/">-Black Bolt</a></li>
+				<li><a href="/card/whiteflare/">-White Flare</a></li>
+				<li><a href="/card/destinedrivals/">-Destined Rivals</a></li>
+				<li><a href="/card/journeytogether/">-Journey Together</a></li>
+				<li><a href="/card/prismaticevolutions/">-Prismatic Evolutions</a></li>
+				<li><a href="/card/surgingsparks/">-Surging Sparks</a></li>
+				<li><a href="/card/stellarcrown/">-Stellar Crown</a></li>
+				<li><a href="/card/shroudedfable/">-Shrouded Fable</a></li>
+				<li><a href="/card/twilightmasquerade/">-Twilight Masquerade</a></li>
+				<li><a href="/card/temporalforces/">-Temporal Forces</a></li>
+				<li><a href="/card/paldeanfates/">-Paldean Fates</a></li>
+				<li><a href="/card/paradoxrift/">-Paradox Rift</a></li>
+				<li><a href="/card/151/">-151</a></li>
+				<li><a href="/card/obsidianflames/">-Obsidian Flames</a></li>
+				<li><a href="/card/paldeaevolved/">-Paldea Evolved</a></li>
+				<li><a href="/card/scarletviolet/">-Scarlet Violet</a></li>
+				<li><a href="/card/swsh.shtml">-SWSH Series</a></li>
+				<li><a href="/card/sm.shtml">-SM Series</a></li>
+				<li><a href="/card/xy.shtml">-XY Series</a></li>
+				<li><a href="/card/bw.shtml">-BW Series</a></li>
+				<li><a href="/card/dpt.shtml">-DPtHS Series</a></li>
+				<li><a href="/card/ex.shtml">-EX Series</a></li>
+				<li><a href="/card/neo.shtml">-Neo/eSeries</a></li>
+				<li><a href="/card/first.shtml">-First Gen Series</a></li>
+				<li><a href="/card/engpromo.shtml"><b>English Promos</b></a></li>
+				<li><a href="/card/megapromos">-Mega Promos</a></li>
+				<li><a href="/card/svpromos">-SV Promos</a></li>
+				<li><a href="/card/swshpromos">-SWSH Promos</a></li>
+				<li><a href="/card/smpromos">-SM Promos</a></li>
+				<li><a href="/card/xypromos">-XY Promos</a></li>
+				<li><a href="/card/popseries.shtml">-POP Series</a></li>
+				<li><a href="/card/japanese.shtml"><b>Japanese Sets</b></a></li>
+				<li><a href="/card/abysseye/">-Abyss Eye</a></li>
+				<li><a href="/card/ninjaspinner/">-Ninja Spinner</a></li>
+				<li><a href="/card/nihilzero/">-Nihil Zero</a></li>
+				<li><a href="/card/megadreamex/">-Mega Dream ex</a></li>
+				<li><a href="/card/infernox/">-Inferno X</a></li>
+				<li><a href="/card/megabrave/">-Mega Brave</a></li>
+				<li><a href="/card/megasymphonia/">-Mega Symphonia</a></li>
+				<li><a href="/card/blackbolt-jp/">-Black Bolt</a></li>
+				<li><a href="/card/whiteflare-jp/">-White Flare</a></li>
+				<li><a href="/card/gloryofteamrocket/">-Glory of Team Rocket</a></li>
+				<li><a href="/card/hotairarena/">-Hot Air Arena</a></li>
+				<li><a href="/card/battlepartners/">-Battle Partners</a></li>
+				<li><a href="/card/terastalfestivalex/">-Terastal Festival ex</a></li>
+				<li><a href="/card/superelectricbreaker/">-Super Electric Breaker</a></li>
+				<li><a href="/card/paradisedragona/">-Paradise Dragona</a></li>
+				<li><a href="/card/stellarmiracle/">-Stellar Miracle</a></li>
+				<li><a href="/card/nightwanderer/">-Night Wanderer</a></li>
+				<li><a href="/card/maskofchange/">-Mask of Change</a></li>
+				<li><a href="/card/crimsonhaze/">-Crimson Haze</a></li>
+				<li><a href="/card/wildforce/">-Wild Force</a></li>
+				<li><a href="/card/cyberjudge/">-Cyber Judge</a></li>
+				<li><a href="/card/vstaruniverse/">-VSTAR Universe</a></li>
+				<li><a href="/card/vs">-Pokémon VS</a></li>
+				<li><a href="/card/jppromo.shtml"><b>Japanese Promos</b></a></li>
+				<li><a href="/card/svpromo">-SV Promos</a></li>
+				<li><a href="/card/spromo">-S Promos</a></li>
+				<li><a href="/card/smpromo">-SM Promos</a></li>
+
+			</ul>
+		</li>
+	</ul>
+</nav>
+
+
+<script type="text/javascript">
+
+function loadMobileLbar(){
+	var tbar_lbar_open=document.getElementById('tbar_lbar_open'),
+		tbar_backdrop=document.getElementById('tbar_backdrop'),
+		lbar=document.getElementById('lbar'),
+		lbarLIs=document.querySelectorAll("#lbar_ul>li .navheader"),
+		lbarLIULs=document.querySelectorAll("#lbar_ul>li>ul");
+
+	/* lbar display/hide */
+	tbar_lbar_open.onclick=function() {
+		if (lbar.className.indexOf("show") > -1){//hide
+			lbar.className = lbar.className.replace("show","");
+			bodyRemoveClass("nav_modal");
+		} else{//show
+			lbar.classList.add("show");
+			bodyAddClass("nav_modal");
+		}
+
+		return false;
+	}
+
+
+	/* background clicked when bar shown */
+	tbar_backdrop.onclick=function() {// if the backdrop is clicked, hide menus
+		lbar.className = lbar.className.replace("show","");
+		rbar.className = rbar.className.replace("show","");
+		bodyRemoveClass("nav_modal");
+		return false;
+	}
+
+	/* handle expand/collapse sub-menus in lbar by attaching click events */
+	for(i=0; i<lbarLIs.length; i++){
+		lbarLIs[i].onclick=function(i) {
+			var elem=this.parentNode.getElementsByTagName("UL")[0];
+			var elemDisp=(elem.className.indexOf("show") === -1)
+
+			// hide all ul, then open one if clicked
+			for(i2=0; i2<lbarLIULs.length; i2++){
+				lbarLIULs[i2].className = lbarLIULs[i2].className.replace("show","");
+			}
+
+			if(elemDisp){
+				elem.classList.add("show");
+			}
+
+			return false;
+		}
+	}
+}
+function loadMobileRbar(){
+	var tbar_rbar_open=document.getElementById('tbar_rbar_open'),
+		rbar=document.getElementById('rbar');
+
+	/* rbar display/hide */
+	tbar_rbar_open.onclick=function() {
+		if (rbar.className.indexOf("show") > -1){//hide
+			rbar.className = rbar.className.replace("show","");
+			bodyRemoveClass("nav_modal");
+		} else{//show
+			rbar.classList.add("show");
+			bodyAddClass("nav_modal");
+		}
+
+		return false;
+	}
+}
+
+loadMobileLbar();
+
+/* attach listener to for rbar events AFTER page loads (because #rbar hasn't loaded at this point in page ) */
+if(window.addEventListener){
+	window.addEventListener('load', loadMobileRbar)
+} else{
+	window.attachEvent('onload', loadMobileRbar)
+}
+</script>
+
+
+
+<div id="content">
+		<div class="center" style="margin-top:16px;height:100px"><div id="nn_lb1"></div><div id="nn_mobile_lb1"></div></div>
+<main>
+<p align=center><table align=center width="400" border="0" cellspacing="0" cellpadding="4">
+<tr>
+
+<td align="center" width="50%"><FORM NAME="pokearth"><DIV>
+ <SELECT NAME="SelectURL" onChange="document.location.href=document.pokearth.SelectURL.options[document.pokearth.SelectURL.selectedIndex].value" style="color:#383838; font-size: 8pt; background:#CEBC77" size=1>
+<option value="/pokearth/index.shtml">Pokéarth</option>
+<option value="/pokearth/index.shtml">Pokéarth: Main</option>
+<option value="/pokearth/kanto/index.shtml">Pokéarth: Kanto</option>
+<option value="/pokearth/johto/index.shtml">Pokéarth: Johto</option>
+<option value="/pokearth/hoenn/index.shtml">Pokéarth: Hoenn</option>
+<option value="/pokearth/sinnoh/index.shtml">Pokéarth: Sinnoh</option>
+<option value="/pokearth/unova/index.shtml">Pokéarth: Unova</option>
+<option value="/pokearth/kalos/index.shtml">Pokéarth: Kalos</option>
+<option value="/pokearth/alola/index.shtml">Pokéarth: Alola</option>
+<option value="/pokearth/galar/index.shtml">Pokéarth: Galar</option>
+<option value="/pokearth/hisui/index.shtml">Pokéarth: Hisui</option>
+<option value="/pokearth/paldea/index.shtml">Pokéarth: Paldea</option><option value="/pokearth/orre/index.shtml">Pokéarth: Orre</option>
+<option value="/pokearth/fiore/index.shtml">Pokéarth: Fiore</option>
+<option value="/pokearth/almia/index.shtml">Pokéarth: Almia</option>
+<option value="/pokearth/oblivia/index.shtml">Pokéarth: Oblivia</option>
+
+
+</SELECT><DIV> </FORM></td>
+<td align="center" width="50%"><FORM NAME="kalos"><DIV>
+ <SELECT NAME="SelectURL" onChange="document.location.href=document.kalos.SelectURL.options[document.kalos.SelectURL.selectedIndex].value" style="color:#383838; font-size: 8pt; background:#CEBC77" size=1>
+<option value="/pokearth/galar/index.shtml">Pokéarth: Galar</option>
+
+<option value="/pokearth/galar/route1.shtml">Route 1</option>
+<option value="/pokearth/galar/route2.shtml">Route 2</option>
+<option value="/pokearth/galar/route3.shtml">Route 3</option>
+<option value="/pokearth/galar/route4.shtml">Route 4</option>
+<option value="/pokearth/galar/route5.shtml">Route 5</option>
+<option value="/pokearth/galar/route6.shtml">Route 6</option>
+<option value="/pokearth/galar/route7.shtml">Route 7</option>
+<option value="/pokearth/galar/route8.shtml">Route 8</option>
+<option value="/pokearth/galar/route9.shtml">Route 9</option>
+<option value="/pokearth/galar/route10.shtml">Route 10</option>
+<option value="/pokearth/galar/axew'seye.shtml">Axew's Eye</option>
+<option value="/pokearth/galar/ballonlea.shtml">Ballonlea</option>
+<option value="/pokearth/galar/battletower.shtml">Battle Tower</option>
+<option value="/pokearth/galar/bridgefield.shtml">Bridge Field</option>
+<option value="/pokearth/galar/circhester.shtml">Circhester</option>
+<option value="/pokearth/galar/dappledgrove.shtml">Dappled Grove</option>
+<option value="/pokearth/galar/dustybowl.shtml">Dusty Bowl</option>
+<option value="/pokearth/galar/eastlakeaxewell.shtml">East Lake Axewell</option>
+<option value="/pokearth/galar/energyplant.shtml">Energy Plant</option>
+<option value="/pokearth/galar/galarmine.shtml">Galar Mine</option>
+<option value="/pokearth/galar/galarmineno.2.shtml">Galar Mine No. 2</option>
+<option value="/pokearth/galar/giant'scap.shtml">Giant's Cap</option>
+<option value="/pokearth/galar/giant'smirror.shtml">Giant's Mirror</option>
+<option value="/pokearth/galar/giant'sseat.shtml">Giant's Seat</option>
+<option value="/pokearth/galar/glimwoodtangle.shtml">Glimwood Tangle</option>
+<option value="/pokearth/galar/hammerlocke.shtml">Hammerlocke</option>
+<option value="/pokearth/galar/hammerlockehills.shtml">Hammerlocke Hills</option>
+<option value="/pokearth/galar/hulbury.shtml">Hulbury</option>
+<option value="/pokearth/galar/lakeofoutrage.shtml">Lake of Outrage</option>
+<option value="/pokearth/galar/meetupspot.shtml">Meetup Spot</option>
+<option value="/pokearth/galar/motostoke.shtml">Motostoke</option>
+<option value="/pokearth/galar/motostokeoutskirts.shtml">Motostoke Outskirts</option>
+<option value="/pokearth/galar/motostokeriverbank.shtml">Motostoke Riverbank</option>
+<option value="/pokearth/galar/northlakemiloch.shtml">North Lake Miloch</option>
+<option value="/pokearth/galar/postwick.shtml">Postwick</option>
+<option value="/pokearth/galar/rollingfields.shtml">Rolling Fields</option>
+<option value="/pokearth/galar/rosetower.shtml">Rose Tower</option>
+<option value="/pokearth/galar/route9tunnel.shtml">Route 9 Tunnel</option>
+<option value="/pokearth/galar/slumberingweald.shtml">Slumbering Weald</option>
+<option value="/pokearth/galar/southlakemiloch.shtml">South Lake Miloch</option>
+<option value="/pokearth/galar/spikemuth.shtml">Spikemuth</option>
+<option value="/pokearth/galar/stonywilderness.shtml">Stony Wilderness</option>
+<option value="/pokearth/galar/stow-on-side.shtml">Stow-on-Side</option>
+<option value="/pokearth/galar/turffield.shtml">Turffield</option>
+<option value="/pokearth/galar/watchtowerruins.shtml">Watchtower Ruins</option>
+<option value="/pokearth/galar/wedgehurst.shtml">Wedgehurst</option>
+<option value="/pokearth/galar/westlakeaxewell.shtml">West Lake Axewell</option>
+<option value="/pokearth/galar/wyndon.shtml">Wyndon</option>
+<option value="/pokearth/galar/wyndonstadium.shtml">Wyndon Stadium</option>
+<option value="/pokearth/galar/">===</option>
+<option value="/pokearth/galar/">Isle of Armor</option>
+<option value="/pokearth/galar/">===</option>
+<option value="/pokearth/galar/brawlers'cave.shtml">Brawlers' Cave</option>
+<option value="/pokearth/galar/challengebeach.shtml">Challenge Beach</option>
+<option value="/pokearth/galar/challengeroad.shtml">Challenge Road</option>
+<option value="/pokearth/galar/courageouscavern.shtml">Courageous Cavern</option>
+<option value="/pokearth/galar/fieldsofhonor.shtml">Fields of Honor</option>
+<option value="/pokearth/galar/forestoffocus.shtml">Forest of Focus</option>
+<option value="/pokearth/galar/honeycalmisland.shtml">Honeycalm Island</option>
+<option value="/pokearth/galar/honeycalmsea.shtml">Honeycalm Sea</option>
+<option value="/pokearth/galar/insularsea.shtml">Insular Sea</option>
+<option value="/pokearth/galar/looplagoon.shtml">Loop Lagoon</option>
+<option value="/pokearth/galar/masterdojo.shtml">Master Dojo</option>
+<option value="/pokearth/galar/potbottomdesert.shtml">Potbottom Desert</option>
+<option value="/pokearth/galar/soothingwetlands.shtml">Soothing Wetlands</option>
+<option value="/pokearth/galar/stepping-stonesea.shtml">Stepping-Stone Sea</option>
+<option value="/pokearth/galar/towerofdarkness.shtml">Tower of Darkness</option>
+<option value="/pokearth/galar/towerofwaters.shtml">Tower of Waters</option>
+<option value="/pokearth/galar/traininglowlands.shtml">Training Lowlands</option>
+<option value="/pokearth/galar/warm-uptunnel.shtml">Warm-Up Tunnel</option>
+<option value="/pokearth/galar/workoutsea.shtml">Workout Sea</option>
+<option value="/pokearth/galar/">===</option>
+<option value="/pokearth/galar/">The Crown Tundra</option>
+<option value="/pokearth/galar/">===</option>
+<option value="/pokearth/galar/slipperyslope.shtml">Slippery Slope</option><option value="/pokearth/galar/freezington.shtml">Freezington</option><option value="/pokearth/galar/frostpointfield.shtml">Frostpoint Field</option><option value="/pokearth/galar/giant'sbed.shtml">Giant's Bed</option><option value="/pokearth/galar/oldcemetery.shtml">Old Cemetery</option><option value="/pokearth/galar/snowslideslope.shtml">Snowslide Slope</option><option value="/pokearth/galar/tunneltothetop.shtml">Tunnel to the Top</option><option value="/pokearth/galar/pathtothepeak.shtml">Path to the Peak</option><option value="/pokearth/galar/crownshrine.shtml">Crown Shrine</option><option value="/pokearth/galar/giant'sfoot.shtml">Giant's Foot</option><option value="/pokearth/galar/roaring-seacaves.shtml">Roaring-Sea Caves</option><option value="/pokearth/galar/frigidsea.shtml">Frigid Sea</option><option value="/pokearth/galar/three-pointpass.shtml">Three-Point Pass</option><option value="/pokearth/galar/ballimerelake.shtml">Ballimere Lake</option><option value="/pokearth/galar/lakesidecave.shtml">Lakeside Cave</option><option value="/pokearth/galar/dynatreehill.shtml">Dyna Tree Hill</option><option value="/pokearth/galar/rockpeakruins.shtml">Rock Peak Ruins</option><option value="/pokearth/galar/icebergruins.shtml">Iceberg Ruins</option><option value="/pokearth/galar/ironruins.shtml">Iron Ruins</option><option value="/pokearth/galar/split-decisionruins.shtml">Split-Decision Ruins</option><option value="/pokearth/galar/maxlair.shtml">Max Lair</option>
+
+</SELECT> </FORM></td>
+
+</tr></table></p>
+
+
+
+
+<table class="dextab" align="center">
+  <tr>
+    <td width="65%"><h1>Route 6</h1><br /> </td><td class="footop"><a href="#trainers">Trainers</a></td><td class="footop"><a href="#pokemon">Pokemon</a></td><td class="footop"><a href="#items">Items</a></td>
+  </tr>
+</table><br /><br /><table class="tab">
+	<tr>
+		<td class="foocontent" valign="top"><b>Wild Area?</b>: No<br /><b>North Exit:</b> <a href="stow-on-side.shtml"><u>Stow-on-Side</u></a><br /><b>East Exit:</b> <a href="hammerlocke.shtml"><u>Hammerlocke</u></a><br />
+
+<p>Route 6 is a caveside route with various levels requiring you to climb up ladders. It always has Intense Sunlight as its weather. Towards the end of the route are the famous Diglett Sculptures of the Galar Region.</p><p><b>Fossil Restoration</b><br />Towards the end of the area you'll find Cara Liss who will revive various Fossil Pok&eacute;mon from two Fossils you bring to her</p></p></p></td>
+		<td class="picturetd" width="256"><a href="/pokearth/maps/galar/6.jpg" loading="lazy" rel="lightbox[Kanto]" title="Route 6"><img src="/pokearth/maps/galar/6.jpg" loading="lazy" border="0" alt="Route 6" class="contentpic" /></a></td>
+	</tr>
+</table>
+<p><a name="pokemon"></a><h2>Wild Pok&eacute;mon</h2></p><table class="anctab" align="center"><tr><td rowspan="3">Anchors</td><td class="grass" width="20%"><a href="#grass">Random</a></td><td class="doublegrass" width="20%"><a href="#overworld">Overworld</a></td><td class="honey" width="20%"><a href="#berry">Berry Tree</a></td></tr><td class="fish" width="20%"><a href="#oldrod">Fish</a></td></tr><td class="gift" width="20%"><a href="#gift">Gift Pok&eacute;mon</a></td></tr></table><table class="extradextable" style="min-width:680px;max-width:680px;" align="center"><tr><td colspan="32" class="doublegrass"><a name="overworld"><h3>Overworld</h3></a></td></tr><tr><td colspan="32" class="lgpika">Pok&eacute;mon Sword</td></tr><tr><td width="16.666666666667%" align="center"><a href="/pokedex-swsh/yamask"><img src="/swordshield/pokemon/small/562-g.png" loading="lazy" border="0" class="wildsprite" alt="Yamask" /></a></td>
+<td width="16.666666666667%" align="center"><a href="/pokedex-swsh/helioptile"><img src="/swordshield/pokemon/small/694.png" loading="lazy" border="0" class="wildsprite" alt="Helioptile" /></a></td>
+<td width="16.666666666667%" align="center"><a href="/pokedex-swsh/dugtrio"><img src="/swordshield/pokemon/small/051.png" loading="lazy" border="0" class="wildsprite" alt="Dugtrio" /></a></td>
+<td width="16.666666666667%" align="center"><a href="/pokedex-swsh/maractus"><img src="/swordshield/pokemon/small/556.png" loading="lazy" border="0" class="wildsprite" alt="Maractus" /></a></td>
+<td width="16.666666666667%" align="center"><a href="/pokedex-swsh/axew"><img src="/swordshield/pokemon/small/610.png" loading="lazy" border="0" class="wildsprite" alt="Axew" /></a></td>
+<td width="16.666666666667%" align="center"><a href="/pokedex-swsh/trapinch"><img src="/swordshield/pokemon/small/328.png" loading="lazy" border="0" class="wildsprite" alt="Trapinch" /></a></td>
+</tr><tr><td width="16.666666666667%" class="name">Yamask</td>
+<td width="16.666666666667%" class="name">Helioptile</td>
+<td width="16.666666666667%" class="name">Dugtrio</td>
+<td width="16.666666666667%" class="name">Maractus</td>
+<td width="16.666666666667%" class="name">Axew</td>
+<td width="16.666666666667%" class="name">Trapinch</td>
+</tr><tr><td width="16.666666666667%" class="type"><a href="/pokedex-swsh/ground.shtml"><img src="/pokedex-bw/type/ground.gif" border="0" /></a> <a href="/pokedex-swsh/ghost.shtml"><img src="/pokedex-bw/type/ghost.gif" border="0" /></a></td>
+<td width="16.666666666667%" class="type"><a href="/pokedex-swsh/electric.shtml"><img src="/pokedex-bw/type/electric.gif" border="0" /></a> <a href="/pokedex-swsh/normal.shtml"><img src="/pokedex-bw/type/normal.gif" border="0" /></a></td>
+<td width="16.666666666667%" class="type"><a href="/pokedex-swsh/ground.shtml"><img src="/pokedex-bw/type/ground.gif" border="0" /></a></td>
+<td width="16.666666666667%" class="type"><a href="/pokedex-swsh/grass.shtml"><img src="/pokedex-bw/type/grass.gif" border="0" /></a></td>
+<td width="16.666666666667%" class="type"><a href="/pokedex-swsh/dragon.shtml"><img src="/pokedex-bw/type/dragon.gif" border="0" /></a></td>
+<td width="16.666666666667%" class="type"><a href="/pokedex-swsh/ground.shtml"><img src="/pokedex-bw/type/ground.gif" border="0" /></a></td>
+</tr><tr><td width="16.666666666667%" class="rate">35%</td>
+<td width="16.666666666667%" class="rate">29%</td>
+<td width="16.666666666667%" class="rate">20%</td>
+<td width="16.666666666667%" class="rate">10%</td>
+<td width="16.666666666667%" class="rate">5%</td>
+<td width="16.666666666667%" class="rate">1%</td>
+</tr><tr><td class="leveltitle">Level</td>
+<td class="leveltitle">Level</td>
+<td class="leveltitle">Level</td>
+<td class="leveltitle">Level</td>
+<td class="leveltitle">Level</td>
+<td class="leveltitle">Level</td>
+</tr><tr><td class="level">29 - 33</td>
+<td class="level">29 - 33</td>
+<td class="level">29 - 33</td>
+<td class="level">29 - 33</td>
+<td class="level">29 - 33</td>
+<td class="level">29 - 33</td>
+ </tr></table><table class="dextable" style="min-width:680px;max-width:680px;" align="center"><tr><td colspan="32" class="lgeevee">Pok&eacute;mon Shield</td></tr><tr><td width="16.666666666667%" align="center"><a href="/pokedex-swsh/yamask"><img src="/swordshield/pokemon/small/562-g.png" loading="lazy" border="0" class="wildsprite" alt="Yamask" /></a></td><td width="16.666666666667%" align="center"><a href="/pokedex-swsh/helioptile"><img src="/swordshield/pokemon/small/694.png" loading="lazy" border="0" class="wildsprite" alt="Helioptile" /></a></td><td width="16.666666666667%" align="center"><a href="/pokedex-swsh/dugtrio"><img src="/swordshield/pokemon/small/051.png" loading="lazy" border="0" class="wildsprite" alt="Dugtrio" /></a></td><td width="16.666666666667%" align="center"><a href="/pokedex-swsh/maractus"><img src="/swordshield/pokemon/small/556.png" loading="lazy" border="0" class="wildsprite" alt="Maractus" /></a></td><td width="16.666666666667%" align="center"><a href="/pokedex-swsh/trapinch"><img src="/swordshield/pokemon/small/328.png" loading="lazy" border="0" class="wildsprite" alt="Trapinch" /></a></td><td width="16.666666666667%" align="center"><a href="/pokedex-swsh/axew"><img src="/swordshield/pokemon/small/610.png" loading="lazy" border="0" class="wildsprite" alt="Axew" /></a></td></tr><tr><td width="16.666666666667%" class="name">Yamask</td><td width="16.666666666667%" class="name">Helioptile</td><td width="16.666666666667%" class="name">Dugtrio</td><td width="16.666666666667%" class="name">Maractus</td><td width="16.666666666667%" class="name">Trapinch</td><td width="16.666666666667%" class="name">Axew</td></tr><tr><td width="16.666666666667%" class="type"><a href="/pokedex-swsh/ground.shtml"><img src="/pokedex-bw/type/ground.gif" border="0" /></a> <a href="/pokedex-swsh/ghost.shtml"><img src="/pokedex-bw/type/ghost.gif" border="0" /></a></td><td width="16.666666666667%" class="type"><a href="/pokedex-swsh/electric.shtml"><img src="/pokedex-bw/type/electric.gif" border="0" /></a> <a href="/pokedex-swsh/normal.shtml"><img src="/pokedex-bw/type/normal.gif" border="0" /></a></td><td width="16.666666666667%" class="type"><a href="/pokedex-swsh/ground.shtml"><img src="/pokedex-bw/type/ground.gif" border="0" /></a></td><td width="16.666666666667%" class="type"><a href="/pokedex-swsh/grass.shtml"><img src="/pokedex-bw/type/grass.gif" border="0" /></a></td><td width="16.666666666667%" class="type"><a href="/pokedex-swsh/ground.shtml"><img src="/pokedex-bw/type/ground.gif" border="0" /></a></td><td width="16.666666666667%" class="type"><a href="/pokedex-swsh/dragon.shtml"><img src="/pokedex-bw/type/dragon.gif" border="0" /></a></td></tr><tr><td width="16.666666666667%" class="rate">35%</td><td width="16.666666666667%" class="rate">29%</td><td width="16.666666666667%" class="rate">20%</td><td width="16.666666666667%" class="rate">10%</td><td width="16.666666666667%" class="rate">5%</td><td width="16.666666666667%" class="rate">1%</td></tr><tr><td class="leveltitle">Level</td><td class="leveltitle">Level</td><td class="leveltitle">Level</td><td class="leveltitle">Level</td><td class="leveltitle">Level</td><td class="leveltitle">Level</td></tr><tr><td class="level">29 - 33</td><td class="level">29 - 33</td><td class="level">29 - 33</td><td class="level">29 - 33</td><td class="level">29 - 33</td><td class="level">29 - 33</td> </tr></table><table class="extradextable" style="min-width:680px;max-width:680px;" align="center"><tr><td colspan="32" class="grass"><a name="grass"><h3>Random in Grass</h3></a></td></tr><tr><td colspan="32" class="lgpika">Pok&eacute;mon Sword</td></tr><tr><td width="12.5%" align="center"><a href="/pokedex-swsh/silicobra"><img src="/swordshield/pokemon/small/843.png" loading="lazy" border="0" class="wildsprite" alt="Silicobra" /></a></td><td width="12.5%" align="center"><a href="/pokedex-swsh/durant"><img src="/swordshield/pokemon/small/632.png" loading="lazy" border="0" class="wildsprite" alt="Durant" /></a></td><td width="12.5%" align="center"><a href="/pokedex-swsh/duskull"><img src="/swordshield/pokemon/small/355.png" loading="lazy" border="0" class="wildsprite" alt="Duskull" /></a></td><td width="12.5%" align="center"><a href="/pokedex-swsh/skorupi"><img src="/swordshield/pokemon/small/451.png" loading="lazy" border="0" class="wildsprite" alt="Skorupi" /></a></td><td width="12.5%" align="center"><a href="/pokedex-swsh/hippopotas"><img src="/swordshield/pokemon/small/449.png" loading="lazy" border="0" class="wildsprite" alt="Hippopotas" /></a></td><td width="12.5%" align="center"><a href="/pokedex-swsh/heatmor"><img src="/swordshield/pokemon/small/631.png" loading="lazy" border="0" class="wildsprite" alt="Heatmor" /></a></td><td width="12.5%" align="center"><a href="/pokedex-swsh/torkoal"><img src="/swordshield/pokemon/small/324.png" loading="lazy" border="0" class="wildsprite" alt="Torkoal" /></a></td><td width="12.5%" align="center"><a href="/pokedex-swsh/hawlucha"><img src="/swordshield/pokemon/small/701.png" loading="lazy" border="0" class="wildsprite" alt="Hawlucha" /></a></td></tr><tr><td width="12.5%" class="name">Silicobra</td><td width="12.5%" class="name">Durant</td><td width="12.5%" class="name">Duskull</td><td width="12.5%" class="name">Skorupi</td><td width="12.5%" class="name">Hippopotas</td><td width="12.5%" class="name">Heatmor</td><td width="12.5%" class="name">Torkoal</td><td width="12.5%" class="name">Hawlucha</td></tr><tr><td width="12.5%" class="type"><a href="/pokedex-swsh/ground.shtml"><img src="/pokedex-bw/type/ground.gif" border="0" /></a></td><td width="12.5%" class="type"><a href="/pokedex-swsh/bug.shtml"><img src="/pokedex-bw/type/bug.gif" border="0" /></a> <a href="/pokedex-swsh/steel.shtml"><img src="/pokedex-bw/type/steel.gif" border="0" /></a></td><td width="12.5%" class="type"><a href="/pokedex-swsh/ghost.shtml"><img src="/pokedex-bw/type/ghost.gif" border="0" /></a></td><td width="12.5%" class="type"><a href="/pokedex-swsh/poison.shtml"><img src="/pokedex-bw/type/poison.gif" border="0" /></a> <a href="/pokedex-swsh/bug.shtml"><img src="/pokedex-bw/type/bug.gif" border="0" /></a></td><td width="12.5%" class="type"><a href="/pokedex-swsh/ground.shtml"><img src="/pokedex-bw/type/ground.gif" border="0" /></a></td><td width="12.5%" class="type"><a href="/pokedex-swsh/fire.shtml"><img src="/pokedex-bw/type/fire.gif" border="0" /></a></td><td width="12.5%" class="type"><a href="/pokedex-swsh/fire.shtml"><img src="/pokedex-bw/type/fire.gif" border="0" /></a></td><td width="12.5%" class="type"><a href="/pokedex-swsh/fighting.shtml"><img src="/pokedex-bw/type/fighting.gif" border="0" /></a> <a href="/pokedex-swsh/flying.shtml"><img src="/pokedex-bw/type/flying.gif" border="0" /></a></td></tr><tr><td width="12.5%" class="rate">30%</td><td width="12.5%" class="rate">20%</td><td width="12.5%" class="rate">18%</td><td width="12.5%" class="rate">10%</td><td width="12.5%" class="rate">10%</td><td width="12.5%" class="rate">5%</td><td width="12.5%" class="rate">5%</td><td width="12.5%" class="rate">2%</td></tr><tr><td class="leveltitle">Level</td><td class="leveltitle">Level</td><td class="leveltitle">Level</td><td class="leveltitle">Level</td><td class="leveltitle">Level</td><td class="leveltitle">Level</td><td class="leveltitle">Level</td><td class="leveltitle">Level</td></tr><tr><td class="level">28 - 30</td><td class="level">28 - 30</td><td class="level">28 - 30</td><td class="level">28 - 30</td><td class="level">28 - 30</td><td class="level">28 - 30</td><td class="level">28 - 30</td><td class="level">28 - 30</td> </tr></table><table class="dextable" style="min-width:680px;max-width:680px;" align="center"><tr><td colspan="32" class="lgeevee">Pok&eacute;mon Shield</td></tr><tr><td width="12.5%" align="center"><a href="/pokedex-swsh/silicobra"><img src="/swordshield/pokemon/small/843.png" loading="lazy" border="0" class="wildsprite" alt="Silicobra" /></a></td><td width="12.5%" align="center"><a href="/pokedex-swsh/heatmor"><img src="/swordshield/pokemon/small/631.png" loading="lazy" border="0" class="wildsprite" alt="Heatmor" /></a></td><td width="12.5%" align="center"><a href="/pokedex-swsh/duskull"><img src="/swordshield/pokemon/small/355.png" loading="lazy" border="0" class="wildsprite" alt="Duskull" /></a></td><td width="12.5%" align="center"><a href="/pokedex-swsh/skorupi"><img src="/swordshield/pokemon/small/451.png" loading="lazy" border="0" class="wildsprite" alt="Skorupi" /></a></td><td width="12.5%" align="center"><a href="/pokedex-swsh/hippopotas"><img src="/swordshield/pokemon/small/449.png" loading="lazy" border="0" class="wildsprite" alt="Hippopotas" /></a></td><td width="12.5%" align="center"><a href="/pokedex-swsh/durant"><img src="/swordshield/pokemon/small/632.png" loading="lazy" border="0" class="wildsprite" alt="Durant" /></a></td><td width="12.5%" align="center"><a href="/pokedex-swsh/torkoal"><img src="/swordshield/pokemon/small/324.png" loading="lazy" border="0" class="wildsprite" alt="Torkoal" /></a></td><td width="12.5%" align="center"><a href="/pokedex-swsh/hawlucha"><img src="/swordshield/pokemon/small/701.png" loading="lazy" border="0" class="wildsprite" alt="Hawlucha" /></a></td></tr><tr><td width="12.5%" class="name">Silicobra</td><td width="12.5%" class="name">Heatmor</td><td width="12.5%" class="name">Duskull</td><td width="12.5%" class="name">Skorupi</td><td width="12.5%" class="name">Hippopotas</td><td width="12.5%" class="name">Durant</td><td width="12.5%" class="name">Torkoal</td><td width="12.5%" class="name">Hawlucha</td></tr><tr><td width="12.5%" class="type"><a href="/pokedex-swsh/ground.shtml"><img src="/pokedex-bw/type/ground.gif" border="0" /></a></td><td width="12.5%" class="type"><a href="/pokedex-swsh/fire.shtml"><img src="/pokedex-bw/type/fire.gif" border="0" /></a></td><td width="12.5%" class="type"><a href="/pokedex-swsh/ghost.shtml"><img src="/pokedex-bw/type/ghost.gif" border="0" /></a></td><td width="12.5%" class="type"><a href="/pokedex-swsh/poison.shtml"><img src="/pokedex-bw/type/poison.gif" border="0" /></a> <a href="/pokedex-swsh/bug.shtml"><img src="/pokedex-bw/type/bug.gif" border="0" /></a></td><td width="12.5%" class="type"><a href="/pokedex-swsh/ground.shtml"><img src="/pokedex-bw/type/ground.gif" border="0" /></a></td><td width="12.5%" class="type"><a href="/pokedex-swsh/bug.shtml"><img src="/pokedex-bw/type/bug.gif" border="0" /></a> <a href="/pokedex-swsh/steel.shtml"><img src="/pokedex-bw/type/steel.gif" border="0" /></a></td><td width="12.5%" class="type"><a href="/pokedex-swsh/fire.shtml"><img src="/pokedex-bw/type/fire.gif" border="0" /></a></td><td width="12.5%" class="type"><a href="/pokedex-swsh/fighting.shtml"><img src="/pokedex-bw/type/fighting.gif" border="0" /></a> <a href="/pokedex-swsh/flying.shtml"><img src="/pokedex-bw/type/flying.gif" border="0" /></a></td></tr><tr><td width="12.5%" class="rate">30%</td><td width="12.5%" class="rate">20%</td><td width="12.5%" class="rate">18%</td><td width="12.5%" class="rate">10%</td><td width="12.5%" class="rate">10%</td><td width="12.5%" class="rate">5%</td><td width="12.5%" class="rate">5%</td><td width="12.5%" class="rate">2%</td></tr><tr><td class="leveltitle">Level</td><td class="leveltitle">Level</td><td class="leveltitle">Level</td><td class="leveltitle">Level</td><td class="leveltitle">Level</td><td class="leveltitle">Level</td><td class="leveltitle">Level</td><td class="leveltitle">Level</td></tr><tr><td class="level">28 - 30</td><td class="level">28 - 30</td><td class="level">28 - 30</td><td class="level">28 - 30</td><td class="level">28 - 30</td><td class="level">28 - 30</td><td class="level">28 - 30</td><td class="level">28 - 30</td> </tr></table><table class="extradextable" style="min-width:680px;max-width:680px;" align="center"><tr><td colspan="32" class="berrytree"><a name="berrytree"><h3>Shake a Berry Tree</h3></h3></a></td></tr><tr><td colspan="32" class="lgpika">Pok&eacute;mon Sword</td></tr><tr><td width="100%" align="center"><a href="/pokedex-swsh/greedent"><img src="/swordshield/pokemon/small/820.png" loading="lazy" border="0" class="wildsprite" alt="Greedent" /></a></td>
+</tr><tr><td width="100%" class="name">Greedent</td>
+</tr><tr><td width="100%" class="type"><a href="/pokedex-swsh/normal.shtml"><img src="/pokedex-bw/type/normal.gif" border="0" /></a></td>
+</tr><tr><td width="100%" class="rate">100%</td>
+</tr><tr><td class="leveltitle">Level</td>
+</tr><tr><td class="level">28 - 30</td>
+ </tr></table><table class="dextable" style="min-width:680px;max-width:680px;" align="center"><tr><td colspan="32" class="lgeevee">Pok&eacute;mon Shield</td></tr><tr><td width="100%" align="center"><a href="/pokedex-swsh/greedent"><img src="/swordshield/pokemon/small/820.png" loading="lazy" border="0" class="wildsprite" alt="Greedent" /></a></td></tr><tr><td width="100%" class="name">Greedent</td></tr><tr><td width="100%" class="type"><a href="/pokedex-swsh/normal.shtml"><img src="/pokedex-bw/type/normal.gif" border="0" /></a></td></tr><tr><td width="100%" class="rate">100%</td></tr><tr><td class="leveltitle">Level</td></tr><tr><td class="level">28 - 30</td> </tr></table><table class="extradextable" style="min-width:680px;max-width:680px;" align="center"><tr><td colspan="32" class="berrytree"><a name="curry"><h3>After Making Curry</h3></h3></a></td></tr><tr><td colspan="32" class="lgpika">Pok&eacute;mon Sword</td></tr><tr><td width="12.5%" align="center"><a href="/pokedex-swsh/hawlucha"><img src="/swordshield/pokemon/small/701.png" loading="lazy" border="0" class="wildsprite" alt="Hawlucha" /></a></td>
+<td width="12.5%" align="center"><a href="/pokedex-swsh/heatmor"><img src="/swordshield/pokemon/small/631.png" loading="lazy" border="0" class="wildsprite" alt="Heatmor" /></a></td>
+<td width="12.5%" align="center"><a href="/pokedex-swsh/torkoal"><img src="/swordshield/pokemon/small/324.png" loading="lazy" border="0" class="wildsprite" alt="Torkoal" /></a></td>
+<td width="12.5%" align="center"><a href="/pokedex-swsh/skorupi"><img src="/swordshield/pokemon/small/451.png" loading="lazy" border="0" class="wildsprite" alt="Skorupi" /></a></td>
+<td width="12.5%" align="center"><a href="/pokedex-swsh/hippopotas"><img src="/swordshield/pokemon/small/449.png" loading="lazy" border="0" class="wildsprite" alt="Hippopotas" /></a></td>
+<td width="12.5%" align="center"><a href="/pokedex-swsh/duskull"><img src="/swordshield/pokemon/small/355.png" loading="lazy" border="0" class="wildsprite" alt="Duskull" /></a></td>
+<td width="12.5%" align="center"><a href="/pokedex-swsh/durant"><img src="/swordshield/pokemon/small/632.png" loading="lazy" border="0" class="wildsprite" alt="Durant" /></a></td>
+<td width="12.5%" align="center"><a href="/pokedex-swsh/silicobra"><img src="/swordshield/pokemon/small/843.png" loading="lazy" border="0" class="wildsprite" alt="Silicobra" /></a></td>
+</tr><tr><td width="12.5%" class="name">Hawlucha</td>
+<td width="12.5%" class="name">Heatmor</td>
+<td width="12.5%" class="name">Torkoal</td>
+<td width="12.5%" class="name">Skorupi</td>
+<td width="12.5%" class="name">Hippopotas</td>
+<td width="12.5%" class="name">Duskull</td>
+<td width="12.5%" class="name">Durant</td>
+<td width="12.5%" class="name">Silicobra</td>
+</tr><tr><td width="12.5%" class="type"><a href="/pokedex-swsh/fighting.shtml"><img src="/pokedex-bw/type/fighting.gif" border="0" /></a> <a href="/pokedex-swsh/flying.shtml"><img src="/pokedex-bw/type/flying.gif" border="0" /></a></td>
+<td width="12.5%" class="type"><a href="/pokedex-swsh/fire.shtml"><img src="/pokedex-bw/type/fire.gif" border="0" /></a></td>
+<td width="12.5%" class="type"><a href="/pokedex-swsh/fire.shtml"><img src="/pokedex-bw/type/fire.gif" border="0" /></a></td>
+<td width="12.5%" class="type"><a href="/pokedex-swsh/poison.shtml"><img src="/pokedex-bw/type/poison.gif" border="0" /></a> <a href="/pokedex-swsh/bug.shtml"><img src="/pokedex-bw/type/bug.gif" border="0" /></a></td>
+<td width="12.5%" class="type"><a href="/pokedex-swsh/ground.shtml"><img src="/pokedex-bw/type/ground.gif" border="0" /></a></td>
+<td width="12.5%" class="type"><a href="/pokedex-swsh/ghost.shtml"><img src="/pokedex-bw/type/ghost.gif" border="0" /></a></td>
+<td width="12.5%" class="type"><a href="/pokedex-swsh/bug.shtml"><img src="/pokedex-bw/type/bug.gif" border="0" /></a> <a href="/pokedex-swsh/steel.shtml"><img src="/pokedex-bw/type/steel.gif" border="0" /></a></td>
+<td width="12.5%" class="type"><a href="/pokedex-swsh/ground.shtml"><img src="/pokedex-bw/type/ground.gif" border="0" /></a></td>
+</tr><tr><td width="12.5%" class="rate">15.61%</td>
+<td width="12.5%" class="rate">14.63%</td>
+<td width="12.5%" class="rate">14.63%</td>
+<td width="12.5%" class="rate">13.01%</td>
+<td width="12.5%" class="rate">13.01%</td>
+<td width="12.5%" class="rate">10.89%</td>
+<td width="12.5%" class="rate">10.41%</td>
+<td width="12.5%" class="rate">7.80%</td>
+</tr><tr><td class="leveltitle">Level</td>
+<td class="leveltitle">Level</td>
+<td class="leveltitle">Level</td>
+<td class="leveltitle">Level</td>
+<td class="leveltitle">Level</td>
+<td class="leveltitle">Level</td>
+<td class="leveltitle">Level</td>
+<td class="leveltitle">Level</td>
+</tr><tr><td class="level">28 - 30</td>
+<td class="level">28 - 30</td>
+<td class="level">28 - 30</td>
+<td class="level">28 - 30</td>
+<td class="level">28 - 30</td>
+<td class="level">28 - 30</td>
+<td class="level">28 - 30</td>
+<td class="level">28 - 30</td>
+ </tr></table><table class="dextable" style="min-width:680px;max-width:680px;" align="center"><tr><td colspan="32" class="lgeevee">Pok&eacute;mon Shield</td></tr><tr><td width="12.5%" align="center"><a href="/pokedex-swsh/hawlucha"><img src="/swordshield/pokemon/small/701.png" loading="lazy" border="0" class="wildsprite" alt="Hawlucha" /></a></td><td width="12.5%" align="center"><a href="/pokedex-swsh/durant"><img src="/swordshield/pokemon/small/632.png" loading="lazy" border="0" class="wildsprite" alt="Durant" /></a></td><td width="12.5%" align="center"><a href="/pokedex-swsh/torkoal"><img src="/swordshield/pokemon/small/324.png" loading="lazy" border="0" class="wildsprite" alt="Torkoal" /></a></td><td width="12.5%" align="center"><a href="/pokedex-swsh/skorupi"><img src="/swordshield/pokemon/small/451.png" loading="lazy" border="0" class="wildsprite" alt="Skorupi" /></a></td><td width="12.5%" align="center"><a href="/pokedex-swsh/hippopotas"><img src="/swordshield/pokemon/small/449.png" loading="lazy" border="0" class="wildsprite" alt="Hippopotas" /></a></td><td width="12.5%" align="center"><a href="/pokedex-swsh/duskull"><img src="/swordshield/pokemon/small/355.png" loading="lazy" border="0" class="wildsprite" alt="Duskull" /></a></td><td width="12.5%" align="center"><a href="/pokedex-swsh/heatmor"><img src="/swordshield/pokemon/small/631.png" loading="lazy" border="0" class="wildsprite" alt="Heatmor" /></a></td><td width="12.5%" align="center"><a href="/pokedex-swsh/silicobra"><img src="/swordshield/pokemon/small/843.png" loading="lazy" border="0" class="wildsprite" alt="Silicobra" /></a></td></tr><tr><td width="12.5%" class="name">Hawlucha</td><td width="12.5%" class="name">Durant</td><td width="12.5%" class="name">Torkoal</td><td width="12.5%" class="name">Skorupi</td><td width="12.5%" class="name">Hippopotas</td><td width="12.5%" class="name">Duskull</td><td width="12.5%" class="name">Heatmor</td><td width="12.5%" class="name">Silicobra</td></tr><tr><td width="12.5%" class="type"><a href="/pokedex-swsh/fighting.shtml"><img src="/pokedex-bw/type/fighting.gif" border="0" /></a> <a href="/pokedex-swsh/flying.shtml"><img src="/pokedex-bw/type/flying.gif" border="0" /></a></td><td width="12.5%" class="type"><a href="/pokedex-swsh/bug.shtml"><img src="/pokedex-bw/type/bug.gif" border="0" /></a> <a href="/pokedex-swsh/steel.shtml"><img src="/pokedex-bw/type/steel.gif" border="0" /></a></td><td width="12.5%" class="type"><a href="/pokedex-swsh/fire.shtml"><img src="/pokedex-bw/type/fire.gif" border="0" /></a></td><td width="12.5%" class="type"><a href="/pokedex-swsh/poison.shtml"><img src="/pokedex-bw/type/poison.gif" border="0" /></a> <a href="/pokedex-swsh/bug.shtml"><img src="/pokedex-bw/type/bug.gif" border="0" /></a></td><td width="12.5%" class="type"><a href="/pokedex-swsh/ground.shtml"><img src="/pokedex-bw/type/ground.gif" border="0" /></a></td><td width="12.5%" class="type"><a href="/pokedex-swsh/ghost.shtml"><img src="/pokedex-bw/type/ghost.gif" border="0" /></a></td><td width="12.5%" class="type"><a href="/pokedex-swsh/fire.shtml"><img src="/pokedex-bw/type/fire.gif" border="0" /></a></td><td width="12.5%" class="type"><a href="/pokedex-swsh/ground.shtml"><img src="/pokedex-bw/type/ground.gif" border="0" /></a></td></tr><tr><td width="12.5%" class="rate">15.61%</td><td width="12.5%" class="rate">14.63%</td><td width="12.5%" class="rate">14.63%</td><td width="12.5%" class="rate">13.01%</td><td width="12.5%" class="rate">13.01%</td><td width="12.5%" class="rate">10.89%</td><td width="12.5%" class="rate">10.41%</td><td width="12.5%" class="rate">7.80%</td></tr><tr><td class="leveltitle">Level</td><td class="leveltitle">Level</td><td class="leveltitle">Level</td><td class="leveltitle">Level</td><td class="leveltitle">Level</td><td class="leveltitle">Level</td><td class="leveltitle">Level</td><td class="leveltitle">Level</td></tr><tr><td class="level">28 - 30</td><td class="level">28 - 30</td><td class="level">28 - 30</td><td class="level">28 - 30</td><td class="level">28 - 30</td><td class="level">28 - 30</td><td class="level">28 - 30</td><td class="level">28 - 30</td> </tr></table><table class="extradextable" style="min-width:680px;max-width:680px;" align="center"><tr><td colspan="32" class="fish"><a name="fish"><h3>Fishing</h3></h3></a></td></tr><tr><td colspan="32" class="lgpika">Pok&eacute;mon Sword</td></tr><tr><td width="33.333333333333%" align="center"><a href="/pokedex-swsh/magikarp"><img src="/swordshield/pokemon/small/129.png" loading="lazy" border="0" class="wildsprite" alt="Magikarp" /></a></td>
+<td width="33.333333333333%" align="center"><a href="/pokedex-swsh/drednaw"><img src="/swordshield/pokemon/small/834.png" loading="lazy" border="0" class="wildsprite" alt="Drednaw" /></a></td>
+<td width="33.333333333333%" align="center"><a href="/pokedex-swsh/goldeen"><img src="/swordshield/pokemon/small/118.png" loading="lazy" border="0" class="wildsprite" alt="Goldeen" /></a></td>
+</tr><tr><td width="33.333333333333%" class="name">Magikarp</td>
+<td width="33.333333333333%" class="name">Drednaw</td>
+<td width="33.333333333333%" class="name">Goldeen</td>
+</tr><tr><td width="33.333333333333%" class="type"><a href="/pokedex-swsh/water.shtml"><img src="/pokedex-bw/type/water.gif" border="0" /></a></td>
+<td width="33.333333333333%" class="type"><a href="/pokedex-swsh/water.shtml"><img src="/pokedex-bw/type/water.gif" border="0" /></a> <a href="/pokedex-swsh/rock.shtml"><img src="/pokedex-bw/type/rock.gif" border="0" /></a></td>
+<td width="33.333333333333%" class="type"><a href="/pokedex-swsh/water.shtml"><img src="/pokedex-bw/type/water.gif" border="0" /></a></td>
+</tr><tr><td width="33.333333333333%" class="rate">70%</td>
+<td width="33.333333333333%" class="rate">20%</td>
+<td width="33.333333333333%" class="rate">10%</td>
+</tr><tr><td class="leveltitle">Level</td>
+<td class="leveltitle">Level</td>
+<td class="leveltitle">Level</td>
+</tr><tr><td class="level">28 - 30</td>
+<td class="level">28 - 30</td>
+<td class="level">28 - 30</td>
+ </tr></table><table class="dextable" style="min-width:680px;max-width:680px;" align="center"><tr><td colspan="32" class="lgeevee">Pok&eacute;mon Shield</td></tr><tr><td width="33.333333333333%" align="center"><a href="/pokedex-swsh/magikarp"><img src="/swordshield/pokemon/small/129.png" loading="lazy" border="0" class="wildsprite" alt="Magikarp" /></a></td><td width="33.333333333333%" align="center"><a href="/pokedex-swsh/drednaw"><img src="/swordshield/pokemon/small/834.png" loading="lazy" border="0" class="wildsprite" alt="Drednaw" /></a></td><td width="33.333333333333%" align="center"><a href="/pokedex-swsh/goldeen"><img src="/swordshield/pokemon/small/118.png" loading="lazy" border="0" class="wildsprite" alt="Goldeen" /></a></td></tr><tr><td width="33.333333333333%" class="name">Magikarp</td><td width="33.333333333333%" class="name">Drednaw</td><td width="33.333333333333%" class="name">Goldeen</td></tr><tr><td width="33.333333333333%" class="type"><a href="/pokedex-swsh/water.shtml"><img src="/pokedex-bw/type/water.gif" border="0" /></a></td><td width="33.333333333333%" class="type"><a href="/pokedex-swsh/water.shtml"><img src="/pokedex-bw/type/water.gif" border="0" /></a> <a href="/pokedex-swsh/rock.shtml"><img src="/pokedex-bw/type/rock.gif" border="0" /></a></td><td width="33.333333333333%" class="type"><a href="/pokedex-swsh/water.shtml"><img src="/pokedex-bw/type/water.gif" border="0" /></a></td></tr><tr><td width="33.333333333333%" class="rate">70%</td><td width="33.333333333333%" class="rate">20%</td><td width="33.333333333333%" class="rate">10%</td></tr><tr><td class="leveltitle">Level</td><td class="leveltitle">Level</td><td class="leveltitle">Level</td></tr><tr><td class="level">28 - 30</td><td class="level">28 - 30</td><td class="level">28 - 30</td> </tr></table><table class="dextable" style="min-width:680px;max-width:680px;" align="center"><tr><td colspan="32" class="gift"><a name="gift"><h3>Gift Pok&eacute;mon</h3></a></td></tr><tr><td width="25%" align="center"><a href="/pokedex-swsh/dracozolt"><img src="/swordshield/pokemon/small/880.png" loading="lazy" border="0" class="wildsprite" alt="Dracozolt" /></a></td><td width="25%" align="center"><a href="/pokedex-swsh/arctozolt"><img src="/swordshield/pokemon/small/881.png" loading="lazy" border="0" class="wildsprite" alt="Arctozolt" /></a></td><td width="25%" align="center"><a href="/pokedex-swsh/dracovish"><img src="/swordshield/pokemon/small/882.png" loading="lazy" border="0" class="wildsprite" alt="Dracovish" /></a></td><td width="25%" align="center"><a href="/pokedex-swsh/arctovish"><img src="/swordshield/pokemon/small/883.png" loading="lazy" border="0" class="wildsprite" alt="Arctovish" /></a></td></tr><tr><td width="25%" class="name">Dracozolt</td><td width="25%" class="name">Arctozolt</td><td width="25%" class="name">Dracovish</td><td width="25%" class="name">Arctovish</td></tr><tr><td width="25%" class="type"><a href="/pokedex-swsh/electric.shtml"><img src="/pokedex-bw/type/electric.gif" border="0" /></a> <a href="/pokedex-swsh/dragon.shtml"><img src="/pokedex-bw/type/dragon.gif" border="0" /></a></td><td width="25%" class="type"><a href="/pokedex-swsh/electric.shtml"><img src="/pokedex-bw/type/electric.gif" border="0" /></a> <a href="/pokedex-swsh/ice.shtml"><img src="/pokedex-bw/type/ice.gif" border="0" /></a></td><td width="25%" class="type"><a href="/pokedex-swsh/water.shtml"><img src="/pokedex-bw/type/water.gif" border="0" /></a> <a href="/pokedex-swsh/dragon.shtml"><img src="/pokedex-bw/type/dragon.gif" border="0" /></a></td><td width="25%" class="type"><a href="/pokedex-swsh/water.shtml"><img src="/pokedex-bw/type/water.gif" border="0" /></a> <a href="/pokedex-swsh/ice.shtml"><img src="/pokedex-bw/type/ice.gif" border="0" /></a></td></tr><tr><td class="leveltitle">Level</td><td class="leveltitle">Level</td><td class="leveltitle">Level</td><td class="leveltitle">Level</td></tr><tr><td class="level">10</td><td class="level">10</td><td class="level">10</td><td class="level">10</td></tr><tr><td width="25%" class="rate">Combine Fossilised Drake & Fossilised Bird</td><td width="25%" class="rate">Combine Fossilised Dino & Fossilised Bird</td><td width="25%" class="rate">Combine Fossilised Drake & Fossilised Fish</td><td width="25%" class="rate">Combine Fossilised Dino & Fossilised Fish</td> </tr></table><p><a name="trainers"></a><h2>Trainers</h2></p><p><a name="trainerssm"></a><h3>Sword / Shield</h3></p><table class="trainer">
+	<tr>
+		<td class="tcol"><!img src="/pokearth/trainers/bw/.png" loading="lazy" class="pkmn" /></td>
+		<td align="center" width="96"><a href="/pokedex-swsh/stunky"><img src="/swordshield/pokemon/small/434.png" loading="lazy" alt="Stunky" class="pkmn" width="100" /></a></td><td align="center" width="96"><a href="/pokedex-swsh/linoone"><img src="/swordshield/pokemon/small/264-g.png" loading="lazy" alt="Linoone" class="pkmn" width="100" /></a></td>
+	</tr>
+
+	<tr>
+		<td >Team Yell Grunt</td>
+		<td align="center"><a href="/pokedex-swsh/stunky">Stunky</a></td><td align="center"><a href="/pokedex-swsh/linoone">Linoone</a></td>
+	</tr>
+
+	<tr>
+		<td rowspan="5"><b>Battle Type</b><br />
+		<br />
+		<b>Items</b><br /><table><tr><td></td><td></td></tr><tr><td></td><td ></td></tr></table>
+		</td><td class="level" height="1">Level 29</td><td class="level" height="1">Level 30</td>
+	</tr>	
+
+	<tr><td align="center"><a href="/pokedex-swsh/poison.shtml"><img src="/pokedex-bw/type/poison.gif" border="0" /></a> <a href="/pokedex-swsh/dark.shtml"><img src="/pokedex-bw/type/dark.gif" border="0" /></a><br /></td><td align="center"><a href="/pokedex-swsh/dark.shtml"><img src="/pokedex-bw/type/dark.gif" border="0" /></a> <a href="/pokedex-swsh/normal.shtml"><img src="/pokedex-bw/type/normal.gif" border="0" /></a><br /></td>
+	</tr><tr><td valign="top" class="bor"><b>Attacks</b>:<br />
+			<a href="/attackdex-swsh/bite.shtml">Bite</a><br />
+<a href="/attackdex-swsh/feint.shtml">Feint</a><br />
+<a href="/attackdex-swsh/poisongas.shtml">Poison Gas</a><br />
+<a href="/attackdex-swsh/.shtml"></a></td><td valign="top" class="bor"><b>Attacks</b>:<br />
+			<a href="/attackdex-swsh/honeclaws.shtml">Hone Claws</a><br />
+<a href="/attackdex-swsh/takedown.shtml">Take Down</a><br />
+<a href="/attackdex-swsh/nightslash.shtml">Night Slash</a><br />
+<a href="/attackdex-swsh/baby-dolleyes.shtml">Baby-Doll Eyes</a></td>
+	</tr>
+	<tr><td valign="top" class="bor"><b>Hold Item</b>:<br />No Item</td><td valign="top" class="bor"><b>Hold Item</b>:<br />No Item</td></tr><tr><td></td><td></td></tr>
+<tr>
+</tr>
+<tr><td valign="top"><i></i>
+	</td></tr>
+	</table><table class="trainer">
+	<tr>
+		<td class="tcol"><!img src="/pokearth/trainers/bw/.png" loading="lazy" class="pkmn" /></td>
+		<td align="center" width="96"><a href="/pokedex-swsh/liepard"><img src="/swordshield/pokemon/small/510.png" loading="lazy" alt="Liepard" class="pkmn" width="100" /></a></td>
+	</tr>
+
+	<tr>
+		<td >Team Yell Grunt</td>
+		<td align="center"><a href="/pokedex-swsh/liepard">Liepard</a></td>
+	</tr>
+
+	<tr>
+		<td rowspan="5"><b>Battle Type</b><br />
+		<br />
+		<b>Items</b><br /><table><tr><td></td><td></td></tr><tr><td></td><td ></td></tr></table>
+		</td><td class="level" height="1">Level 30</td>
+	</tr>	
+
+	<tr><td align="center"><a href="/pokedex-swsh/dark.shtml"><img src="/pokedex-bw/type/dark.gif" border="0" /></a><br /></td>
+	</tr><tr><td valign="top" class="bor"><b>Attacks</b>:<br />
+			<a href="/attackdex-swsh/fakeout.shtml">Fake Out</a><br />
+<a href="/attackdex-swsh/furyswipes.shtml">Fury Swipes</a><br />
+<a href="/attackdex-swsh/assurance.shtml">Assurance</a><br />
+<a href="/attackdex-swsh/sandattack.shtml">Sand Attack</a></td>
+	</tr>
+	<tr><td valign="top" class="bor"><b>Hold Item</b>:<br />No Item</td></tr><tr><td></td></tr>
+<tr>
+</tr>
+<tr><td valign="top"><i></i>
+	</td></tr>
+	</table><table class="trainer">
+	<tr>
+		<td class="tcol"><!img src="/pokearth/trainers/bw/.png" loading="lazy" class="pkmn" /></td>
+		<td align="center" width="96"><a href="/pokedex-swsh/clefairy"><img src="/swordshield/pokemon/small/035.png" loading="lazy" alt="Clefairy" class="pkmn" width="100" /></a></td><td align="center" width="96"><a href="/pokedex-swsh/clefable"><img src="/swordshield/pokemon/small/036.png" loading="lazy" alt="Clefable" class="pkmn" width="100" /></a></td>
+	</tr>
+
+	<tr>
+		<td >Beauty Anita</td>
+		<td align="center"><a href="/pokedex-swsh/clefairy">Clefairy</a></td><td align="center"><a href="/pokedex-swsh/clefable">Clefable</a></td>
+	</tr>
+
+	<tr>
+		<td rowspan="5"><b>Battle Type</b><br />
+		<br />
+		<b>Items</b><br /><table><tr><td></td><td></td></tr><tr><td></td><td ></td></tr></table>
+		</td><td class="level" height="1">Level 29</td><td class="level" height="1">Level 30</td>
+	</tr>	
+
+	<tr><td align="center"><a href="/pokedex-swsh/fairy.shtml"><img src="/pokedex-bw/type/fairy.gif" border="0" /></a><br /></td><td align="center"><a href="/pokedex-swsh/fairy.shtml"><img src="/pokedex-bw/type/fairy.gif" border="0" /></a><br /></td>
+	</tr><tr><td valign="top" class="bor"><b>Attacks</b>:<br />
+			<a href="/attackdex-swsh/metronome.shtml">Metronome</a><br />
+<a href="/attackdex-swsh/.shtml"></a><br />
+<a href="/attackdex-swsh/.shtml"></a><br />
+<a href="/attackdex-swsh/.shtml"></a></td><td valign="top" class="bor"><b>Attacks</b>:<br />
+			<a href="/attackdex-swsh/metronome.shtml">Metronome</a><br />
+<a href="/attackdex-swsh/.shtml"></a><br />
+<a href="/attackdex-swsh/.shtml"></a><br />
+<a href="/attackdex-swsh/.shtml"></a></td>
+	</tr>
+	<tr><td valign="top" class="bor"><b>Hold Item</b>:<br />No Item</td><td valign="top" class="bor"><b>Hold Item</b>:<br />No Item</td></tr><tr><td></td><td></td></tr>
+<tr>
+</tr>
+<tr><td valign="top"><i></i>
+	</td></tr>
+	</table><table class="trainer">
+	<tr>
+		<td class="tcol"><!img src="/pokearth/trainers/bw/.png" loading="lazy" class="pkmn" /></td>
+		<td align="center" width="96"><a href="/pokedex-swsh/pawniard"><img src="/swordshield/pokemon/small/624.png" loading="lazy" alt="Pawniard" class="pkmn" width="100" /></a></td>
+	</tr>
+
+	<tr>
+		<td >Doctor Iwan</td>
+		<td align="center"><a href="/pokedex-swsh/pawniard">Pawniard</a></td>
+	</tr>
+
+	<tr>
+		<td rowspan="5"><b>Battle Type</b><br />
+		<br />
+		<b>Items</b><br /><table><tr><td></td><td></td></tr><tr><td></td><td ></td></tr></table>
+		</td><td class="level" height="1">Level 31</td>
+	</tr>	
+
+	<tr><td align="center"><a href="/pokedex-swsh/dark.shtml"><img src="/pokedex-bw/type/dark.gif" border="0" /></a> <a href="/pokedex-swsh/steel.shtml"><img src="/pokedex-bw/type/steel.gif" border="0" /></a><br /></td>
+	</tr><tr><td valign="top" class="bor"><b>Attacks</b>:<br />
+			<a href="/attackdex-swsh/metalclaw.shtml">Metal Claw</a><br />
+<a href="/attackdex-swsh/torment.shtml">Torment</a><br />
+<a href="/attackdex-swsh/furycutter.shtml">Fury Cutter</a><br />
+<a href="/attackdex-swsh/metalsound.shtml">Metal Sound</a></td>
+	</tr>
+	<tr><td valign="top" class="bor"><b>Hold Item</b>:<br />No Item</td></tr><tr><td></td></tr>
+<tr>
+</tr>
+<tr><td valign="top"><i></i>
+	</td></tr>
+	</table><table class="trainer">
+	<tr>
+		<td class="tcol"><!img src="/pokearth/trainers/bw/.png" loading="lazy" class="pkmn" /></td>
+		<td align="center" width="96"><a href="/pokedex-swsh/togetic"><img src="/swordshield/pokemon/small/176.png" loading="lazy" alt="Togetic" class="pkmn" width="100" /></a></td>
+	</tr>
+
+	<tr>
+		<td >Doctor Evelyn</td>
+		<td align="center"><a href="/pokedex-swsh/togetic">Togetic</a></td>
+	</tr>
+
+	<tr>
+		<td rowspan="5"><b>Battle Type</b><br />
+		<br />
+		<b>Items</b><br /><table><tr><td></td><td></td></tr><tr><td></td><td ></td></tr></table>
+		</td><td class="level" height="1">Level 31</td>
+	</tr>	
+
+	<tr><td align="center"><a href="/pokedex-swsh/fairy.shtml"><img src="/pokedex-bw/type/fairy.gif" border="0" /></a> <a href="/pokedex-swsh/flying.shtml"><img src="/pokedex-bw/type/flying.gif" border="0" /></a><br /></td>
+	</tr><tr><td valign="top" class="bor"><b>Attacks</b>:<br />
+			<a href="/attackdex-swsh/fairywind.shtml">Fairy Wind</a><br />
+<a href="/attackdex-swsh/yawn.shtml">Yawn</a><br />
+<a href="/attackdex-swsh/ancientpower.shtml">Ancient Power</a><br />
+<a href="/attackdex-swsh/lifedew.shtml">Life Dew</a></td>
+	</tr>
+	<tr><td valign="top" class="bor"><b>Hold Item</b>:<br />No Item</td></tr><tr><td></td></tr>
+<tr>
+</tr>
+<tr><td valign="top"><i></i>
+	</td></tr>
+	</table><table class="trainer">
+	<tr>
+		<td class="tcol"><!img src="/pokearth/trainers/bw/.png" loading="lazy" class="pkmn" /></td>
+		<td align="center" width="96"><a href="/pokedex-swsh/sawk"><img src="/swordshield/pokemon/small/539.png" loading="lazy" alt="Sawk" class="pkmn" width="100" /></a></td>
+	</tr>
+
+	<tr>
+		<td >Backpacker Diane</td>
+		<td align="center"><a href="/pokedex-swsh/sawk">Sawk</a></td>
+	</tr>
+
+	<tr>
+		<td rowspan="5"><b>Battle Type</b><br />
+		<br />
+		<b>Items</b><br /><table><tr><td></td><td></td></tr><tr><td></td><td ></td></tr></table>
+		</td><td class="level" height="1">Level 31</td>
+	</tr>	
+
+	<tr><td align="center"><a href="/pokedex-swsh/fighting.shtml"><img src="/pokedex-bw/type/fighting.gif" border="0" /></a><br /></td>
+	</tr><tr><td valign="top" class="bor"><b>Attacks</b>:<br />
+			<a href="/attackdex-swsh/doublekick.shtml">Double Kick</a><br />
+<a href="/attackdex-swsh/lowsweep.shtml">Low Sweep</a><br />
+<a href="/attackdex-swsh/bulkup.shtml">Bulk Up</a><br />
+<a href="/attackdex-swsh/.shtml"></a></td>
+	</tr>
+	<tr><td valign="top" class="bor"><b>Hold Item</b>:<br />No Item</td></tr><tr><td></td></tr>
+<tr>
+</tr>
+<tr><td valign="top"><i></i>
+	</td></tr>
+	</table><table class="trainer">
+	<tr>
+		<td class="tcol"><!img src="/pokearth/trainers/bw/.png" loading="lazy" class="pkmn" /></td>
+		<td align="center" width="96"><a href="/pokedex-swsh/skorupi"><img src="/swordshield/pokemon/small/451.png" loading="lazy" alt="Skorupi" class="pkmn" width="100" /></a></td><td align="center" width="96"><a href="/pokedex-swsh/pawniard"><img src="/swordshield/pokemon/small/624.png" loading="lazy" alt="Pawniard" class="pkmn" width="100" /></a></td>
+	</tr>
+
+	<tr>
+		<td >Model Nicola</td>
+		<td align="center"><a href="/pokedex-swsh/skorupi">Skorupi</a></td><td align="center"><a href="/pokedex-swsh/pawniard">Pawniard</a></td>
+	</tr>
+
+	<tr>
+		<td rowspan="5"><b>Battle Type</b><br />
+		<br />
+		<b>Items</b><br /><table><tr><td></td><td></td></tr><tr><td></td><td ></td></tr></table>
+		</td><td class="level" height="1">Level 30</td><td class="level" height="1">Level 30</td>
+	</tr>	
+
+	<tr><td align="center"><a href="/pokedex-swsh/poison.shtml"><img src="/pokedex-bw/type/poison.gif" border="0" /></a> <a href="/pokedex-swsh/bug.shtml"><img src="/pokedex-bw/type/bug.gif" border="0" /></a><br /></td><td align="center"><a href="/pokedex-swsh/dark.shtml"><img src="/pokedex-bw/type/dark.gif" border="0" /></a> <a href="/pokedex-swsh/steel.shtml"><img src="/pokedex-bw/type/steel.gif" border="0" /></a><br /></td>
+	</tr><tr><td valign="top" class="bor"><b>Attacks</b>:<br />
+			<a href="/attackdex-swsh/venoshock.shtml">Venoshock</a><br />
+<a href="/attackdex-swsh/bugbite.shtml">Bug Bite</a><br />
+<a href="/attackdex-swsh/honeclaws.shtml">Hone Claws</a><br />
+<a href="/attackdex-swsh/.shtml"></a></td><td valign="top" class="bor"><b>Attacks</b>:<br />
+			<a href="/attackdex-swsh/assurance.shtml">Assurance</a><br />
+<a href="/attackdex-swsh/metalclaw.shtml">Metal Claw</a><br />
+<a href="/attackdex-swsh/metalsound.shtml">Metal Sound</a><br />
+<a href="/attackdex-swsh/.shtml"></a></td>
+	</tr>
+	<tr><td valign="top" class="bor"><b>Hold Item</b>:<br />No Item</td><td valign="top" class="bor"><b>Hold Item</b>:<br />No Item</td></tr><tr><td></td><td></td></tr>
+<tr>
+</tr>
+<tr><td valign="top"><i></i>
+	</td></tr>
+	</table><table class="trainer">
+	<tr>
+		<td class="tcol"><!img src="/pokearth/trainers/bw/.png" loading="lazy" class="pkmn" /></td>
+		<td align="center" width="96"><a href="/pokedex-swsh/throh"><img src="/swordshield/pokemon/small/538.png" loading="lazy" alt="Throh" class="pkmn" width="100" /></a></td>
+	</tr>
+
+	<tr>
+		<td >Backpacker Ruth</td>
+		<td align="center"><a href="/pokedex-swsh/throh">Throh</a></td>
+	</tr>
+
+	<tr>
+		<td rowspan="5"><b>Battle Type</b><br />
+		<br />
+		<b>Items</b><br /><table><tr><td></td><td></td></tr><tr><td></td><td ></td></tr></table>
+		</td><td class="level" height="1">Level 31</td>
+	</tr>	
+
+	<tr><td align="center"><a href="/pokedex-swsh/fighting.shtml"><img src="/pokedex-bw/type/fighting.gif" border="0" /></a><br /></td>
+	</tr><tr><td valign="top" class="bor"><b>Attacks</b>:<br />
+			<a href="/attackdex-swsh/stormthrow.shtml">Storm Throw</a><br />
+<a href="/attackdex-swsh/revenge.shtml">Revenge</a><br />
+<a href="/attackdex-swsh/circlethrow.shtml">Circle Throw</a><br />
+<a href="/attackdex-swsh/.shtml"></a></td>
+	</tr>
+	<tr><td valign="top" class="bor"><b>Hold Item</b>:<br />No Item</td></tr><tr><td></td></tr>
+<tr>
+</tr>
+<tr><td valign="top"><i></i>
+	</td></tr>
+	</table><table class="trainer">
+	<tr>
+		<td class="tcol"><!img src="/pokearth/trainers/bw/.png" loading="lazy" class="pkmn" /></td>
+		<td align="center" width="96"><a href="/pokedex-swsh/koffing"><img src="/swordshield/pokemon/small/109.png" loading="lazy" alt="Koffing" class="pkmn" width="100" /></a></td><td align="center" width="96"><a href="/pokedex-swsh/sudowoodo"><img src="/swordshield/pokemon/small/185.png" loading="lazy" alt="Sudowoodo" class="pkmn" width="100" /></a></td>
+	</tr>
+
+	<tr>
+		<td >Artist Duncan</td>
+		<td align="center"><a href="/pokedex-swsh/koffing">Koffing</a></td><td align="center"><a href="/pokedex-swsh/sudowoodo">Sudowoodo</a></td>
+	</tr>
+
+	<tr>
+		<td rowspan="5"><b>Battle Type</b><br />
+		<br />
+		<b>Items</b><br /><table><tr><td></td><td></td></tr><tr><td></td><td ></td></tr></table>
+		</td><td class="level" height="1">Level 29</td><td class="level" height="1">Level 31</td>
+	</tr>	
+
+	<tr><td align="center"><a href="/pokedex-swsh/poison.shtml"><img src="/pokedex-bw/type/poison.gif" border="0" /></a><br /></td><td align="center"><a href="/pokedex-swsh/rock.shtml"><img src="/pokedex-bw/type/rock.gif" border="0" /></a><br /></td>
+	</tr><tr><td valign="top" class="bor"><b>Attacks</b>:<br />
+			<a href="/attackdex-swsh/self-destruct.shtml">Self-Destruct</a><br />
+<a href="/attackdex-swsh/haze.shtml">Haze</a><br />
+<a href="/attackdex-swsh/smokescreen.shtml">Smokescreen</a><br />
+<a href="/attackdex-swsh/clearsmog.shtml">Clear Smog</a></td><td valign="top" class="bor"><b>Attacks</b>:<br />
+			<a href="/attackdex-swsh/slam.shtml">Slam</a><br />
+<a href="/attackdex-swsh/rockslide.shtml">Rock Slide</a><br />
+<a href="/attackdex-swsh/suckerpunch.shtml">Sucker Punch</a><br />
+<a href="/attackdex-swsh/.shtml"></a></td>
+	</tr>
+	<tr><td valign="top" class="bor"><b>Hold Item</b>:<br />No Item</td><td valign="top" class="bor"><b>Hold Item</b>:<br />No Item</td></tr><tr><td></td><td></td></tr>
+<tr>
+</tr>
+<tr><td valign="top"><i></i>
+	</td></tr>
+	</table><p><a name="items"></a><h2>Items</h2></p><table width="580" align="center">
+<tr> <td class="fooevo">Picture</td><td width="35%" class="fooevo">Item</td><td width="35%" class="fooevo">Method</td><td width="10%" class="fooevo">Quantity</td></tr><tr> <td width="32" class="cen"><a href="/itemdex/ultraball.shtml"><img src="/itemdex/sprites/ultraball.png" loading="lazy" border="0" class="pkmn" /></a></td> 
+<td width="35%" class="fooinfo"><a href="/itemdex/ultraball.shtml">Ultra Ball</a></td><td width="35%" class="fooinfo">Beneath ledge on east of route</td><td width="35%" class="fooinfo">3</td></tr><tr> <td width="32" class="cen"><a href="/itemdex/fossilizeddino.shtml"><img src="/itemdex/sprites/fossilizeddino.png" loading="lazy" border="0" class="pkmn" /></a></td> 
+<td width="35%" class="fooinfo"><a href="/itemdex/fossilizeddino.shtml">Fossilized Dino</a></td><td width="35%" class="fooinfo">Hidden in rock up stairs from Backpacker Diane (Sword)</td><td width="35%" class="fooinfo">2</td></tr><tr> <td width="32" class="cen"><a href="/itemdex/fossilizedfish.shtml"><img src="/itemdex/sprites/fossilizedfish.png" loading="lazy" border="0" class="pkmn" /></a></td> 
+<td width="35%" class="fooinfo"><a href="/itemdex/fossilizedfish.shtml">Fossilized Fish</a></td><td width="35%" class="fooinfo">Hidden in rock up stairs from Backpacker Diane (Shield)</td><td width="35%" class="fooinfo">2</td></tr><tr> <td width="32" class="cen"><a href="/itemdex/lightclay.shtml"><img src="/itemdex/sprites/lightclay.png" loading="lazy" border="0" class="pkmn" /></a></td> 
+<td width="35%" class="fooinfo"><a href="/itemdex/lightclay.shtml">Light Clay</a></td><td width="35%" class="fooinfo">On ledge left of Backpacker Diane</td><td width="35%" class="fooinfo">1</td></tr><tr> <td width="32" class="cen">&nbsp;</td> <td width="50%" class="fooinfo"><font size="1">TM015</td><td width="35%" class="fooinfo">Next to tent</td><td width="35%" class="fooinfo">1</td></tr><tr> <td width="32" class="cen"><a href="/itemdex/rarecandy.shtml"><img src="/itemdex/sprites/rarecandy.png" loading="lazy" border="0" class="pkmn" /></a></td> 
+<td width="35%" class="fooinfo"><a href="/itemdex/rarecandy.shtml">Rare Candy</a></td><td width="35%" class="fooinfo">Hidden in front of rock by pool in far right of route</td><td width="35%" class="fooinfo">1</td></tr><tr> <td width="32" class="cen">&nbsp;</td> <td width="50%" class="fooinfo"><font size="1">TM030</td><td width="35%" class="fooinfo">On ledge in far east of route</td><td width="35%" class="fooinfo">1</td></tr><tr> <td width="32" class="cen"><a href="/itemdex/rarebone.shtml"><img src="/itemdex/sprites/rarebone.png" loading="lazy" border="0" class="pkmn" /></a></td> 
+<td width="35%" class="fooinfo"><a href="/itemdex/rarebone.shtml">Rare Bone</a></td><td width="35%" class="fooinfo">Hidden next to Model</td><td width="35%" class="fooinfo">2</td></tr><tr> <td width="32" class="cen"><a href="/itemdex/sitrusberry.shtml"><img src="/itemdex/sprites/sitrusberry.png" loading="lazy" border="0" class="pkmn" /></a></td> 
+<td width="35%" class="fooinfo"><a href="/itemdex/sitrusberry.shtml">Sitrus Berry</a></td><td width="35%" class="fooinfo">Berry Tree</td><td width="35%" class="fooinfo"></td></tr><tr> <td width="32" class="cen"><a href="/itemdex/rawstberry.shtml"><img src="/itemdex/sprites/rawstberry.png" loading="lazy" border="0" class="pkmn" /></a></td> 
+<td width="35%" class="fooinfo"><a href="/itemdex/rawstberry.shtml">Rawst Berry</a></td><td width="35%" class="fooinfo">Berry Tree</td><td width="35%" class="fooinfo"></td></tr><tr> <td width="32" class="cen"><a href="/itemdex/leppaberry.shtml"><img src="/itemdex/sprites/leppaberry.png" loading="lazy" border="0" class="pkmn" /></a></td> 
+<td width="35%" class="fooinfo"><a href="/itemdex/leppaberry.shtml">Leppa Berry</a></td><td width="35%" class="fooinfo">Berry Tree</td><td width="35%" class="fooinfo"></td></tr><tr> <td width="32" class="cen"><a href="/itemdex/persimberry.shtml"><img src="/itemdex/sprites/persimberry.png" loading="lazy" border="0" class="pkmn" /></a></td> 
+<td width="35%" class="fooinfo"><a href="/itemdex/persimberry.shtml">Persim Berry</a></td><td width="35%" class="fooinfo">Berry Tree</td><td width="35%" class="fooinfo"></td></tr></table><p><h2>Items Found in Pok&eacute;mon Camp</h2></p>
+
+<table class="dextable" align="center">
+	<tr><td class="fooevo">Picture</td><td class="fooevo">Item</td><td class="fooevo">Rarity</td></tr>
+	<tr>
+	<td class="cen"><a href="/itemdex/cheriberry.shtml"><img src="/itemdex/sprites/cheriberry.png" loading="lazy" border="0" class="pkmn" /></a></td>
+	<td class="cen"><a href="/itemdex/cheriberry.shtml">Cheri Berry</a></td>
+	<td class="cen">7.87%</td>
+	</tr><tr>
+	<td class="cen"><a href="/itemdex/chestoberry.shtml"><img src="/itemdex/sprites/chestoberry.png" loading="lazy" border="0" class="pkmn" /></a></td>
+	<td class="cen"><a href="/itemdex/chestoberry.shtml">Chesto Berry</a></td>
+	<td class="cen">7.87%</td>
+	</tr><tr>
+	<td class="cen"><a href="/itemdex/pechaberry.shtml"><img src="/itemdex/sprites/pechaberry.png" loading="lazy" border="0" class="pkmn" /></a></td>
+	<td class="cen"><a href="/itemdex/pechaberry.shtml">Pecha Berry</a></td>
+	<td class="cen">7.87%</td>
+	</tr><tr>
+	<td class="cen"><a href="/itemdex/rawstberry.shtml"><img src="/itemdex/sprites/rawstberry.png" loading="lazy" border="0" class="pkmn" /></a></td>
+	<td class="cen"><a href="/itemdex/rawstberry.shtml">Rawst Berry</a></td>
+	<td class="cen">7.87%</td>
+	</tr><tr>
+	<td class="cen"><a href="/itemdex/aspearberry.shtml"><img src="/itemdex/sprites/aspearberry.png" loading="lazy" border="0" class="pkmn" /></a></td>
+	<td class="cen"><a href="/itemdex/aspearberry.shtml">Aspear Berry</a></td>
+	<td class="cen">7.87%</td>
+	</tr><tr>
+	<td class="cen"><a href="/itemdex/leppaberry.shtml"><img src="/itemdex/sprites/leppaberry.png" loading="lazy" border="0" class="pkmn" /></a></td>
+	<td class="cen"><a href="/itemdex/leppaberry.shtml">Leppa Berry</a></td>
+	<td class="cen">7.87%</td>
+	</tr><tr>
+	<td class="cen"><a href="/itemdex/oranberry.shtml"><img src="/itemdex/sprites/oranberry.png" loading="lazy" border="0" class="pkmn" /></a></td>
+	<td class="cen"><a href="/itemdex/oranberry.shtml">Oran Berry</a></td>
+	<td class="cen">7.87%</td>
+	</tr><tr>
+	<td class="cen"><a href="/itemdex/persimberry.shtml"><img src="/itemdex/sprites/persimberry.png" loading="lazy" border="0" class="pkmn" /></a></td>
+	<td class="cen"><a href="/itemdex/persimberry.shtml">Persim Berry</a></td>
+	<td class="cen">7.87%</td>
+	</tr><tr>
+	<td class="cen"><a href="/itemdex/potion.shtml"><img src="/itemdex/sprites/potion.png" loading="lazy" border="0" class="pkmn" /></a></td>
+	<td class="cen"><a href="/itemdex/potion.shtml">Potion</a></td>
+	<td class="cen">7.87%</td>
+	</tr><tr>
+	<td class="cen"><a href="/itemdex/pokeball.shtml"><img src="/itemdex/sprites/pokeball.png" loading="lazy" border="0" class="pkmn" /></a></td>
+	<td class="cen"><a href="/itemdex/pokeball.shtml">Poke Ball</a></td>
+	<td class="cen">7.87%</td>
+	</tr><tr>
+	<td class="cen"><a href="/itemdex/greatball.shtml"><img src="/itemdex/sprites/greatball.png" loading="lazy" border="0" class="pkmn" /></a></td>
+	<td class="cen"><a href="/itemdex/greatball.shtml">Great Ball</a></td>
+	<td class="cen">3.94%</td>
+	</tr><tr>
+	<td class="cen"><a href="/itemdex/rarebone.shtml"><img src="/itemdex/sprites/rarebone.png" loading="lazy" border="0" class="pkmn" /></a></td>
+	<td class="cen"><a href="/itemdex/rarebone.shtml">Rare Bone</a></td>
+	<td class="cen">1.57%</td>
+	</tr><tr>
+	<td class="cen"><a href="/itemdex/sausages.shtml"><img src="/itemdex/sprites/sausages.png" loading="lazy" border="0" class="pkmn" /></a></td>
+	<td class="cen"><a href="/itemdex/sausages.shtml">Sausages</a></td>
+	<td class="cen">7.87%</td>
+	</tr><tr>
+	<td class="cen"><a href="/itemdex/packofpotatoes.shtml"><img src="/itemdex/sprites/packofpotatoes.png" loading="lazy" border="0" class="pkmn" /></a></td>
+	<td class="cen"><a href="/itemdex/packofpotatoes.shtml">Pack of Potatoes</a></td>
+	<td class="cen">7.87%</td>
+	</tr></table>
+
+</main></div><!-- END #content -->
+
+<aside id="rbar">
+	<a href="/potw-champions/" class="navheader">Pokémon of the Week</a>
+	<div align="center">
+		<a href="/potw-champions/254.shtml"><img src="/potw-champions/254.jpg" alt="Pokémon of the Week"  class="tbarpic"></a>
+	</div>
+	<div class="navheader">Next In Japan</div>
+	<div>
+		<div align="center"><img src="/anime/NextOn/1381.jpg"  class="tbarpic"></div>
+		Episode 145<br/>
+		<b>It's Astonishing! Mega Rayquaza and the Mystical Land?!</b><br/>
+		<div align="center"><img src="/anime/NextOn/1381-i.jpg"  class="tbarpic"></div>
+			Airdate: 14/08/2026
+	</div>
+	<div class="navheader">Recently In USA</div>
+	<div>
+		<div align="center"><a href="/anime/epiguide/pokemon2023/123.shtml"><img src="/1359.jpg"  class="tbarpic"></div>
+		Episode 123<br/>
+		<b> Mochi Mayhem!</b><br />
+		<img src="/anime/synopsis.gif">Synopsis</a><br/>
+		<a href="/anime/pictures/pokemon2023/123.shtml"><img src="/anime/pictures.gif">Pictures</a><br/>
+	</div>
+	<div class="navheader">Next In USA</div>
+	<div>
+		<div align="center"><a href="/anime/epiguide/pokemon2023/124.shtml"><img src="/1360.jpg"  class="tbarpic"></div>
+		Episode 124<br/>
+		<b> Operation Infiltration!</b><br />
+		Airdate: 2026</a><br />
+		<a href="/anime/epiguide/pokemon2023/124.shtml"><img src="/anime/synopsis.gif">Synopsis</a><br/>
+		<a href="/anime/pictures/pokemon2023/124.shtml"><img src="/anime/pictures.gif">Pictures</a><br/>
+	</div>
+	<div class="navheader">Social Media</div>
+	<div class="center">
+		<a href="https://www.facebook.com/SerebiiNetPage" target="blank"><img src="/Toolbar/headers/Facebook.png" width="30" alt="Facebook"/></a>
+		<a href="https://www.twitter.com/SerebiiNet" target="blank"><img src="/Toolbar/headers/Twitter.png" width="30" alt="Twitter"/></a>
+		<a href="https://bsky.app/profile/serebii.bsky.social" target="blank" rel="me"><img src="/Toolbar/headers/bluesky.png" width="30" alt="BlueSky"/></a>
+		<a href="https://www.youtube.com/serebiispp" target="blank"><img src="/Toolbar/headers/youtube.png" width="30" alt="YouTube"/></a>
+		<a href="https://www.instagram.com/serebii" target="blank" rel="nofollow"><img src="/Toolbar/headers/instagram.png" width="30" alt="Instagram"/></a>
+		<a href="https://www.threads.net/@serebii" target="blank" rel="nofollow"><img src="/Toolbar/headers/threads.png" width="30" alt="Threads"/></a>
+	</div>
+	<div class="navheader">Support Us</div>
+	<div class="center">
+		<a href="https://www.patreon.com/serebiinet" target="blank" rel="nofollow"><img src="/Toolbar/headers/patreon.png" width="50" alt="Patreon"/></a>
+</div>
+	<div class="navheader">In Association With</div>
+	<div class="center">
+		<a href="http://www.pocketmonsters.net/" target="blank" rel="nofollow"><img src="/Toolbar/pm.png" alt="#PM"></a><br/>
+		<a href="http://www.legendarypokemon.net/" target="blank" rel="nofollow"><img src="/Toolbar/lpoke.png" alt="Legendary Pokémon"></a>
+	</div>
+</aside>
+</div><!-- END #wrapper -->
+<footer id="footer">
+	<div class="copyright">
+		<a href="#top" alt="Top of Page" title="Top of Page" class="totop"></a>
+
+		All Content is &copy; Copyright of Serebii.net 1999-2026. |
+		<a href="/privacy.shtml">Privacy Policy</a> |
+		<a class="nn-cmp-show" href="#">Manage Cookie Settings</a><br/>
+		Pokémon and All Respective Names are Trademark &amp; &copy; of Nintendo 1996-2026<br /><br />
+<a href="https://www.patreon.com/serebiinet" target="blank" rel="nofollow"></u>Support us on Patreon</u></a>
+	</div>
+
+	<div style="height:102px">
+		<div id="nn_lb2"></div><div id="nn_mobile_lb2"></div>
+<div id="celtra-reveal-wrapper" style="position:fixed; height: auto; width: 100%">
+<div id="nn_1by1"></div>
+</div>
+	</div>
+<script data-cfasync="false" async src="//cdn.intergient.com/1025662/76683/ramp.js"></script>
+</footer>
+
+
+
+</body>
+</html>

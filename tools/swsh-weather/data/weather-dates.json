@@ -1,0 +1,47 @@
+{
+ "Snowstorm": {
+  "wild": "February 1st",
+  "ioa": null,
+  "ct": "January 31st"
+ },
+ "Overcast": {
+  "wild": "March 1st",
+  "ioa": "February 15th",
+  "ct": "March 31st"
+ },
+ "Sandstorm": {
+  "wild": "April 1st",
+  "ioa": null,
+  "ct": null
+ },
+ "Normal Weather": {
+  "wild": "May 1st",
+  "ioa": "March 15th",
+  "ct": "April 30th"
+ },
+ "Fog": {
+  "wild": "June 1st",
+  "ioa": "January 15th",
+  "ct": "July 31st"
+ },
+ "Intense Sun": {
+  "wild": "July 1st",
+  "ioa": "May 15th",
+  "ct": "May 31st"
+ },
+ "Raining": {
+  "wild": "October 1st",
+  "ioa": "April 15th",
+  "ct": null
+ },
+ "Thunderstorm": {
+  "wild": "November 1st",
+  "ioa": "July 15th",
+  "ct": null
+ },
+ "Snowing": {
+  "wild": "December 1st",
+  "ioa": null,
+  "ct": "June 30th"
+ }
+}
