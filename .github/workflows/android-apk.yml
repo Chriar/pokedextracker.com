@@ -42,6 +42,10 @@ jobs:
         working-directory: web
         run: npx cap add android && npx cap sync android
 
+      - name: Generate app icons
+        working-directory: web
+        run: npx capacitor-assets generate --android
+
       - name: Build APK
         working-directory: web/android
         run: ./gradlew assembleDebug --no-daemon

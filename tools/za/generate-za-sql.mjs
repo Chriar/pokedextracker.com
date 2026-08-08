@@ -36,6 +36,7 @@ const DATA_DIR = join(dirname(fileURLToPath(import.meta.url)), 'data');
 
 const lumiose = JSON.parse(await readFile(join(DATA_DIR, 'lumiose.json'), 'utf8'));
 const hyperspace = JSON.parse(await readFile(join(DATA_DIR, 'hyperspace.json'), 'utf8'));
+const locationData = JSON.parse(await readFile(join(DATA_DIR, 'locations.json'), 'utf8').catch(() => '{}'));
 
 // Map national_id -> base-form pokemon row id. Some species have duplicate
 // rows in the upstream dataset (one per game family that re-lists them), and
@@ -103,6 +104,29 @@ for (const dt of DEX_TYPES) {
 }
 if (missing.length > 0) {
   throw new Error(`no base-form pokemon row for:\n  ${missing.join('\n  ')}`);
+}
+
+// Locations, scraped from Serebii's per-species pages (fetch-locations.mjs).
+// The base game gets the "Legends: Z-A" rows; the Mega Dimension game gets
+// base + Hyperspace rows merged, since the DLC contains the base game. The
+// DELETE FROM games above cascades away any previous rows.
+const lit = (v) => `'${String(v).replace(/'/g, "''")}'`;
+const arrayLit = (values) => `ARRAY[${values.map(lit).join(',')}]::text[]`;
+
+const locationRows = [];
+const dlcSpecies = new Set([...lumiose, ...hyperspace].map((e) => e.national_id));
+for (const e of lumiose) {
+  const values = locationData[e.national_id]?.za;
+  if (values?.length) locationRows.push(`('legends_z_a', ${rowByNationalId[e.national_id]}, ${lit(values.join('; '))}, ${arrayLit(values)})`);
+}
+for (const nationalId of dlcSpecies) {
+  const za = locationData[nationalId]?.za || [];
+  const md = locationData[nationalId]?.md || [];
+  const values = [...za, ...md];
+  if (values.length) locationRows.push(`('legends_z_a_mega_dimension', ${rowByNationalId[nationalId]}, ${lit(values.join('; '))}, ${arrayLit(values)})`);
+}
+if (locationRows.length > 0) {
+  lines.push(`INSERT INTO locations (game_id, pokemon_id, value, "values") VALUES\n${locationRows.join(',\n')};`);
 }
 
 lines.push("SELECT setval('dex_types_id_seq', GREATEST((SELECT MAX(id) FROM dex_types), 103));");

@@ -59,6 +59,7 @@
   },
   "devDependencies": {
     "@capacitor/android": "^7",
+    "@capacitor/assets": "^3.0.5",
     "@capacitor/cli": "^7",
     "@capacitor/core": "^7",
     "@tanstack/eslint-plugin-query": "^4.29.9",
