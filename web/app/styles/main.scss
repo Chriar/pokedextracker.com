@@ -24,6 +24,9 @@ body {
   @include flex-direction(column);
 
   height: 100vh;
+  // Keeps the nav below the device status bar when the app runs edge-to-edge
+  // (Android WebView / notched phones); resolves to 0 in normal browsers.
+  padding-top: env(safe-area-inset-top, 0px);
 
   .tracker-container,
   .home-container,

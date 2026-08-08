@@ -12,7 +12,7 @@ import { Progress } from '../../library/Progress';
 import { ReactGA } from '../../../utils/analytics';
 import { Scroll } from './Scroll';
 import { SearchResults } from './SearchResults';
-import { groupBoxes } from '../../../utils/pokemon';
+import { dedupeCaptures, groupBoxes } from '../../../utils/pokemon';
 import { useTrackerContext } from './use-tracker';
 import { useUser } from '../../../hooks/queries/users';
 
@@ -53,7 +53,13 @@ export function Dex ({
   const caught = useMemo(() => captures.filter(({ captured }) => captured).length, [captures]);
   const total = captures.length;
 
-  const groupedCaptures = useMemo(() => groupBoxes(captures), [captures]);
+  // With the duplicates filter on, the box view keeps its 30-slot buckets
+  // (and per-box Mark All buttons) but is built from the deduped list.
+  const visibleCaptures = useMemo(() => {
+    return hideDuplicates ? dedupeCaptures(captures, hideDuplicateForms) : captures;
+  }, [captures, hideDuplicates, hideDuplicateForms]);
+
+  const groupedCaptures = useMemo(() => groupBoxes(visibleCaptures), [visibleCaptures]);
   const boxes = useMemo(() => {
     return groupedCaptures.map((box, i) => (
       <Box
@@ -82,12 +88,10 @@ export function Dex ({
         <div className="percentage">
           <Progress caught={caught} total={total} />
         </div>
-        {query.length > 0 || hideCaught || hideDuplicates ?
+        {query.length > 0 || hideCaught ?
           <SearchResults
-            captures={captures}
+            captures={visibleCaptures}
             hideCaught={hideCaught}
-            hideDuplicateForms={hideDuplicateForms}
-            hideDuplicates={hideDuplicates}
             query={query}
             setHideCaught={setHideCaught}
             setQuery={setQuery}

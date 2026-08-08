@@ -6,6 +6,26 @@ import type { Capture, Dex } from '../types';
 
 export const BOX_SIZE = 30;
 
+// The key that decides whether two dex entries are "the same pokemon" for
+// duplicate filtering: same species, and (unless forms are collapsed too) the
+// same form. Dexes that combine several regional dexes list a pokemon once
+// per sub-dex, so everything after the first occurrence is a duplicate.
+export function duplicateKey (capture: Capture, collapseForms: boolean) {
+  return collapseForms ? `${capture.pokemon.national_id}` : `${capture.pokemon.national_id}:${capture.pokemon.form || ''}`;
+}
+
+export function dedupeCaptures<T extends Capture> (captures: T[], collapseForms: boolean): T[] {
+  const seen = new Set<string>();
+  return captures.filter((capture) => {
+    const key = duplicateKey(capture, collapseForms);
+    if (seen.has(key)) {
+      return false;
+    }
+    seen.add(key);
+    return true;
+  });
+}
+
 export function groupBoxes (captures: Capture[]) {
   let lastBoxName: string | null = null;
   let lastBoxIndex = 0;

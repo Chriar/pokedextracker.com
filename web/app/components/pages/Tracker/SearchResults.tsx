@@ -11,46 +11,20 @@ const DEFER_CUTOFF = 120;
 interface Props {
   captures: UICapture[];
   hideCaught: boolean;
-  hideDuplicateForms: boolean;
-  hideDuplicates: boolean;
   query: string;
   setHideCaught: Dispatch<SetStateAction<boolean>>;
   setQuery: Dispatch<SetStateAction<string>>;
   setSelectedPokemon: Dispatch<SetStateAction<number>>;
 }
 
-export function SearchResults ({
-  captures,
-  hideCaught,
-  hideDuplicateForms,
-  hideDuplicates,
-  query,
-  setHideCaught,
-  setQuery,
-  setSelectedPokemon,
-}: Props) {
+export function SearchResults ({ captures, hideCaught, query, setHideCaught, setQuery, setSelectedPokemon }: Props) {
   const handleClearCaughtFilter = () => setHideCaught(false);
   const handleClearClick = () => setQuery('');
 
   const filteredCaptures = useMemo(() => {
-    // Tracks which Pokémon have already appeared while walking the dex in
-    // order, so that only the first occurrence of each is kept. A dex that
-    // combines multiple regional dexes (e.g. Paldea + Kitakami + Blueberry)
-    // lists the same Pokémon once per sub-dex.
-    const seen = new Set<string>();
-
     return captures.filter((capture) => {
       const dexId = capture.pokemon.dex_number;
       const natId = nationalId(capture.pokemon.national_id);
-
-      let matchesDuplicate = true;
-      if (hideDuplicates) {
-        const key = hideDuplicateForms ?
-          `${capture.pokemon.national_id}` :
-          `${capture.pokemon.national_id}:${capture.pokemon.form || ''}`;
-        matchesDuplicate = !seen.has(key);
-        seen.add(key);
-      }
 
       const matchesCaught = !hideCaught || !capture.captured;
       const matchesQuery =
@@ -69,9 +43,9 @@ export function SearchResults ({
         // Exact 4-digit formatted national ID match (e.g. 0001, 0002, 0003)
         padding(natId, 4) === query;
 
-      return matchesDuplicate && matchesCaught && matchesQuery;
+      return matchesCaught && matchesQuery;
     });
-  }, [captures, hideCaught, hideDuplicateForms, hideDuplicates, query]);
+  }, [captures, hideCaught, query]);
 
   if (filteredCaptures.length === 0) {
     let message = <p>No results. <a className="link" onClick={handleClearClick}>Clear your search?</a></p>;

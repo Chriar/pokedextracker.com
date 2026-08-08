@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useRef } from 'react';
 
+import { MarkDuplicatesButton } from './MarkDuplicatesButton';
 import { ReactGA } from '../../../utils/analytics';
 
 import type { ChangeEvent, Dispatch, SetStateAction } from 'react';
@@ -126,6 +127,12 @@ export function SearchBar ({
                   <span className="checkbox-custom"><span /></span>Also Hide Duplicate Forms
                 </label>
               </div>
+            </div> :
+            null
+          }
+          {hideDuplicates ?
+            <div className="form-group">
+              <MarkDuplicatesButton hideDuplicateForms={hideDuplicateForms} />
             </div> :
             null
           }
