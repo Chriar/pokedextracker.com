@@ -1,6 +1,8 @@
 import { Route, Router, Switch } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
+import { createBrowserHistory, createHashHistory } from 'history';
 import { historyContext } from '@rollbar/react';
+
+import { Config } from '../../../config';
 
 import { Account } from './Account';
 import { Home } from './Home';
@@ -14,7 +16,9 @@ import { Tracker } from './Tracker';
 import { logPageView } from '../../utils/analytics';
 import { useLocalStorageContext } from '../../hooks/contexts/use-local-storage-context';
 
-const history = createBrowserHistory();
+// The offline/APK build is served from static files with no server-side
+// rewrites, so it uses hash-based URLs instead of real paths.
+const history = Config.LOCAL_MODE ? createHashHistory() : createBrowserHistory();
 history.listen(() => logPageView());
 // @ts-ignore Rollbar's types are wrong. See https://github.com/rollbar/rollbar-react/issues/69
 history.listen(historyContext(Rollbar));

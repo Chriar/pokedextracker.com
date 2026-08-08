@@ -5,7 +5,7 @@ import { Config } from '../../config';
 const Rollbar = new Constructor({
   accessToken: Config.ROLLBAR_TOKEN,
   codeVersion: Config.VERSION,
-  enabled: Config.ENVIRONMENT !== 'development',
+  enabled: Config.ENVIRONMENT !== 'development' && Config.ENVIRONMENT !== 'localapp',
   environment: Config.ENVIRONMENT,
   hostSafeList: ['pokedextracker.com', 'staging.pokedextracker.com'],
   captureUncaught: true,

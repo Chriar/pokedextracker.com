@@ -1,6 +1,7 @@
 import { stringify } from 'qs';
 
 import { Config } from '../../config';
+import { localAPI } from '../local/local-api';
 import { localStorage } from './local-storage';
 
 export class PokedexTrackerError extends Error {
@@ -32,6 +33,9 @@ function getHeaders () {
 
 export const API = {
   async delete<T, U = any> (path: string, payload?: U): Promise<T> {
+    if (Config.LOCAL_MODE) {
+      return localAPI('DELETE', path, payload);
+    }
     const response = await fetch(Config.API_HOST + path, {
       method: 'DELETE',
       body: JSON.stringify(payload),
@@ -40,6 +44,9 @@ export const API = {
     return handleResponse(response);
   },
   async get<T, U = any> (path: string, params?: U): Promise<T> {
+    if (Config.LOCAL_MODE) {
+      return localAPI('GET', path, params);
+    }
     const query = stringify(params);
     const response = await fetch(`${Config.API_HOST}${path}${query ? `?${query}` : ''}`, {
       headers: getHeaders(),
@@ -47,6 +54,9 @@ export const API = {
     return handleResponse(response);
   },
   async post<T, U = any> (path: string, payload: U): Promise<T> {
+    if (Config.LOCAL_MODE) {
+      return localAPI('POST', path, payload);
+    }
     const response = await fetch(Config.API_HOST + path, {
       method: 'POST',
       body: JSON.stringify(payload),

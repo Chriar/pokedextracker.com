@@ -37,11 +37,25 @@ const DATA_DIR = join(dirname(fileURLToPath(import.meta.url)), 'data');
 const lumiose = JSON.parse(await readFile(join(DATA_DIR, 'lumiose.json'), 'utf8'));
 const hyperspace = JSON.parse(await readFile(join(DATA_DIR, 'hyperspace.json'), 'utf8'));
 
-// Map national_id -> base-form pokemon row id from the scrape cache.
+// Map national_id -> base-form pokemon row id. Some species have duplicate
+// rows in the upstream dataset (one per game family that re-lists them), and
+// only one set carries coherent evolution edges: the rows referenced by the
+// HOME "Full National" dex. Use that mapping first, and fall back to a cache
+// scan only for species the national dex somehow lacks.
 const rowByNationalId = {};
 for (const file of (await readdir(join(CACHE, 'pokemon'))).filter((f) => f.endsWith('.json'))) {
   const p = JSON.parse(await readFile(join(CACHE, 'pokemon', file), 'utf8'));
-  if (p.form === null) rowByNationalId[p.national_id] = p.id;
+  if (p.form === null && !(p.national_id in rowByNationalId)) rowByNationalId[p.national_id] = p.id;
+}
+const dexTypesInCache = JSON.parse(await readFile(join(CACHE, 'dex-types.json'), 'utf8'));
+const nationalDexType = dexTypesInCache
+  .filter((dt) => dt.game_family_id === 'home' && !dt.base_dex_type_id)
+  .sort((a, b) => a.order - b.order)[0];
+if (nationalDexType) {
+  const captures = JSON.parse(await readFile(join(CACHE, 'captures', `${nationalDexType.id}.json`), 'utf8'));
+  for (const capture of captures) {
+    if (capture.pokemon.form === null) rowByNationalId[capture.pokemon.national_id] = capture.pokemon.id;
+  }
 }
 
 const FAMILY_BASE = 'legends_z_a';

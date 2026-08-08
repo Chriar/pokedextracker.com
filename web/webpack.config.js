@@ -47,6 +47,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({ template: './app/index.html', filename: 'index.html', inject: 'body' }),
     new Webpack.DefinePlugin({
+      'process.env.LOCAL_APP': JSON.stringify(process.env.LOCAL_APP || ''),
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV) || 'undefined',
       'process.env.VERSION': JSON.stringify(process.env.VERSION || 'development'),
     }),
