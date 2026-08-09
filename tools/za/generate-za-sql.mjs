@@ -148,17 +148,26 @@ if (missing.length > 0) {
 const lit = (v) => `'${String(v).replace(/'/g, "''")}'`;
 const arrayLit = (values) => `ARRAY[${values.map(lit).join(',')}]::text[]`;
 
+// Every species with scraped Z-A data gets location rows — including
+// pokemon obtainable outside the dex listings (post-dex legendaries like
+// Xerneas/Yveltal/Zygarde/Hoopa), so national/HOME dexes show their
+// locations too.
 const locationRows = [];
-const dlcSpecies = new Set([...lumiose, ...hyperspace].map((e) => e.national_id));
-for (const e of lumiose) {
-  const values = locationData[e.national_id]?.za;
-  if (values?.length) locationRows.push(`('legends_z_a', ${rowByNationalId[e.national_id]}, ${lit(values.join('; '))}, ${arrayLit(values)})`);
+const noRow = [];
+for (const [nationalId, data] of Object.entries(locationData)) {
+  const rowId = rowByNationalId[nationalId];
+  if (!rowId) {
+    noRow.push(nationalId);
+    continue;
+  }
+  const za = data.za || [];
+  const md = data.md || [];
+  if (za.length) locationRows.push(`('legends_z_a', ${rowId}, ${lit(za.join('; '))}, ${arrayLit(za)})`);
+  const combinedValues = [...za, ...md];
+  if (combinedValues.length) locationRows.push(`('legends_z_a_mega_dimension', ${rowId}, ${lit(combinedValues.join('; '))}, ${arrayLit(combinedValues)})`);
 }
-for (const nationalId of dlcSpecies) {
-  const za = locationData[nationalId]?.za || [];
-  const md = locationData[nationalId]?.md || [];
-  const values = [...za, ...md];
-  if (values.length) locationRows.push(`('legends_z_a_mega_dimension', ${rowByNationalId[nationalId]}, ${lit(values.join('; '))}, ${arrayLit(values)})`);
+if (noRow.length > 0) {
+  console.log(`  NOTE: no base-form pokemon row for ${noRow.length} species with Z-A locations: ${noRow.join(', ')}`);
 }
 if (locationRows.length > 0) {
   lines.push(`INSERT INTO locations (game_id, pokemon_id, value, "values") VALUES\n${locationRows.join(',\n')};`);

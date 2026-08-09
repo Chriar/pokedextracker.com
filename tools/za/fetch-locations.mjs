@@ -99,19 +99,30 @@ function parseLocations (page) {
 // --- collect species slugs from the two listing pages ---------------------
 
 const slugByNationalId = {};
+
+// Every species with a Gen-9 dex page — not just the Z-A dex listings.
+// Pokemon can be obtainable in Z-A without a dex entry (post-dex legendaries
+// like Xerneas/Yveltal/Zygarde/Hoopa), and their location rows live on the
+// same pages. The index's first species block is national numbering, so the
+// first occurrence of each slug carries its national id.
+const svIndex = await fetchPage('https://www.serebii.net/pokedex-sv/', 'pokedex-sv-index.shtml');
+const seenSlugs = new Set();
+for (const [, slug, num] of svIndex.matchAll(/<option value="\/pokedex-sv\/([a-z0-9.\-']+)\/?"[^>]*>\s*(\d+)/g)) {
+  if (seenSlugs.has(slug)) continue;
+  seenSlugs.add(slug);
+  slugByNationalId[parseInt(num, 10)] = slug;
+}
+
+// The Z-A dex listings double as a sanity source for slugs (and would catch
+// any species the index dropdown misses).
 for (const url of LISTINGS) {
   const page = await fetchPage(url, url.split('/').pop());
-  const entryRE = /<a href="\/pokedex-sv\/([a-z0-9.\-']+)\/?">(?:[^<]+)<br/g;
-  const imgRE = /\/pokemon\/small\/(\d+)(?:-\w+)?\.png/g;
-
-  // walk entries in order: each name link is preceded by its sprite img
   const entries = [...page.matchAll(/#\d{3,4}\s*<\/td>(.*?)(?=#\d{3,4}\s*<\/td>|<\/table>\s*<br)/gs)];
   for (const [, block] of entries) {
     const img = /\/pokemon\/small\/(\d+)(?:-\w+)?\.png/.exec(block);
     const link = /<a href="\/pokedex-sv\/([a-z0-9.\-']+)\/?">/.exec(block);
     if (img && link) slugByNationalId[parseInt(img[1], 10)] = link[1];
   }
-  void entryRE; void imgRE;
 }
 console.log(`species slugs: ${Object.keys(slugByNationalId).length}`);
 
@@ -129,10 +140,20 @@ await Promise.all(ids.map(async (nationalId) => {
   if (done % 50 === 0) console.log(`${done}/${ids.length}`);
 }));
 
-const missing = ids.filter((id) => !locations[id]);
-if (missing.length > 0) {
-  console.log(`WARNING: no Z-A locations parsed for ${missing.length} species: ${missing.slice(0, 15).join(', ')}${missing.length > 15 ? '…' : ''}`);
+// Most species legitimately have no Z-A data; only warn for species that are
+// actually in the Z-A dex listings.
+const dexListIds = new Set();
+for (const url of LISTINGS) {
+  const page = await fetchPage(url, url.split('/').pop());
+  for (const m of page.matchAll(/\/pokemon\/small\/(\d+)(?:-\w+)?\.png/g)) {
+    dexListIds.add(m[1].replace(/^0+/, ''));
+  }
 }
+const missing = ids.filter((id) => dexListIds.has(String(parseInt(id, 10))) && !locations[id]);
+if (missing.length > 0) {
+  console.log(`WARNING: no Z-A locations parsed for ${missing.length} dex-listed species: ${missing.slice(0, 15).join(', ')}${missing.length > 15 ? '…' : ''}`);
+}
+console.log(`species with Z-A location data: ${Object.keys(locations).length} (${Object.keys(locations).filter((id) => !dexListIds.has(String(parseInt(id, 10)))).length} outside the dex listings)`);
 
 await mkdir(DATA, { recursive: true });
 await writeFile(join(DATA, 'locations.json'), JSON.stringify(locations, null, 1));
