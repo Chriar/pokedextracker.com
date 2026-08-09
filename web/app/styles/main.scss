@@ -120,7 +120,8 @@ nav {
   .dropdown {
     @include flexbox();
 
-    &:hover {
+    &:hover,
+    &.open {
       > a {
         background-color: lighten($brand-primary, 10%);
       }

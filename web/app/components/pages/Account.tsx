@@ -4,9 +4,11 @@ import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
 
 import { Alert } from '../library/Alert';
+import { Config } from '../../../config';
 import { Footer } from '../library/Footer';
 import { Nav } from '../library/Nav';
 import { ReactGA } from '../../utils/analytics';
+import { exportLocalData, importLocalData } from '../../local/local-api';
 import { Reload } from '../library/Reload';
 import { friendCode3dsFormatter, friendCodeSwitchFormatter } from '../../utils/formatting';
 import { useSession } from '../../hooks/contexts/use-session';
@@ -25,6 +27,10 @@ export function Account () {
   const [passwordConfirm, setPasswordConfirm] = useState('');
   const [friendCode3ds, setFriendCode3ds] = useState(sessionUser?.friend_code_3ds || '');
   const [friendCodeSwitch, setFriendCodeSwitch] = useState(sessionUser?.friend_code_switch || '');
+  const [exported, setExported] = useState('');
+  const [importText, setImportText] = useState('');
+  const [backupMessage, setBackupMessage] = useState('');
+  const [backupError, setBackupError] = useState('');
 
   const updateUserMutation = useUpdateUser();
 
@@ -33,7 +39,7 @@ export function Account () {
   }, []);
 
   useEffect(() => {
-    if (!session) {
+    if (!session && !Config.LOCAL_MODE) {
       history.push('/login');
     }
   }, [session]);
@@ -80,6 +86,35 @@ export function Account () {
   };
 
   const handleChangePasswordClick = () => setIsEditingPassword((prev) => !prev);
+
+  const handleExportClick = () => {
+    setBackupError('');
+    setBackupMessage('');
+    const data = exportLocalData();
+    setExported(data);
+    navigator.clipboard?.writeText(data)
+    .then(() => setBackupMessage('Backup copied to clipboard! Paste it somewhere safe (notes, a file, cloud storage).'))
+    .catch(() => setBackupMessage('Backup shown below — select and copy it somewhere safe.'));
+  };
+
+  const handleImportClick = () => {
+    setBackupError('');
+    setBackupMessage('');
+    if (!importText.trim()) {
+      setBackupError('paste a backup into the box first');
+      return;
+    }
+    if (!window.confirm('Importing replaces ALL current dexes and caught progress on this device. Continue?')) {
+      return;
+    }
+    try {
+      const { dexes, captures } = importLocalData(importText);
+      setBackupMessage(`Imported ${dexes} dex${dexes === 1 ? '' : 'es'} and ${captures} caught Pokémon! Reloading...`);
+      setTimeout(() => window.location.reload(), 1200);
+    } catch (error) {
+      setBackupError(error instanceof Error ? error.message : 'import failed');
+    }
+  };
   const handlePasswordChange = (e: ChangeEvent<HTMLInputElement>) => setPassword(e.target.value);
   const handlePasswordConfirmChange = (e: ChangeEvent<HTMLInputElement>) => setPasswordConfirm(e.target.value);
   const handleFriendCode3dsChange = (e: ChangeEvent<HTMLInputElement>) => setFriendCode3ds(friendCode3dsFormatter(e.target.value));
@@ -94,17 +129,19 @@ export function Account () {
         <form className="form-column" onSubmit={handleSubmit}>
           <Alert message={error || updateUserMutation.error?.message} type="error" />
           <Alert message={updateUserMutation.isSuccess && 'Account settings saved!'} type="success" />
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <button
-              className="btn btn-inline btn-yellow"
-              onClick={handleChangePasswordClick}
-              type="button"
-            >
-              {isEditingPassword ? 'Cancel' : 'Change'}
-            </button>
-          </div>
-          {isEditingPassword &&
+          {!Config.LOCAL_MODE &&
+            <div className="form-group">
+              <label htmlFor="password">Password</label>
+              <button
+                className="btn btn-inline btn-yellow"
+                onClick={handleChangePasswordClick}
+                type="button"
+              >
+                {isEditingPassword ? 'Cancel' : 'Change'}
+              </button>
+            </div>
+          }
+          {!Config.LOCAL_MODE && isEditingPassword &&
             <div>
               <div className="form-group">
                 <input
@@ -171,6 +208,41 @@ export function Account () {
             {updateUserMutation.isLoading ? <span className="spinner"><FontAwesomeIcon icon={faCircleNotch} spin /></span> : null}
           </button>
         </form>
+        {Config.LOCAL_MODE &&
+          <form className="form-column" onSubmit={(e) => e.preventDefault()}>
+            <h1>Backup</h1>
+            <Alert message={backupError} type="error" />
+            <Alert message={backupMessage} type="success" />
+            <div className="form-group">
+              <label>Export</label>
+              <p className="form-note">Copies all your dexes and caught progress as text. Save it anywhere (notes, a file, cloud storage) — importing it on any device restores everything.</p>
+              <button className="btn btn-blue" onClick={handleExportClick} type="button">Export Data</button>
+            </div>
+            {exported &&
+              <div className="form-group">
+                <textarea
+                  className="form-control"
+                  onFocus={(e) => e.target.select()}
+                  readOnly
+                  rows={6}
+                  value={exported}
+                />
+              </div>
+            }
+            <div className="form-group">
+              <label htmlFor="import_backup">Import</label>
+              <textarea
+                className="form-control"
+                id="import_backup"
+                onChange={(e) => setImportText(e.target.value)}
+                placeholder="Paste a backup here"
+                rows={4}
+                value={importText}
+              />
+            </div>
+            <button className="btn btn-yellow" onClick={handleImportClick} type="button">Import Data</button>
+          </form>
+        }
       </div>
       <Footer />
     </div>

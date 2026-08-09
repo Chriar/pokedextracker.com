@@ -31,9 +31,11 @@ export function App () {
     <Router history={history}>
       <div className={`root ${isNightMode ? 'night-mode' : ''}`}>
         <Switch>
-          <Route component={Home} exact path="/" />
-          <Route component={Login} exact path="/login" />
-          <Route component={Register} exact path="/register" />
+          {/* The offline app is accountless: the landing page is your
+              profile, and login/register don't exist. */}
+          <Route component={Config.LOCAL_MODE ? ProfileRedirect : Home} exact path="/" />
+          {!Config.LOCAL_MODE && <Route component={Login} exact path="/login" />}
+          {!Config.LOCAL_MODE && <Route component={Register} exact path="/register" />}
           <Route component={Account} exact path="/account" />
           <Route component={ProfileRedirect} exact path="/profile" />
           <Route component={Profile} exact path="/u/:username" />

@@ -1,4 +1,7 @@
-import { createContext, useContext, useMemo } from 'react';
+import { createContext, useContext, useEffect, useMemo } from 'react';
+
+import { Config } from '../../../config';
+import { ensureLocalSession } from '../../local/local-api';
 import { tokenToUser } from '../../utils/state';
 import type { SetLocalStorageFn } from '../use-local-storage';
 import { useLocalStorage } from '../use-local-storage';
@@ -27,6 +30,14 @@ export const SessionProvider = ({ children }: Props) => {
   const [token, setToken] = useLocalStorage<string | null>('token', { defaultValue: null });
   const session = useMemo(() => tokenToUser(token), [token]);
   const { data: sessionUser } = useUser(session?.username);
+
+  // The offline app is accountless: create/load the local profile and sign
+  // in automatically.
+  useEffect(() => {
+    if (Config.LOCAL_MODE && !token) {
+      setToken(ensureLocalSession());
+    }
+  }, [token, setToken]);
 
   const contextValue = useMemo<SessionContextState>(() => ({
     session,

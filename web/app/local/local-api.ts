@@ -417,6 +417,43 @@ function createDex (db: DB, state: LocalState, payload: { title: string; slug: s
   return dex;
 }
 
+// --- accountless bootstrap + backup ---------------------------------------
+
+// The offline app has no accounts: on first launch a local profile is
+// created automatically and a session token is minted for it, so the UI is
+// always "signed in". Existing profiles keep their name.
+export function ensureLocalSession (): string {
+  const state = loadState();
+  ensureUser(state, 'trainer');
+  saveState(state);
+  return makeToken(state);
+}
+
+const BACKUP_VERSION = 1;
+
+export function exportLocalData (): string {
+  const state = loadState();
+  return JSON.stringify({ pokedextracker_backup: BACKUP_VERSION, exported: new Date().toISOString(), state }, null, 2);
+}
+
+export function importLocalData (json: string): { dexes: number; captures: number } {
+  let parsed;
+  try {
+    parsed = JSON.parse(json);
+  } catch {
+    throw new LocalAPIError('that does not look like valid backup data (not JSON)');
+  }
+  if (parsed?.pokedextracker_backup !== BACKUP_VERSION || !parsed.state?.user || !Array.isArray(parsed.state.dexes)) {
+    throw new LocalAPIError('that does not look like a Pokédex Tracker backup');
+  }
+  const state = parsed.state as LocalState;
+  saveState(state);
+  return {
+    dexes: state.dexes.length,
+    captures: Object.values(state.captures || {}).reduce((total, ids) => total + ids.length, 0),
+  };
+}
+
 // --- router ---------------------------------------------------------------
 
 export async function localAPI (method: string, path: string, payload?: any): Promise<any> {
