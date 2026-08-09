@@ -1,0 +1,83 @@
+{
+  "name": "pokedextracker.com",
+  "version": "2.9.0",
+  "description": "A website to track your completion of a Living Pokedex",
+  "main": "app/index.tsx",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "npm run build:bundle && npm run build:public && npm run build:version",
+    "build:bundle": "rm -rf build && webpack",
+    "build:public": "mkdir -p build && cp -R public/* build/",
+    "build:version": "mkdir -p build && date > build/version",
+    "deploy": "./scripts/deploy.sh",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx --max-warnings 0 .",
+    "lint:all": "yarn lint && yarn lint:types",
+    "lint:types": "tsc --noEmit",
+    "start": "webpack serve"
+  },
+  "dependencies": {
+    "@babel/core": "^7.22.6",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-optional-chaining": "^7.21.0",
+    "@babel/preset-env": "^7.22.4",
+    "@babel/preset-react": "^7.22.5",
+    "@babel/preset-typescript": "^7.22.5",
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-brands-svg-icons": "^5.12.1",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@rollbar/react": "^0.11.2",
+    "@tanstack/react-query": "^4.29.19",
+    "@types/lodash": "^4.14.195",
+    "@types/react-dom": "^18.2.6",
+    "@types/react-modal": "^3.16.0",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/slug": "^5.0.3",
+    "babel-loader": "^9.1.2",
+    "classnames": "^2.3.2",
+    "core-js": "^3.30.2",
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.1",
+    "lodash": "^4.17.21",
+    "qs": "^6.11.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-ga": "^3.3.1",
+    "react-modal": "^3.16.1",
+    "react-router-dom": "^5.3.4",
+    "rollbar": "^2.26.2",
+    "sass": "^1.62.1",
+    "sass-loader": "^13.3.1",
+    "slug": "^2.1.1",
+    "style-loader": "^3.3.3",
+    "typescript": "5.0.4",
+    "webpack": "^5.85.0",
+    "webpack-cli": "^5.1.1",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^7",
+    "@capacitor/assets": "^3.0.5",
+    "@capacitor/cli": "^7",
+    "@capacitor/core": "^7",
+    "@tanstack/eslint-plugin-query": "^4.29.9",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
+    "eslint": "^8.44.0",
+    "eslint-plugin-react": "^7.32.2",
+    "webpack-dev-server": "^4.15.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robinjoseph08/pokedextracker.com.git"
+  },
+  "author": "Robin Joseph <robin.joseph@me.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robinjoseph08/pokedextracker.com/issues"
+  },
+  "homepage": "https://github.com/robinjoseph08/pokedextracker.com#readme",
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}

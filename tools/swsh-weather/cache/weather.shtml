@@ -1,0 +1,1908 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>Pokémon Sword & Shield - Weather</title>
+
+<script data-cfasync="false">
+  window.ramp = window.ramp || {};
+  window.ramp.que = window.ramp.que || [];
+</script>
+
+<meta http-equiv="imagetoolbar" CONTENT="no">
+	<link rel="stylesheet" type="text/css" href="/style/layout.css" />
+<meta name="viewport" content="width=device-width,initial-scale=1" id="viewport-meta">
+
+<!-- GDPR Compliancy -->
+<style>
+body {
+	--cmpBgColor: #507C36;
+	--cmpTextColor: #000000;
+	--cmpLinkColor: #ffffff;
+	--cmpPurposesColor: #000000;
+	--cmpBrandColor: #000000;
+	--cmpLogo: url('https://www.serebii.net/extralogo.png');
+}
+</style>
+<!-- GDPR Compliancy -->
+
+<link rel="search" href="/serebii-opensearch.xml" type="application/opensearchdescription+xml" title="Serebii Open Search" />
+<link rel="shortcut icon" href="/favicon.ico" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128947957-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-128947957-1');
+</script>
+<!-- Place the below code anywhere you like in the <head> (higher is better) -->
+
+
+
+
+<meta name="keywords" content="Serebii, Pokemon, Pokémon, New, Generation Eight, Gen VII, Gen 8, Shield, Sword, Pokémon Camp" />
+<link rel="stylesheet" href="/style/tablenew.css" type="text/css" media="screen" />
+<link rel="canonical" href="https://www.serebii.net/swordshield/weather.shtml" />
+<meta property="og:image" content="https://www.serebii.net/swordshield/title.png">
+<meta property="og:title" content="Weather  - Pokémon Sword & Shield">
+<meta property="og:description" content="Weather mechanics introduced in Pokémon Sword & Shield for Nintendo Switch. Lists all mechanics and features">
+<meta name="description" content="Weather mechanics introduced in Pokémon Sword & Shield for Nintendo Switch. Lists all mechanics and features">
+<meta name="twitter:card" content="summary_large_image">
+<style type="text/css">h1 {font-size:14pt;text-decoration:underline;}h2 {font-size:12pt;font-weight:bold;margin-bottom:0px;} </style>
+
+
+
+</head>
+<body>
+<script type="text/javascript">
+	var viewport_meta = document.getElementById('viewport-meta');
+	var viewport_timer;
+
+	// these body*Class are reused in the lbar mobile menu
+	function bodyAddClass(className){
+		if(document.body) document.body.classList.add(className);
+	}
+	function bodyRemoveClass(className){
+		if(document.body) document.body.className = document.body.className.replace(className,"");
+	}
+
+	function viewport_set() {
+		// Define our viewport meta values
+		var viewports = {
+			default: viewport_meta.getAttribute('content'),
+			mobileL: 'width=device-width,initial-scale=0.75',
+			mobileM: 'width=device-width,initial-scale=0.5',
+			mobileS: 'width=device-width,initial-scale=0.4'
+		};
+
+		// Change the viewport value based on screen.width
+		if(screen.width < 370){
+			viewport_meta.setAttribute('content', viewports.mobileS);
+			bodyAddClass("nav_mobileS");
+			bodyRemoveClass("nav_mobileM");
+			bodyRemoveClass("nav_mobileL");
+		} else if(screen.width < 505){
+			viewport_meta.setAttribute('content', viewports.mobileM);
+			bodyRemoveClass("nav_mobileS");
+			bodyAddClass("nav_mobileM");
+			bodyRemoveClass("nav_mobileL");
+		} else if (screen.width < 760){
+			viewport_meta.setAttribute('content', viewports.mobileL);
+			bodyRemoveClass("nav_mobileS");
+			bodyRemoveClass("nav_mobileM");
+			bodyAddClass("nav_mobileL");
+		} else{
+			viewport_meta.setAttribute('content', viewports.default);
+			bodyRemoveClass("nav_mobileS");
+			bodyRemoveClass("nav_mobileM");
+			bodyRemoveClass("nav_mobileL");
+		}
+	}
+
+	// Set the correct viewport value on page load
+	viewport_set();
+
+	/* attach listener to (delay) set the correct viewport after device orientation change or resize. also onload so the nav_mobile* class gets added to body AFTER <body> has loaded */
+	if(window.addEventListener){
+		window.addEventListener('load', viewport_set);
+		window.addEventListener('resize', function(){
+			clearTimeout(viewport_timer);
+			viewport_timer = setTimeout(viewport_set, 100);
+		})
+	} else{
+		window.attachEvent('onload', viewport_set)
+		window.attachEvent('onresize', function(){
+			clearTimeout(viewport_timer);
+			viewport_timer = setTimeout(viewport_set, 100);
+		})
+	}
+
+</script>
+
+
+<header id="header">
+	<div class="banner">
+		<a href="/"><img src="/Banner.jpg" alt="Serebii.net Header" style="height:139px"></a>
+	</div>
+
+	<nav class="quicklinks">
+		<ul>
+			<li><b>Quick Links</b></li>
+			<li><a href="/index2.shtml">Home</a></li>
+			<li><a href="https://forums.serebii.net/" target="blank">Forums</a></li>
+			<li><a href="mailto:webmaster@serebii.net">Contact</a></li>
+			<li><a href="/discord.shtml">Discord</a></li>
+			<li><a href="/pokemon">Pokédex Hub</a></li>
+			<li><a href="/pokedex-sv">Scarlet & Violet Pokédex</a></li>
+			<li><a href="/pokedex-champions">Champions Pokédex</a></li>
+			<li><a href="/pokearth">Pokéarth</a></li>
+
+			<li class="search">
+				<form id="searchbox_018410473690156091934:6gahkiyodbi" action="/search.shtml" style="margin:0px;">
+					<input type="hidden" name="cx" value="018410473690156091934:6gahkiyodbi" />
+					<input type="hidden" name="cof" value="FORID:11" />
+					<input name="q" type="text" size="20" />
+					<input type="submit" name="sa" value="Search" />
+				</form>
+				<script type="text/javascript" src="//www.google.com/coop/cse/brand?form=searchbox_018410473690156091934%3A6gahkiyodbi"></script>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+
+<div id="wrapper">
+
+<ul id="tbar_sticky">
+	<li>
+		<a href="#lbar" class="navheader" id="tbar_lbar_open"><img src="/hidden/2019-04/burger.svg"></a>
+	</li>
+	<li>
+		<form id="searchbox_018410473690156091934:6gahkiyodbi" action="/search.shtml" style="margin:0px;">
+			<input type="hidden" name="cx" value="018410473690156091934:6gahkiyodbi" />
+			<input type="hidden" name="cof" value="FORID:11" />
+			<input name="q" type="search" placeholder="Search Serebii.net..." />
+		</form>
+	</li>
+	<li>
+		<a href="#rbar" class="navheader" id="tbar_rbar_open" style="padding-right:20px"><img src="/hidden/2019-04/burger.svg"></a>
+	</li>
+</ul>
+<div id="tbar_backdrop"></div>
+
+<nav id="lbar">
+	<ul id="lbar_ul">
+		<li>
+			<a href="/" class="navheader">Databases</a>
+			<ul>
+				<li><a href="/index2.shtml">News</a>
+				<li><a href="/archive.shtml">Archived news</a></li>
+				<li><a href="/pokemon/"><b>Pokédex</b></a></li>
+				<li><a href="/pokedex/">-Red/Blue Pokédex</a></li>
+				<li><a href="/pokedex-gs/">-Gold/Silver Pokédex</a></li>
+				<li><a href="/pokedex-rs/">-Ruby/Sapphire Pokédex</a></li>
+				<li><a href="/pokedex-dp/">-Diamond/Pearl Pokédex</a></li>
+				<li><a href="/pokedex-bw/">-Black/White Pokédex</a></li>
+				<li><a href="/pokedex-xy/">-X & Y Pokédex</a></li>
+				<li><a href="/pokedex-sm/">-Sun & Moon Pokédex</a></li>
+				<li><a href="/pokedex-sm/">-Let's Go Pokédex</a></li>
+				<li><a href="/pokedex-swsh/">-Sword & Shield Pokédex</a></li>
+				<li><a href="/pokedex-swsh/">-BDSP Pokédex</a></li>
+				<li><a href="/pokedex-swsh/">-Legends: Arceus Pokédex</a></li>
+				<li><a href="/pokemongo/pokemon/">-GO Pokédex</a></li>
+				<li><a href="/pokedex-sv/">-Scarlet & Violet Pokédex</a></li>
+				<li><a href="/pokedex-sv/">-Legends: Z-A Pokédex</a></li>
+				<li><a href="/pokedex-champions/">-Champions Pokédex</a></li>
+
+				<li><strong>Attackdex</strong></li>
+				<li><a href="/attackdex-rby/">-Gen 1 Attackdex</a></li>
+				<li><a href="/attackdex-gs/">-Gen 2 Attackdex</a></li>
+				<li><a href="/attackdex/">-Gen 3 Attackdex</a></li>
+				<li><a href="/attackdex-dp/">-Gen 4 Attackdex</a></li>
+				<li><a href="/attackdex-bw/">-Gen 5 Attackdex</a></li>
+				<li><a href="/attackdex-xy/">-Gen 6 Attackdex</a></li>
+				<li><a href="/attackdex-sm/">-Gen 7 Attackdex</a></li>
+				<li><a href="/attackdex-swsh/">-Gen 8 Attackdex</a></li>
+				<li><a href="/attackdex-sv/">-Gen 9 Attackdex</a></li>
+				<li><a href="/attackdex-champions/">-Champions Attackdex</a></li>
+				<li><a href="/itemdex/">ItemDex</a></li>
+				<li><a href="/pokearth/">Pokéarth</a></li>
+				<li><a href="/abilitydex/">Abilitydex</a></li>
+				<li><a href="/spindex/">Spin-Off Pokédex</a></li>
+				<li><a href="/spindex-dp/">Spin-Off Pokédex DP</a></li>
+				<li><a href="/spindex-bw/">Spin-Off Pokédex BW</a></li>
+				<li><a href="/card/dex/">Cardex</a></li>
+				<li><a href="/movies/dex/">Cinematic Pokédex</a></li>
+				<li><a href="/games/mechanics.shtml">Game Mechanics</a></li>
+				<li><a href="/games/iv-calcsv.shtml">-Scarlet/Violet IV Calc.</a></li>
+				<li><a href="/potw-champions">Pokémon of the Week</a></li>
+				<li><a href="/potw-champions/">-Champions</a></li>
+				<li><a href="/potw-sv/">-9th Gen</a></li>
+				<li><a href="/potw-swsh/">-8th Gen</a></li>
+				<li><a href="/potw-sm/">-7th Gen</a></li>
+				<li><a href="/pokemon/timeline.shtml">Pokémon Timeline</a></li>
+				<li><a href="/pokemoncenter/">Pokémon Centers</a></li>
+				<li><a href="/playpokemon">Pokémon Championship Series</a></li>
+				<li><a href="/pokemonxp/">PokémonXP</a></li>
+
+				<li><a href="/music/projectvoltage">Hatsune Miku Project Voltage</a></li>
+				<li><a href="/museums/">Pokémon in Museums & Exhibitions</a></li>
+				<li><a href="/pokemon/vangoghmuseum/">-Pokémon x Van Gogh</a></li>
+				<li><a href="/pokemonday/">Pokémon Day</a></li>
+				<li><a href="/presentations">Pokémon Presentations</a></li>
+				<li><a href="/lego/">LEGO Pokémon</a></li>
+				<li><a href="/pokemonshirts/">Pokémon Shirts</a></li>
+				<li><a href="/themeparks/">Theme Parks</a></li>
+				<li><a href="https://forums.serebii.net" target="blank">Forums</a></li>
+				<li><a href="/discord.shtml">Discord Chat</a></li>		
+				<li><a href="/games/currentevents.shtml">Current & Upcoming Events</a></li>
+				<li><a href="/events">Event Database</a></li>
+				<li><a href="/scarletviolet/pokemon.shtml">9th Generation Pokémon</a></li>
+				<li><a href="/scarletviolet/dlc-pokemon.shtml">-New Pokémon in DLC</a></li>
+				<li><a href="/scarletviolet/paldeanforms.shtml">-Paldean Form Pokémon</a></li>
+
+			</ul>
+		</li>
+
+
+		<li>
+			<a href="/anime/" class="navheader">Anime & TV</a>
+			<ul>
+				<li><a href="/anime/epiguide/">Episode Listings & Pictures</a></li>
+				<li><a href="/anime/dex/">AniméDex</a></li>
+				<li><a href="/anime/characters/">Character Bios</a></li>
+				<li><a href="/anime/epiguide/indigo/">The Indigo League</a></li>
+				<li><a href="/anime/epiguide/orange/">The Orange League</a></li>
+				<li><a href="/anime/epiguide/johto/">The Johto Saga</a></li>
+				<li><a href="/anime/epiguide/houen/">The Saga in Hoenn!</a></li>
+				<li><a href="/anime/epiguide/kanto/">Kanto Battle Frontier Saga!</a></li>
+				<li><a href="/anime/epiguide/shinou/">The Sinnoh Saga!</a></li>
+				<li><a href="/anime/epiguide/bestwishes/">Best Wishes - Unova Saga</a></li>
+				<li><a href="/anime/epiguide/xy/">XY - Kalos Saga</a></li>
+				<li><a href="/anime/epiguide/sunmoon/">Sun & Moon - Alola Saga</a></li>
+				<li><a href="/anime/epiguide/pokemon/">Pokémon Journeys - Galar Saga</a></li>
+				<li><a href="/anime/epiguide/pokemonmaster/">Pokémon Aim To Be A Pokémon Master</a></li>
+				<li><a href="/anime/epiguide/pokemon2023/">Pokémon Horizons - Paldea Saga</a></li>
+				<li><a href="/anime/epiguide/chronicles/">Pokémon Chronicles</a></li>	
+				<li><a href="/anime/epiguide/specials/">The Special Episodes</a></li>
+				<li><a href="/anime/banned.shtml">The Banned Episodes</a></li>
+				<li><a href="/anime/shiny/">Shiny Pokémon</a></li>
+<li><b>Other Web Series</b></li>
+				<li><a href="/anime/epiguide/generations/">Pokémon Generations</a></li>
+				<li><a href="/anime/epiguide/twilightwings/">Pokémon Twilight Wings</a></li>
+				<li><a href="/anime/epiguide/evolutions/">Pokémon Evolutions</a></li>
+				<li><a href="/anime/hisuiansnow/">Pokémon: Hisuian Snow</a></li>
+				<li><a href="/anime/paldeanwinds/">Pokémon: Paldean Winds</a></li>
+				<li><a href="/anime/poketoon/">PokéToon</a></li>
+				<li><a href="/anime/other/pathtothepeak/">Path to the Peak</a></li>
+				<li><a href="/anime/other/pokeminutes/">PokéMinutes</a></li>
+				<li><a href="/anime/other/pokevideodex/">PokéVideoDex</a></li>
+				<li><a href="/anime/other/goodmorningwithpokemon/">Good Morning with Pokémon</a></li>
+				<li><a href="/anime/other/">Other Animations</a></li>
+				<li><b>Other Series</b></li>
+				<li><a href="/pokemonconcierge/">Pokémon Concierge</a></li>
+				<li><a href="/pokemontales/">Pokémon Tales: The Misadventures of Sirfetch'd & Pichu</a></li>
+
+				<li><b>Live Action</b></li>
+				<li><a href="/poketsume/">PokéTsume</a></li>
+
+
+			</ul>
+		</li>
+
+		<li>
+			<a href="/games/" class="navheader">Video Games</a>
+			<ul>
+				<li><a href="/pokemon/generation10.shtml"><b>Gen X</b></li>
+				<li><a href="/windswaves/">Winds & Waves</a></li>
+
+				<li><a href="/pokemon/generation9.shtml"><b>Gen IX</b></a></li>
+				<li><a href="/scarletviolet/">Scarlet & Violet</a></li>
+				<li><a href="/legendsz-a/">Legends: Z-A</a></li>
+				<li><a href="/pokemonchampions/">Pokémon Champions</a></li>
+				<li><a href="/pokemonpokopia/">Pokémon Pokopia</a></li>
+				<li><a href="/pokemonfriends/">Pokémon Friends</a></li>
+				<li><a href="/pokemongo/">Pokémon GO</a></li>
+				<li><a href="/cafemix/">Pokémon Café ReMix</a></li>
+				<li><a href="/pokemonmasters/">Pokémon Masters EX</a></li>
+				<li><a href="/pokemonunite/">Pokémon UNITE</a></li>
+				<li><a href="/pokemonsleep/">Pokémon Sleep</a></li>
+				<li><a href="/detectivepikachureturns/">Detective Pikachu Returns</a></li>
+				<li><a href="/tcgpocket/">Pokémon TCG Pocket</a></li>
+
+				<li><a href="/pokemon/generation8.shtml"><b>Gen VIII</b></a></li>
+				<li><a href="/swordshield/">Sword & Shield</a></li>
+				<li><a href="/brilliantdiamondshiningpearl/">Brilliant Diamond & Shining Pearl</a></li>
+				<li><a href="/legendsarceus/">Pokémon Legends: Arceus</a></li>
+				<li><a href="/pokemonhome/">Pokémon HOME</a></li>
+				<li><a href="/pokemongo/">Pokémon GO</a></li>
+				<li><a href="/pokemonmasters/">Pokémon Masters EX</a></li>
+				<li><a href="/dungeonrescueteamdx/">Pokémon Mystery Dungeon Rescue Team DX</a></li>
+				<li><a href="/pokemonsmile/">Pokémon Smile</a></li>
+				<li><a href="/cafemix/">Pokémon Café ReMix</a></li>
+				<li><a href="/newpokemonsnap/">New Pokémon Snap</a></li>
+				<li><a href="/pokemonunite/">Pokémon UNITE</a></li>
+				<li><a href="/tcglive/">Pokémon TCG Live</a></li>
+
+				<li><a href="/pokemon/generation7.shtml"><b>Gen VII</b></a></li>
+				<li><a href="/sunmoon/">Sun & Moon</a></li>
+				<li><a href="/ultrasunultramoon/">Ultra Sun & Ultra Moon</a></li>
+				<li><a href="/letsgopikachueevee/">Let's Go, Pikachu! & Let's Go, Eevee!</a></li>
+				<li><a href="/pokemongo/">Pokémon GO</a></li>
+				<li><a href="/magikarpjump/">Pokémon: Magikarp Jump</a></li>
+				<li><a href="/rumblerush/">Pokémon Rumble Rush</a></li>
+				<li><a href="/pokkendx/">Pokkén Tournament DX</a></li>
+				<li><a href="/detective/">Detective Pikachu</a></li>
+				<li><a href="/quest/">Pokémon Quest</a></li>
+				<li><a href="/smashbrosultimate/">Super Smash Bros. Ultimate</a></li>
+				<li><a href="/pokemon/generation6.shtml"><b>Gen VI</b></a></li>
+				<li><a href="/xy/">X & Y</a></li>
+				<li><a href="/omegarubyalphasapphire/">Omega Ruby & Alpha Sapphire</a></li>
+				<li><a href="/bank/">Pokémon Bank</a></li>
+				<li><a href="/battletrozei/">Pokémon Battle TrozeiPokémon Link: Battle</a></li>
+				<li><a href="/artacademy/">Pokémon Art Academy</a></li>
+				<li><a href="/bandofthieves/">The Band of Thieves & 1000 Pokémon</a></li>
+				<li><a href="/shuffle/">Pokémon Shuffle</a></li>
+				<li><a href="/rumbleworld/">Pokémon Rumble World</a></li>
+				<li><a href="/supermysterydungeon/">Pokémon Super Mystery Dungeon</a></li>
+				<li><a href="/picross/">Pokémon Picross</a></li>
+				<li><a href="/detective/">Detective Pikachu</a></li>
+				<li><a href="/pokken/">Pokkén Tournament</a></li>
+				<li><a href="/duel/">Pokémon Duel</a></li>
+				<li><a href="/smashbros3dswiiu/">Smash Bros for 3DS/Wii U</a></li>
+				<li><a href="/games/badge/">Nintendo Badge Arcade</a></li>
+				<li><a href="/pokemon/generation5.shtml"><b>Gen V</b></a></li>
+				<li><a href="/blackwhite/">Black & White</a></li>
+				<li><a href="/black2white2/">Black 2 & White 2</a></li>
+				<li><a href="/dreamradar/">Pokémon Dream Radar</a></li>
+				<li><a href="/trettalab/">Pokémon Tretta Lab</a></li>
+				<li><a href="/rumbleu/">Pokémon Rumble U</a></li>
+				<li><a href="/dungeoninfinity/">Mystery Dungeon: Gates to Infinity</a></li>
+				<li><a href="/conquest/">Pokémon Conquest</a></li>
+				<li><a href="/pokepark2/">PokéPark 2: Wonders Beyond</a></li>
+				<li><a href="/rumble2/">Pokémon Rumble Blast</a></li>
+				<li><a href="/pokedex3d/">Pokédex 3D</a></li>
+				<li><a href="/pokedex3dpro/">Pokédex 3D Pro</a></li>
+				<li><a href="/typingds/">Learn With Pokémon: Typing Adventure</a></li>
+				<li><a href="/card/howtoplayds/">TCG How to Play DS</a></li>
+				<li><a href="/pokedexios/">Pokédex for iOS</a></li>
+				<li><a href="/pokemon/generation4.shtml"><b>Gen IV</b></a></li>
+				<li><a href="/diamondpearl/">Diamond & Pearl</a></li>
+				<li><a href="/platinum/">Platinum</a></li>
+				<li><a href="/heartgoldsoulsilver/">Heart Gold & Soul Silver</a></li>
+				<li><a href="/ranger3/">Pokémon Ranger: Guardian Signs</a></li>
+				<li><a href="/melee/">Pokémon Rumble</a></li>
+				<li><a href="/dungeon3/">Mystery Dungeon: Blazing, Stormy & Light Adventure Squad</a></li>
+				<li><a href="/pokepark/">PokéPark Wii - Pikachu's  Adventure</a></li>
+				<li><a href="/battle/">Pokémon Battle Revolution</a></li>
+				<li><a href="/dungeonsky/">Mystery Dungeon - Explorers of Sky</a></li>
+				<li><a href="/ranger2/">Pokémon Ranger: Shadows of Almia</a></li>
+				<li><a href="/dungeon2/">Mystery Dungeon - Explorers of Time & Darkness</a></li>
+				<li><a href="/ranch/">My Pokémon Ranch</a></li>
+				<li><a href="/ssbb/">Smash Bros Brawl</a></li>
+				<li><a href="/pokemon/generation3.shtml"><b>Gen III</b></a></li>
+				<li><a href="/rubysapphire/">Ruby & Sapphire</a></li>
+				<li><a href="/fireredleafgreen/">Fire Red & Leaf Green</a></li>
+				<li><a href="/emerald/">Emerald</a></li>
+				<li><a href="/colosseum/">Pokémon Colosseum</a></li>
+				<li><a href="/xd/">Pokémon XD: Gale of Darkness</a></li>
+				<li><a href="/dash/">Pokémon Dash</a></li>
+				<li><a href="/pokemon_channel/">Pokémon Channel</a></li>
+				<li><a href="/pokemon_box/">Pokémon Box: RS</a></li>
+				<li><a href="/pinball_rs/">Pokémon Pinball RS</a></li>
+				<li><a href="/ranger/">Pokémon Ranger</a></li>
+				<li><a href="/mysteriousdungeon/">Mystery Dungeon Red & Blue</a></li>
+				<li><a href="/torouze/">PokémonTrozei</a></li>
+				<li><a href="/pikachu/">Pikachu DS Tech Demo</a></li>
+				<li><a href="/pokeparkfish/">PokéPark Fishing Rally</a></li>
+				<li><a href="/e-reader/">The E-Reader</a></li>
+				<li><a href="/pokemate/">PokéMate</a></li>
+				<li><a href="/pokemon/generation2.shtml"><b>Gen II</b></a></li>
+				<li><a href="/gs/">Gold/Silver</a></li>
+				<li><a href="/crystal/">Crystal</a></li>
+				<li><a href="/stadium2/">Pokémon Stadium 2</a></li>
+				<li><a href="/puzzlechallenge/">Pokémon Puzzle Challenge</a></li>
+				<li><a href="/mini/">Pokémon Mini</a></li>
+				<li><a href="/smash_bros_2/">Super Smash Bros. Melee</a></li>
+				<li><a href="/pokemon/generation1.shtml"><b>Gen I</b></a></li>
+				<li><a href="/rb/">Red, Blue & Green</a></li>
+				<li><a href="/yellow/">Yellow</a></li>
+				<li><a href="/puzzleleague/">Pokémon Puzzle League</a></li>
+				<li><a href="/snap/">Pokémon Snap</a></li>
+				<li><a href="/pinball/">Pokémon Pinball</a></li>
+				<li><a href="/stadiumjp/">Pokémon Stadium (Japanese)</a></li>
+				<li><a href="/stadium/">Pokémon Stadium</a></li>
+				<li><a href="/tradingcardgamegb/">Pokémon Trading Card Game GB</a></li>
+				<li><a href="/smash_bros/">Super Smash Bros.</a></li>
+
+				<li><strong>Miscellaneous</strong></li>
+				<li><a href="/games/mechanics.shtml">Game Mechanics</a></li>
+				<li><a href="/playpokemon">Pokémon Championship Series</a></li>
+				<li><a href="/games/others.shtml">In Other Games</a></li>
+				<li><a href="/games/virtualconsole.shtml">Virtual Console</a></li>
+				<li><a href="/games/consoles.shtml">Special Edition Consoles</a></li>
+				<li><a href="/games/themes.shtml">Pokémon 3DS Themes</a></li>
+				<li><a href="/apps">Smartphone & Tablet Apps</a></li>
+				<li><a href="/virtualpet">Virtual Pets</a></li>
+				<li><a href="/amiibo">amiibo</a></li>
+				<li><a href="/nintendoswitchonline/">Nintendo Switch Online & Icons</a></li>
+				<li><strong>Board Game</strong></li>
+				<li><a href="/pokemongoita">Pokémon Goita</a></li>
+				<li><strong>Arcade</strong></li>
+				<li><a href="/frienda">Pokémon FRIENDA</a></li>
+			</ul>
+		</li>
+
+		<li>
+			<a href="/manga/" class="navheader">Manga</a>
+			<ul>
+				<li><a href="/manga/">General Information</a>
+				<li><a href="/manga/dex">MangaDex</a></li>
+				<li><a href="/manga/characters">Character BIOs</a></li>
+				<li><a href="/manga/characters-new">Detailed BIOs</a></li>
+				<li><a href="/manga/chapter.shtml">Chapter Guides</a></li>
+				<li><a href="/manga/volume.shtml">Volume Guides</a></li>
+				<li><a href="/manga/rby/">RBG Series</a></li>
+				<li><a href="/manga/yellow/">Yellow Series</a></li>
+				<li><a href="/manga/gsc/">GSC Series</a></li>
+				<li><a href="/manga/rs/">RS Series</a></li>
+				<li><a href="/manga/frlg/">FRLG Series</a></li>
+				<li><a href="/manga/bf/">Emerald Series</a></li>
+				<li><a href="/manga/dp/">DP Series</a></li>
+				<li><a href="/manga/pt/">Platinum Series</a></li>
+				<li><a href="/manga/hgss/">HGSS Series</a></li>
+				<li><a href="/manga/bw/">BW Series</a></li>
+				<li><a href="/manga/b2w2/">B2W2 Series</a></li>
+				<li><a href="/manga/xy/">XY Series</a></li>
+				<li><a href="/manga/oras/">ORAS Series</a></li>
+				<li><a href="/manga/sunmoon/">SM Series</a></li>
+			</ul>
+		</li>
+
+		<li>
+			<a href="/movies/" class="navheader">Movies</a>
+			<ul>
+				<li><strong>Anime</strong></li>
+				<li><a href="/movies/mewtwo/origin/">The Origin of Mewtwo</a></li>
+				<li><a href="/movies/mewtwo/">Mewtwo Strikes Back</a></li>
+				<li><a href="/movies/lugia/">The Power of One</a></li>
+				<li><a href="/movies/entei/">Spell Of The Unown</a></li>
+				<li><a href="/anime/epiguide/specials/002.shtml">Mewtwo Returns</a></li>
+				<li><a href="/movies/serebii/">Celebi: Voice of the Forest</a></li>
+				<li><a href="/movies/latias_latios/">Pokémon Heroes</a></li>
+				<li><a href="/movies/jirachi/">Jirachi - Wish Maker</a></li>
+				<li><a href="/movies/deoxys/">Destiny Deoxys!</a></li>
+				<li><a href="/movies/mew/">Lucario and the Mystery of Mew!</a></li>
+				<li><a href="/movies/kyogre/">Pokémon Ranger & The Temple of the Sea!</a></li>
+				<li><a href="/movies/dp/">The Rise of Darkrai!</a></li>
+				<li><a href="/movies/giratina/">Giratina & The Sky Warrior!</a></li>
+				<li><a href="/movies/arceus/">Arceus and the Jewel of Life</a></li>
+				<li><a href="/movies/celebi/">Zoroark - Master of Illusions</a></li>
+				<li><a href="/movies/victini/">Black: Victini & ReshiramWhite: Victini & Zekrom</a></li>
+				<li><a href="/movies/kyurem/">Kyurem VS The Sword of Justice</a></li>
+				<li><a href="/movies/meloetta/">-Meloetta's Midnight Serenade</a></li>
+				<li><a href="/movies/genesect/">Genesect and the Legend Awakened</a></li>
+				<li><a href="/movies/xy/">Diancie & The Cocoon of Destruction</a></li>
+				<li><a href="/movies/hoopa/">Hoopa & The Clash of Ages</a></li>
+				<li><a href="/movies/volcanion/">Volcanion and the Mechanical Marvel</a></li>
+				<li><a href="/movies/pokemon20/">Pokémon I Choose You!</a></li>
+				<li><a href="/movies/thepowerofus/">Pokémon The Power of Us</a></li>
+				<li><a href="/movies/mewtwoevolution/">Mewtwo Strikes Back Evolution</a></li>
+				<li><a href="/movies/secretsofthejungle/">Secrets of the Jungle</a></li>
+				<li><strong>Live Action</strong></li>
+				<li><a href="/movies/detectivepikachu/">Pokémon Detective Pikachu</a></li>
+			</ul>
+		</li>
+
+		<li>
+			<a href="/movies/" class="navheader">Pikachu Shorts</a>
+			<ul>
+				<li><a href="/movies/pikachu1/">Pikachu's Summer Vacation</a></li>
+				<li><a href="/movies/pikachu2/">Pikachu's Rescue Adventure</a></li>
+				<li><a href="/movies/pikachu3/">Pikachu And Pichu</a></li>
+				<li><a href="/movies/pikachu4/">Pikachu's PikaBoo</a></li>
+				<li><a href="/movies/pikachu5/">Camp Pikachu!</a></li>
+				<li><a href="/movies/pikachu6/">Gotta Dance!!</a></li>
+				<li><a href="/movies/pikachu7/">Pikachu's Summer Festival!</a></li>
+				<li><a href="/movies/pikachu8/">Pikachu's Ghost Festival!</a></li>
+				<li><a href="/movies/pikachu9/">Pikachu's Island Adventure!</a></li>
+				<li><a href="/movies/pikachu10/">Pikachu's Exploration Club</a></li>
+				<li><a href="/movies/pikachu11/">Pikachu's Great Ice Adventure</a></li>
+				<li><a href="/movies/pikachu12/">Pikachu's Sparkling Search</a></li>
+				<li><a href="/movies/pikachu13/">Pikachu's Really Mysterious Adventure</a></li>
+				<li><a href="/movies/eevee/">Eevee & Friends</a></li>
+				<li><a href="/movies/klefki/">Pikachu, What's This Key?</a></li>
+				<li><a href="/movies/pikachumusic/">Pikachu & The Pokémon Music Squad</a></li>
+			</ul>
+		</li>
+
+		<li>
+			<a href="/card/" class="navheader">Trading Cards</a>
+			<ul>
+				<li><a href="/tcglive/">Pokémon TCG Live</a></li>
+				<li><a href="/card/dex/">Cardex</a></li>
+				<li><a href="/card/dex/extra">-Extra Pokémon Types</a></li>
+				<li><a href="/card/dex/trainers">Trainer Cards</a></li>
+				<li><a href="/card/dex/energy">Energy Cards</a></li>
+				<li><a href="/card/dex/extra/altart.shtml">Alternate Art Cards</a></li>
+				<li><a href="/card/raidbattles">Raid Battles</a></li>
+				<li><a href="/card/classic/">Pokémon TCG Classic</a></li>
+				<li><a href="/card/english.shtml"><b>English Sets</b></a></li>
+				<li><a href="/card/deltareign/">-Delta Reign</a></li>
+				<li><a href="/card/30thcelebration/">-30th Celebration</a></li>
+				<li><a href="/card/pitchblack/">-Pitch Black</a></li>
+				<li><a href="/card/chaosrising/">-Chaos Rising</a></li>
+				<li><a href="/card/perfectorder/">-Perfect Order</a></li>
+				<li><a href="/card/ascendedheroes/">-Ascended Heroes</a></li>
+				<li><a href="/card/phantasmalflames/">-Phantasmal Flames</a></li>
+				<li><a href="/card/megaevolution/">-Mega Evolution</a></li>
+				<li><a href="/card/blackbolt/">-Black Bolt</a></li>
+				<li><a href="/card/whiteflare/">-White Flare</a></li>
+				<li><a href="/card/destinedrivals/">-Destined Rivals</a></li>
+				<li><a href="/card/journeytogether/">-Journey Together</a></li>
+				<li><a href="/card/prismaticevolutions/">-Prismatic Evolutions</a></li>
+				<li><a href="/card/surgingsparks/">-Surging Sparks</a></li>
+				<li><a href="/card/stellarcrown/">-Stellar Crown</a></li>
+				<li><a href="/card/shroudedfable/">-Shrouded Fable</a></li>
+				<li><a href="/card/twilightmasquerade/">-Twilight Masquerade</a></li>
+				<li><a href="/card/temporalforces/">-Temporal Forces</a></li>
+				<li><a href="/card/paldeanfates/">-Paldean Fates</a></li>
+				<li><a href="/card/paradoxrift/">-Paradox Rift</a></li>
+				<li><a href="/card/151/">-151</a></li>
+				<li><a href="/card/obsidianflames/">-Obsidian Flames</a></li>
+				<li><a href="/card/paldeaevolved/">-Paldea Evolved</a></li>
+				<li><a href="/card/scarletviolet/">-Scarlet Violet</a></li>
+				<li><a href="/card/swsh.shtml">-SWSH Series</a></li>
+				<li><a href="/card/sm.shtml">-SM Series</a></li>
+				<li><a href="/card/xy.shtml">-XY Series</a></li>
+				<li><a href="/card/bw.shtml">-BW Series</a></li>
+				<li><a href="/card/dpt.shtml">-DPtHS Series</a></li>
+				<li><a href="/card/ex.shtml">-EX Series</a></li>
+				<li><a href="/card/neo.shtml">-Neo/eSeries</a></li>
+				<li><a href="/card/first.shtml">-First Gen Series</a></li>
+				<li><a href="/card/engpromo.shtml"><b>English Promos</b></a></li>
+				<li><a href="/card/megapromos">-Mega Promos</a></li>
+				<li><a href="/card/svpromos">-SV Promos</a></li>
+				<li><a href="/card/swshpromos">-SWSH Promos</a></li>
+				<li><a href="/card/smpromos">-SM Promos</a></li>
+				<li><a href="/card/xypromos">-XY Promos</a></li>
+				<li><a href="/card/popseries.shtml">-POP Series</a></li>
+				<li><a href="/card/japanese.shtml"><b>Japanese Sets</b></a></li>
+				<li><a href="/card/abysseye/">-Abyss Eye</a></li>
+				<li><a href="/card/ninjaspinner/">-Ninja Spinner</a></li>
+				<li><a href="/card/nihilzero/">-Nihil Zero</a></li>
+				<li><a href="/card/megadreamex/">-Mega Dream ex</a></li>
+				<li><a href="/card/infernox/">-Inferno X</a></li>
+				<li><a href="/card/megabrave/">-Mega Brave</a></li>
+				<li><a href="/card/megasymphonia/">-Mega Symphonia</a></li>
+				<li><a href="/card/blackbolt-jp/">-Black Bolt</a></li>
+				<li><a href="/card/whiteflare-jp/">-White Flare</a></li>
+				<li><a href="/card/gloryofteamrocket/">-Glory of Team Rocket</a></li>
+				<li><a href="/card/hotairarena/">-Hot Air Arena</a></li>
+				<li><a href="/card/battlepartners/">-Battle Partners</a></li>
+				<li><a href="/card/terastalfestivalex/">-Terastal Festival ex</a></li>
+				<li><a href="/card/superelectricbreaker/">-Super Electric Breaker</a></li>
+				<li><a href="/card/paradisedragona/">-Paradise Dragona</a></li>
+				<li><a href="/card/stellarmiracle/">-Stellar Miracle</a></li>
+				<li><a href="/card/nightwanderer/">-Night Wanderer</a></li>
+				<li><a href="/card/maskofchange/">-Mask of Change</a></li>
+				<li><a href="/card/crimsonhaze/">-Crimson Haze</a></li>
+				<li><a href="/card/wildforce/">-Wild Force</a></li>
+				<li><a href="/card/cyberjudge/">-Cyber Judge</a></li>
+				<li><a href="/card/vstaruniverse/">-VSTAR Universe</a></li>
+				<li><a href="/card/vs">-Pokémon VS</a></li>
+				<li><a href="/card/jppromo.shtml"><b>Japanese Promos</b></a></li>
+				<li><a href="/card/svpromo">-SV Promos</a></li>
+				<li><a href="/card/spromo">-S Promos</a></li>
+				<li><a href="/card/smpromo">-SM Promos</a></li>
+
+			</ul>
+		</li>
+	</ul>
+</nav>
+
+
+<script type="text/javascript">
+
+function loadMobileLbar(){
+	var tbar_lbar_open=document.getElementById('tbar_lbar_open'),
+		tbar_backdrop=document.getElementById('tbar_backdrop'),
+		lbar=document.getElementById('lbar'),
+		lbarLIs=document.querySelectorAll("#lbar_ul>li .navheader"),
+		lbarLIULs=document.querySelectorAll("#lbar_ul>li>ul");
+
+	/* lbar display/hide */
+	tbar_lbar_open.onclick=function() {
+		if (lbar.className.indexOf("show") > -1){//hide
+			lbar.className = lbar.className.replace("show","");
+			bodyRemoveClass("nav_modal");
+		} else{//show
+			lbar.classList.add("show");
+			bodyAddClass("nav_modal");
+		}
+
+		return false;
+	}
+
+
+	/* background clicked when bar shown */
+	tbar_backdrop.onclick=function() {// if the backdrop is clicked, hide menus
+		lbar.className = lbar.className.replace("show","");
+		rbar.className = rbar.className.replace("show","");
+		bodyRemoveClass("nav_modal");
+		return false;
+	}
+
+	/* handle expand/collapse sub-menus in lbar by attaching click events */
+	for(i=0; i<lbarLIs.length; i++){
+		lbarLIs[i].onclick=function(i) {
+			var elem=this.parentNode.getElementsByTagName("UL")[0];
+			var elemDisp=(elem.className.indexOf("show") === -1)
+
+			// hide all ul, then open one if clicked
+			for(i2=0; i2<lbarLIULs.length; i2++){
+				lbarLIULs[i2].className = lbarLIULs[i2].className.replace("show","");
+			}
+
+			if(elemDisp){
+				elem.classList.add("show");
+			}
+
+			return false;
+		}
+	}
+}
+function loadMobileRbar(){
+	var tbar_rbar_open=document.getElementById('tbar_rbar_open'),
+		rbar=document.getElementById('rbar');
+
+	/* rbar display/hide */
+	tbar_rbar_open.onclick=function() {
+		if (rbar.className.indexOf("show") > -1){//hide
+			rbar.className = rbar.className.replace("show","");
+			bodyRemoveClass("nav_modal");
+		} else{//show
+			rbar.classList.add("show");
+			bodyAddClass("nav_modal");
+		}
+
+		return false;
+	}
+}
+
+loadMobileLbar();
+
+/* attach listener to for rbar events AFTER page loads (because #rbar hasn't loaded at this point in page ) */
+if(window.addEventListener){
+	window.addEventListener('load', loadMobileRbar)
+} else{
+	window.attachEvent('onload', loadMobileRbar)
+}
+</script>
+
+
+
+<div id="content">
+		<div class="center" style="margin-top:16px;height:100px"><div id="nn_lb1"></div><div id="nn_mobile_lb1"></div></div>
+<main>
+
+<p><h1>Weather</h1></p>
+
+<table class="tab" align="center">
+<tr>
+<td class="fooleft" colspan="2"><h2><b>Weather Features</b></h2></td>
+</tr>
+<tr>
+<td class="foocontent" valign="top">
+<p>In the past, some games have used time of day or season in order to determine different Pokémon encounters. Pokémon Sword & Shield, however, utilises the weather. While the routes of the game are typically stuck to a specific weather and feature no variance, the Wild Area has a constantly shifting weather pattern..</p>
+
+<p>Each day, the weather in each area of the Wild Area will change, and there are certain Pokémon that will only come out in certain weather meaning you'll have to check each day. However, on the first day of each month, every area in the Wild Area will have the exact same weather so you know what to expect.</p>
+
+<p>The weather doesn't just affect the Pokémon spawns but in fact also alter the battle conditions and there are 9 different weather effects to note.</p>
+
+<p>There are also some restrictions with the weather:<br />
+Snowstorm & Sandstorm - Complete 3 Gyms and reach Hammerlocke for this weather to appear<br />
+Fog - Become Champion for this weather to appear</p>
+
+<p>Snow and Snowstorm weathers do not appear in the Isle of Armor</p>
+<p>Sandstorm does not appear in The Crown Tundra. Rain & Thunderstorm do not appear in snow covered areas of The Crown Tundra</p>
+</td>
+<td class="picturetd"><img  src="weather/thunderstorm.jpg" alt="Weather Image" class="contentpic" loading="lazy" /></td>
+</tr><tr>
+<td class="fooleft" colspan="2"><h2><b>Locked Weather</b></h2></td>
+</tr>
+<tr>
+<td class="foocontent" valign="top">
+<p>As mentioned, on the first of the month the weather gets locked into one weather effect across the entire Wild Area. As such, we'll be keeping track of each weather and listing it accordingly</p>
+<table class="tab" align="center" style="width:600px">
+	<tr>
+		<td class="fooevo">Wild Area Date</td>
+		<td class="fooevo">Isle of Armor Date</td>
+		<td class="fooevo">Crown Tundra Date</td>
+		<td class="fooevo">Weather</td>
+	</tr>
+	<tr>
+		<td class="fooinfo">February 1st</td>
+		<td class="fooinfo">&nbsp;</td>
+		<td class="fooinfo">January 31st<br />February 28th/29th<br />August 31st<br />November 30th</td>
+		<td class="fooinfo">Snowstorm</td>
+	</tr>
+	<tr>
+		<td class="fooinfo">March 1st</td>
+		<td class="fooinfo">February 15th<br />November 15th</td>
+		<td class="fooinfo">March 31st<br />October 31st</td>
+		<td class="fooinfo">Overcast</td>
+	</tr>
+	<tr>
+		<td class="fooinfo">April 1st</td>
+		<td class="fooinfo">&nbsp;</td>
+		<td class="fooinfo">&nbsp;</td>
+		<td class="fooinfo">Sandstorm</td>
+	</tr>
+	<tr>
+		<td class="fooinfo">May 1st</td>
+		<td class="fooinfo">March 15th<br />September 15th</td>
+		<td class="fooinfo">April 30th<br />December 31st</td>
+		<td class="fooinfo">Normal Weather</td>
+	</tr>
+	<tr>
+		<td class="fooinfo">February 29th<br />June 1st<br />September 1st</td>
+		<td class="fooinfo">January 15th<br />October 15th</td>
+		<td class="fooinfo">July 31st</td>
+		<td class="fooinfo">Fog</td>
+	</tr>
+	<tr>
+		<td class="fooinfo">July 1st<br />August 1st</td>
+		<td class="fooinfo">May 15th<br />December 15th</td>
+		<td class="fooinfo">May 31st</td>
+		<td class="fooinfo">Intense Sun</td>
+	</tr>
+	<tr>
+		<td class="fooinfo">October 1st</td>
+		<td class="fooinfo">April 15th<br />June 15th<br />December 25th</td>
+		<td class="fooinfo">&nbsp;</td>
+		<td class="fooinfo">Raining</td>
+	</tr>
+	<tr>
+		<td class="fooinfo">November 1st</td>
+		<td class="fooinfo">July 15th<br />August 15th</td>
+		<td class="fooinfo">&nbsp;</td>
+		<td class="fooinfo">Thunderstorm</td>
+	</tr>
+	<tr>
+		<td class="fooinfo">December 1st<br />December 25th</td>
+		<td class="fooinfo">&nbsp;</td>
+		<td class="fooinfo">June 30th<br />September 30th</td>
+		<td class="fooinfo">Snowing</td>
+	</tr>
+
+</table>
+</td>
+<td class="picturetd"><img  src="lockedweather.jpg" alt="Weather Image" class="contentpic" loading="lazy" /></td>
+</tr>
+</table>
+
+<p><h2><u>List of Weather Effects</u></h2></p>
+
+<table class="dextable" align="center">
+	<tr><td class="fooevo">Picture</td><td class="fooevo">Weather</td><td class="fooevo">Battle Effects</td></tr>
+	<tr><td class="fooinfo"><img src="weather/normalweather.jpg" width="250" alt="Normal Weather" loading="lazy" /></td><td class="fooinfo">Normal Weather</td><td class="fooinfo">None</td></tr>
+	<tr><td class="fooinfo"><img src="weather/overcast.jpg" width="250" alt="Overcast" loading="lazy" /></td><td class="fooinfo">Overcast</td><td class="fooinfo">None</td></tr>
+	<tr><td class="fooinfo"><img src="weather/rain.jpg" width="250" alt="Rain" loading="lazy" /></td><td class="fooinfo">Raining</td><td class="fooinfo">Rain Dance is in effect</td></tr>
+	<tr><td class="fooinfo"><img src="weather/thunderstorm.jpg" width="250" alt="Thunderstorm" loading="lazy" /></td><td class="fooinfo">Thunderstorm</td><td class="fooinfo">Rain Dance is in effect<br />Electric Terrain is in effect</td></tr>
+	<tr><td class="fooinfo"><img src="weather/snowing.jpg" width="250" alt="Snowing" loading="lazy" /></td><td class="fooinfo">Snowing</td><td class="fooinfo">Hail is in effect</td></tr>
+	<tr><td class="fooinfo"><img src="weather/snowstorm.jpg" width="250" alt="Snowstorm" loading="lazy" /></td><td class="fooinfo">Snowstorm</td><td class="fooinfo">Hail is in effect</td></tr>
+	<tr><td class="fooinfo"><img src="weather/intensesun.jpg" width="250" alt="Intense Sun" loading="lazy" /></td><td class="fooinfo">Intense Sun</td><td class="fooinfo">Sunny Day is in effect</td></tr>
+	<tr><td class="fooinfo"><img src="weather/sandstorm.jpg" width="250" alt="Sandstorm" loading="lazy" /></td><td class="fooinfo">Sandstorm</td><td class="fooinfo">Sandstorm is in effect</td></tr>
+	<tr><td class="fooinfo"><img src="weather/fog.jpg" width="250" alt="Fog" loading="lazy" /></td><td class="fooinfo">Fog</td><td class="fooinfo">Misty Terrain is in effect</td></tr>
+</table>
+
+<p><h2><u>List of Weather Exclusive Pokémon in the Wild Area</u></h2></p>
+
+<p>This list will showcase all Pokémon that can only be found in 4 or less weather effects. For full details on locations check out their Pokédex Location pages</p>
+
+<table class="dextable" align="center"><tr><td class="fooevo">Number</td><td class="fooevo">Picture</td><td class="fooevo">Name</td><td class="fooevo">Weathers Available</td></tr><tr>
+			<td class="cen">#026</td>
+			<td class="cen"><a href="/pokedex-swsh/raichu/"><img src="/swordshield/pokemon/small/026.png" alt="Raichu" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/raichu/">Raichu</a></td>
+			<td class="fooinfo">Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#028</td>
+			<td class="cen"><a href="/pokedex-swsh/sandslash/"><img src="/swordshield/pokemon/small/028.png" alt="Sandslash" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/sandslash/">Sandslash</a></td>
+			<td class="fooinfo">Sandstorm</td>
+		</tr><tr>
+			<td class="cen">#035</td>
+			<td class="cen"><a href="/pokedex-swsh/clefairy/"><img src="/swordshield/pokemon/small/035.png" alt="Clefairy" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/clefairy/">Clefairy</a></td>
+			<td class="fooinfo">Fog</td>
+		</tr><tr>
+			<td class="cen">#037</td>
+			<td class="cen"><a href="/pokedex-swsh/vulpix/"><img src="/swordshield/pokemon/small/037.png" alt="Vulpix" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/vulpix/">Vulpix</a></td>
+			<td class="fooinfo">Intense Sun</td>
+		</tr><tr>
+			<td class="cen">#038</td>
+			<td class="cen"><a href="/pokedex-swsh/ninetales/"><img src="/swordshield/pokemon/small/038.png" alt="Ninetales" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/ninetales/">Ninetales</a></td>
+			<td class="fooinfo">Intense Sun</td>
+		</tr><tr>
+			<td class="cen">#040</td>
+			<td class="cen"><a href="/pokedex-swsh/wigglytuff/"><img src="/swordshield/pokemon/small/040.png" alt="Wigglytuff" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/wigglytuff/">Wigglytuff</a></td>
+			<td class="fooinfo">Fog</td>
+		</tr><tr>
+			<td class="cen">#058</td>
+			<td class="cen"><a href="/pokedex-swsh/growlithe/"><img src="/swordshield/pokemon/small/058.png" alt="Growlithe" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/growlithe/">Growlithe</a></td>
+			<td class="fooinfo">Intense Sun</td>
+		</tr><tr>
+			<td class="cen">#059</td>
+			<td class="cen"><a href="/pokedex-swsh/arcanine/"><img src="/swordshield/pokemon/small/059.png" alt="Arcanine" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/arcanine/">Arcanine</a></td>
+			<td class="fooinfo">Intense Sun</td>
+		</tr><tr>
+			<td class="cen">#061</td>
+			<td class="cen"><a href="/pokedex-swsh/poliwhirl/"><img src="/swordshield/pokemon/small/061.png" alt="Poliwhirl" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/poliwhirl/">Poliwhirl</a></td>
+			<td class="fooinfo">Raining, Thunderstorm, Fog</td>
+		</tr><tr>
+			<td class="cen">#064</td>
+			<td class="cen"><a href="/pokedex-swsh/kadabra/"><img src="/swordshield/pokemon/small/064.png" alt="Kadabra" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/kadabra/">Kadabra</a></td>
+			<td class="fooinfo">Fog</td>
+		</tr><tr>
+			<td class="cen">#077</td>
+			<td class="cen"><a href="/pokedex-swsh/ponyta/"><img src="/swordshield/pokemon/small/077-g.png" alt="Ponyta" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/ponyta/">Ponyta</a></td>
+			<td class="fooinfo">Fog</td>
+		</tr><tr>
+			<td class="cen">#078</td>
+			<td class="cen"><a href="/pokedex-swsh/rapidash/"><img src="/swordshield/pokemon/small/078-g.png" alt="Rapidash" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/rapidash/">Rapidash</a></td>
+			<td class="fooinfo">Fog</td>
+		</tr><tr>
+			<td class="cen">#082</td>
+			<td class="cen"><a href="/pokedex-swsh/magneton/"><img src="/swordshield/pokemon/small/082.png" alt="Magneton" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/magneton/">Magneton</a></td>
+			<td class="fooinfo">Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#083</td>
+			<td class="cen"><a href="/pokedex-swsh/farfetch'd/"><img src="/swordshield/pokemon/small/083-g.png" alt="Farfetch'd" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/farfetch'd/">Farfetch'd</a></td>
+			<td class="fooinfo">Overcast</td>
+		</tr><tr>
+			<td class="cen">#091</td>
+			<td class="cen"><a href="/pokedex-swsh/cloyster/"><img src="/swordshield/pokemon/small/091.png" alt="Cloyster" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/cloyster/">Cloyster</a></td>
+			<td class="fooinfo">Normal Weather, Fog, Raining</td>
+		</tr><tr>
+			<td class="cen">#105</td>
+			<td class="cen"><a href="/pokedex-swsh/marowak/"><img src="/swordshield/pokemon/small/105.png" alt="Marowak" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/marowak/">Marowak</a></td>
+			<td class="fooinfo">Normal Weather, Intense Sun, Fog</td>
+		</tr><tr>
+			<td class="cen">#106</td>
+			<td class="cen"><a href="/pokedex-swsh/hitmonlee/"><img src="/swordshield/pokemon/small/106.png" alt="Hitmonlee" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/hitmonlee/">Hitmonlee</a></td>
+			<td class="fooinfo">Overcast</td>
+		</tr><tr>
+			<td class="cen">#107</td>
+			<td class="cen"><a href="/pokedex-swsh/hitmonchan/"><img src="/swordshield/pokemon/small/107.png" alt="Hitmonchan" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/hitmonchan/">Hitmonchan</a></td>
+			<td class="fooinfo">Overcast</td>
+		</tr><tr>
+			<td class="cen">#122</td>
+			<td class="cen"><a href="/pokedex-swsh/mr.mime/"><img src="/swordshield/pokemon/small/122-g.png" alt="Mr. Mime" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/mr.mime/">Mr. Mime</a></td>
+			<td class="fooinfo">Snowing</td>
+		</tr><tr>
+			<td class="cen">#125</td>
+			<td class="cen"><a href="/pokedex-swsh/electabuzz/"><img src="/swordshield/pokemon/small/125.png" alt="Electabuzz" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/electabuzz/">Electabuzz</a></td>
+			<td class="fooinfo">Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#126</td>
+			<td class="cen"><a href="/pokedex-swsh/magmar/"><img src="/swordshield/pokemon/small/126.png" alt="Magmar" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/magmar/">Magmar</a></td>
+			<td class="fooinfo">Intense Sun</td>
+		</tr><tr>
+			<td class="cen">#133</td>
+			<td class="cen"><a href="/pokedex-swsh/eevee/"><img src="/swordshield/pokemon/small/133.png" alt="Eevee" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/eevee/">Eevee</a></td>
+			<td class="fooinfo">Snowstorm, Sandstorm, Normal Weather</td>
+		</tr><tr>
+			<td class="cen">#134</td>
+			<td class="cen"><a href="/pokedex-swsh/vaporeon/"><img src="/swordshield/pokemon/small/134.png" alt="Vaporeon" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/vaporeon/">Vaporeon</a></td>
+			<td class="fooinfo">Raining</td>
+		</tr><tr>
+			<td class="cen">#135</td>
+			<td class="cen"><a href="/pokedex-swsh/jolteon/"><img src="/swordshield/pokemon/small/135.png" alt="Jolteon" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/jolteon/">Jolteon</a></td>
+			<td class="fooinfo">Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#136</td>
+			<td class="cen"><a href="/pokedex-swsh/flareon/"><img src="/swordshield/pokemon/small/136.png" alt="Flareon" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/flareon/">Flareon</a></td>
+			<td class="fooinfo">Intense Sun</td>
+		</tr><tr>
+			<td class="cen">#148</td>
+			<td class="cen"><a href="/pokedex-swsh/dragonair/"><img src="/swordshield/pokemon/small/148.png" alt="Dragonair" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/dragonair/">Dragonair</a></td>
+			<td class="fooinfo">Thunderstorm, Fog</td>
+		</tr><tr>
+			<td class="cen">#149</td>
+			<td class="cen"><a href="/pokedex-swsh/dragonite/"><img src="/swordshield/pokemon/small/149.png" alt="Dragonite" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/dragonite/">Dragonite</a></td>
+			<td class="fooinfo">Raining, Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#170</td>
+			<td class="cen"><a href="/pokedex-swsh/chinchou/"><img src="/swordshield/pokemon/small/170.png" alt="Chinchou" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/chinchou/">Chinchou</a></td>
+			<td class="fooinfo">Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#171</td>
+			<td class="cen"><a href="/pokedex-swsh/lanturn/"><img src="/swordshield/pokemon/small/171.png" alt="Lanturn" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/lanturn/">Lanturn</a></td>
+			<td class="fooinfo">Thunderstorm, Normal Weather, Fog</td>
+		</tr><tr>
+			<td class="cen">#172</td>
+			<td class="cen"><a href="/pokedex-swsh/pichu/"><img src="/swordshield/pokemon/small/172.png" alt="Pichu" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/pichu/">Pichu</a></td>
+			<td class="fooinfo">Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#175</td>
+			<td class="cen"><a href="/pokedex-swsh/togepi/"><img src="/swordshield/pokemon/small/175.png" alt="Togepi" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/togepi/">Togepi</a></td>
+			<td class="fooinfo">Normal Weather, Overcast, Fog</td>
+		</tr><tr>
+			<td class="cen">#176</td>
+			<td class="cen"><a href="/pokedex-swsh/togetic/"><img src="/swordshield/pokemon/small/176.png" alt="Togetic" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/togetic/">Togetic</a></td>
+			<td class="fooinfo">Fog</td>
+		</tr><tr>
+			<td class="cen">#182</td>
+			<td class="cen"><a href="/pokedex-swsh/bellossom/"><img src="/swordshield/pokemon/small/182.png" alt="Bellossom" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/bellossom/">Bellossom</a></td>
+			<td class="fooinfo">Normal Weather</td>
+		</tr><tr>
+			<td class="cen">#183</td>
+			<td class="cen"><a href="/pokedex-swsh/marill/"><img src="/swordshield/pokemon/small/183.png" alt="Marill" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/marill/">Marill</a></td>
+			<td class="fooinfo">Raining, Normal Weather, Sandstorm</td>
+		</tr><tr>
+			<td class="cen">#184</td>
+			<td class="cen"><a href="/pokedex-swsh/azumarill/"><img src="/swordshield/pokemon/small/184.png" alt="Azumarill" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/azumarill/">Azumarill</a></td>
+			<td class="fooinfo">Fog</td>
+		</tr><tr>
+			<td class="cen">#186</td>
+			<td class="cen"><a href="/pokedex-swsh/politoed/"><img src="/swordshield/pokemon/small/186.png" alt="Politoed" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/politoed/">Politoed</a></td>
+			<td class="fooinfo">Raining, Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#196</td>
+			<td class="cen"><a href="/pokedex-swsh/espeon/"><img src="/swordshield/pokemon/small/196.png" alt="Espeon" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/espeon/">Espeon</a></td>
+			<td class="fooinfo">Overcast, Snowing</td>
+		</tr><tr>
+			<td class="cen">#197</td>
+			<td class="cen"><a href="/pokedex-swsh/umbreon/"><img src="/swordshield/pokemon/small/197.png" alt="Umbreon" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/umbreon/">Umbreon</a></td>
+			<td class="fooinfo">Sandstorm, Overcast</td>
+		</tr><tr>
+			<td class="cen">#212</td>
+			<td class="cen"><a href="/pokedex-swsh/scizor/"><img src="/swordshield/pokemon/small/212.png" alt="Scizor" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/scizor/">Scizor</a></td>
+			<td class="fooinfo">Sandstorm</td>
+		</tr><tr>
+			<td class="cen">#215</td>
+			<td class="cen"><a href="/pokedex-swsh/sneasel/"><img src="/swordshield/pokemon/small/215.png" alt="Sneasel" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/sneasel/">Sneasel</a></td>
+			<td class="fooinfo">Snowing, Snowstorm, Overcast</td>
+		</tr><tr>
+			<td class="cen">#222</td>
+			<td class="cen"><a href="/pokedex-swsh/corsola/"><img src="/swordshield/pokemon/small/222-g.png" alt="Corsola" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/corsola/">Corsola</a></td>
+			<td class="fooinfo">Overcast</td>
+		</tr><tr>
+			<td class="cen">#225</td>
+			<td class="cen"><a href="/pokedex-swsh/delibird/"><img src="/swordshield/pokemon/small/225.png" alt="Delibird" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/delibird/">Delibird</a></td>
+			<td class="fooinfo">Snowing, Snowstorm</td>
+		</tr><tr>
+			<td class="cen">#230</td>
+			<td class="cen"><a href="/pokedex-swsh/kingdra/"><img src="/swordshield/pokemon/small/230.png" alt="Kingdra" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/kingdra/">Kingdra</a></td>
+			<td class="fooinfo">Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#237</td>
+			<td class="cen"><a href="/pokedex-swsh/hitmontop/"><img src="/swordshield/pokemon/small/237.png" alt="Hitmontop" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/hitmontop/">Hitmontop</a></td>
+			<td class="fooinfo">Overcast</td>
+		</tr><tr>
+			<td class="cen">#239</td>
+			<td class="cen"><a href="/pokedex-swsh/elekid/"><img src="/swordshield/pokemon/small/239.png" alt="Elekid" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/elekid/">Elekid</a></td>
+			<td class="fooinfo">Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#240</td>
+			<td class="cen"><a href="/pokedex-swsh/magby/"><img src="/swordshield/pokemon/small/240.png" alt="Magby" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/magby/">Magby</a></td>
+			<td class="fooinfo">Intense Sun</td>
+		</tr><tr>
+			<td class="cen">#242</td>
+			<td class="cen"><a href="/pokedex-swsh/blissey/"><img src="/swordshield/pokemon/small/242.png" alt="Blissey" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/blissey/">Blissey</a></td>
+			<td class="fooinfo">Fog</td>
+		</tr><tr>
+			<td class="cen">#246</td>
+			<td class="cen"><a href="/pokedex-swsh/larvitar/"><img src="/swordshield/pokemon/small/246.png" alt="Larvitar" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/larvitar/">Larvitar</a></td>
+			<td class="fooinfo">Overcast, Intense Sun</td>
+		</tr><tr>
+			<td class="cen">#247</td>
+			<td class="cen"><a href="/pokedex-swsh/pupitar/"><img src="/swordshield/pokemon/small/247.png" alt="Pupitar" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/pupitar/">Pupitar</a></td>
+			<td class="fooinfo">Sandstorm</td>
+		</tr><tr>
+			<td class="cen">#280</td>
+			<td class="cen"><a href="/pokedex-swsh/ralts/"><img src="/swordshield/pokemon/small/280.png" alt="Ralts" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/ralts/">Ralts</a></td>
+			<td class="fooinfo">Fog, Overcast</td>
+		</tr><tr>
+			<td class="cen">#281</td>
+			<td class="cen"><a href="/pokedex-swsh/kirlia/"><img src="/swordshield/pokemon/small/281.png" alt="Kirlia" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/kirlia/">Kirlia</a></td>
+			<td class="fooinfo">Fog</td>
+		</tr><tr>
+			<td class="cen">#282</td>
+			<td class="cen"><a href="/pokedex-swsh/gardevoir/"><img src="/swordshield/pokemon/small/282.png" alt="Gardevoir" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/gardevoir/">Gardevoir</a></td>
+			<td class="fooinfo">Fog, Normal Weather, Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#290</td>
+			<td class="cen"><a href="/pokedex-swsh/nincada/"><img src="/swordshield/pokemon/small/290.png" alt="Nincada" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/nincada/">Nincada</a></td>
+			<td class="fooinfo">Intense Sun, Sandstorm</td>
+		</tr><tr>
+			<td class="cen">#302</td>
+			<td class="cen"><a href="/pokedex-swsh/sableye/"><img src="/swordshield/pokemon/small/302.png" alt="Sableye" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/sableye/">Sableye</a></td>
+			<td class="fooinfo">Fog</td>
+		</tr><tr>
+			<td class="cen">#303</td>
+			<td class="cen"><a href="/pokedex-swsh/mawile/"><img src="/swordshield/pokemon/small/303.png" alt="Mawile" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/mawile/">Mawile</a></td>
+			<td class="fooinfo">Snowstorm</td>
+		</tr><tr>
+			<td class="cen">#309</td>
+			<td class="cen"><a href="/pokedex-swsh/electrike/"><img src="/swordshield/pokemon/small/309.png" alt="Electrike" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/electrike/">Electrike</a></td>
+			<td class="fooinfo">Thunderstorm, Raining</td>
+		</tr><tr>
+			<td class="cen">#310</td>
+			<td class="cen"><a href="/pokedex-swsh/manectric/"><img src="/swordshield/pokemon/small/310.png" alt="Manectric" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/manectric/">Manectric</a></td>
+			<td class="fooinfo">Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#321</td>
+			<td class="cen"><a href="/pokedex-swsh/wailord/"><img src="/swordshield/pokemon/small/321.png" alt="Wailord" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/wailord/">Wailord</a></td>
+			<td class="fooinfo"></td>
+		</tr><tr>
+			<td class="cen">#328</td>
+			<td class="cen"><a href="/pokedex-swsh/trapinch/"><img src="/swordshield/pokemon/small/328.png" alt="Trapinch" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/trapinch/">Trapinch</a></td>
+			<td class="fooinfo">Sandstorm</td>
+		</tr><tr>
+			<td class="cen">#330</td>
+			<td class="cen"><a href="/pokedex-swsh/flygon/"><img src="/swordshield/pokemon/small/330.png" alt="Flygon" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/flygon/">Flygon</a></td>
+			<td class="fooinfo">Normal Weather, Sandstorm, Intense Sun</td>
+		</tr><tr>
+			<td class="cen">#334</td>
+			<td class="cen"><a href="/pokedex-swsh/altaria/"><img src="/swordshield/pokemon/small/334.png" alt="Altaria" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/altaria/">Altaria</a></td>
+			<td class="fooinfo">Overcast</td>
+		</tr><tr>
+			<td class="cen">#348</td>
+			<td class="cen"><a href="/pokedex-swsh/armaldo/"><img src="/swordshield/pokemon/small/348.png" alt="Armaldo" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/armaldo/">Armaldo</a></td>
+			<td class="fooinfo">Raining, Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#350</td>
+			<td class="cen"><a href="/pokedex-swsh/milotic/"><img src="/swordshield/pokemon/small/350.png" alt="Milotic" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/milotic/">Milotic</a></td>
+			<td class="fooinfo">Fog</td>
+		</tr><tr>
+			<td class="cen">#359</td>
+			<td class="cen"><a href="/pokedex-swsh/absol/"><img src="/swordshield/pokemon/small/359.png" alt="Absol" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/absol/">Absol</a></td>
+			<td class="fooinfo">Snowstorm, Sandstorm</td>
+		</tr><tr>
+			<td class="cen">#361</td>
+			<td class="cen"><a href="/pokedex-swsh/snorunt/"><img src="/swordshield/pokemon/small/361.png" alt="Snorunt" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/snorunt/">Snorunt</a></td>
+			<td class="fooinfo">Snowing, Snowstorm</td>
+		</tr><tr>
+			<td class="cen">#362</td>
+			<td class="cen"><a href="/pokedex-swsh/glalie/"><img src="/swordshield/pokemon/small/362.png" alt="Glalie" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/glalie/">Glalie</a></td>
+			<td class="fooinfo">Snowing, Snowstorm, Sandstorm</td>
+		</tr><tr>
+			<td class="cen">#403</td>
+			<td class="cen"><a href="/pokedex-swsh/shinx/"><img src="/swordshield/pokemon/small/403.png" alt="Shinx" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/shinx/">Shinx</a></td>
+			<td class="fooinfo">Raining, Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#404</td>
+			<td class="cen"><a href="/pokedex-swsh/luxio/"><img src="/swordshield/pokemon/small/404.png" alt="Luxio" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/luxio/">Luxio</a></td>
+			<td class="fooinfo">Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#405</td>
+			<td class="cen"><a href="/pokedex-swsh/luxray/"><img src="/swordshield/pokemon/small/405.png" alt="Luxray" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/luxray/">Luxray</a></td>
+			<td class="fooinfo">Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#407</td>
+			<td class="cen"><a href="/pokedex-swsh/roserade/"><img src="/swordshield/pokemon/small/407.png" alt="Roserade" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/roserade/">Roserade</a></td>
+			<td class="fooinfo">Overcast, Fog</td>
+		</tr><tr>
+			<td class="cen">#416</td>
+			<td class="cen"><a href="/pokedex-swsh/vespiquen/"><img src="/swordshield/pokemon/small/416.png" alt="Vespiquen" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/vespiquen/">Vespiquen</a></td>
+			<td class="fooinfo">Normal Weather</td>
+		</tr><tr>
+			<td class="cen">#438</td>
+			<td class="cen"><a href="/pokedex-swsh/bonsly/"><img src="/swordshield/pokemon/small/438.png" alt="Bonsly" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/bonsly/">Bonsly</a></td>
+			<td class="fooinfo">Sandstorm</td>
+		</tr><tr>
+			<td class="cen">#447</td>
+			<td class="cen"><a href="/pokedex-swsh/riolu/"><img src="/swordshield/pokemon/small/447.png" alt="Riolu" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/riolu/">Riolu</a></td>
+			<td class="fooinfo">Snowstorm</td>
+		</tr><tr>
+			<td class="cen">#449</td>
+			<td class="cen"><a href="/pokedex-swsh/hippopotas/"><img src="/swordshield/pokemon/small/449.png" alt="Hippopotas" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/hippopotas/">Hippopotas</a></td>
+			<td class="fooinfo">Intense Sun, Sandstorm</td>
+		</tr><tr>
+			<td class="cen">#450</td>
+			<td class="cen"><a href="/pokedex-swsh/hippowdon/"><img src="/swordshield/pokemon/small/450.png" alt="Hippowdon" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/hippowdon/">Hippowdon</a></td>
+			<td class="fooinfo">Sandstorm</td>
+		</tr><tr>
+			<td class="cen">#453</td>
+			<td class="cen"><a href="/pokedex-swsh/croagunk/"><img src="/swordshield/pokemon/small/453.png" alt="Croagunk" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/croagunk/">Croagunk</a></td>
+			<td class="fooinfo">Overcast, Sandstorm, Normal Weather</td>
+		</tr><tr>
+			<td class="cen">#454</td>
+			<td class="cen"><a href="/pokedex-swsh/toxicroak/"><img src="/swordshield/pokemon/small/454.png" alt="Toxicroak" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/toxicroak/">Toxicroak</a></td>
+			<td class="fooinfo">Overcast, Raining, Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#462</td>
+			<td class="cen"><a href="/pokedex-swsh/magnezone/"><img src="/swordshield/pokemon/small/462.png" alt="Magnezone" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/magnezone/">Magnezone</a></td>
+			<td class="fooinfo">Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#463</td>
+			<td class="cen"><a href="/pokedex-swsh/lickilicky/"><img src="/swordshield/pokemon/small/463.png" alt="Lickilicky" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/lickilicky/">Lickilicky</a></td>
+			<td class="fooinfo">Normal Weather, Sandstorm, Raining</td>
+		</tr><tr>
+			<td class="cen">#465</td>
+			<td class="cen"><a href="/pokedex-swsh/tangrowth/"><img src="/swordshield/pokemon/small/465.png" alt="Tangrowth" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/tangrowth/">Tangrowth</a></td>
+			<td class="fooinfo">Normal Weather, Intense Sun</td>
+		</tr><tr>
+			<td class="cen">#466</td>
+			<td class="cen"><a href="/pokedex-swsh/electivire/"><img src="/swordshield/pokemon/small/466.png" alt="Electivire" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/electivire/">Electivire</a></td>
+			<td class="fooinfo">Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#467</td>
+			<td class="cen"><a href="/pokedex-swsh/magmortar/"><img src="/swordshield/pokemon/small/467.png" alt="Magmortar" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/magmortar/">Magmortar</a></td>
+			<td class="fooinfo">Intense Sun</td>
+		</tr><tr>
+			<td class="cen">#468</td>
+			<td class="cen"><a href="/pokedex-swsh/togekiss/"><img src="/swordshield/pokemon/small/468.png" alt="Togekiss" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/togekiss/">Togekiss</a></td>
+			<td class="fooinfo">Fog</td>
+		</tr><tr>
+			<td class="cen">#470</td>
+			<td class="cen"><a href="/pokedex-swsh/leafeon/"><img src="/swordshield/pokemon/small/470.png" alt="Leafeon" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/leafeon/">Leafeon</a></td>
+			<td class="fooinfo">Normal Weather</td>
+		</tr><tr>
+			<td class="cen">#471</td>
+			<td class="cen"><a href="/pokedex-swsh/glaceon/"><img src="/swordshield/pokemon/small/471.png" alt="Glaceon" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/glaceon/">Glaceon</a></td>
+			<td class="fooinfo">Snowing, Snowstorm, Sandstorm</td>
+		</tr><tr>
+			<td class="cen">#507</td>
+			<td class="cen"><a href="/pokedex-swsh/herdier/"><img src="/swordshield/pokemon/small/507.png" alt="Herdier" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/herdier/">Herdier</a></td>
+			<td class="fooinfo">Fog, Normal Weather</td>
+		</tr><tr>
+			<td class="cen">#508</td>
+			<td class="cen"><a href="/pokedex-swsh/stoutland/"><img src="/swordshield/pokemon/small/508.png" alt="Stoutland" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/stoutland/">Stoutland</a></td>
+			<td class="fooinfo">Normal Weather</td>
+		</tr><tr>
+			<td class="cen">#517</td>
+			<td class="cen"><a href="/pokedex-swsh/munna/"><img src="/swordshield/pokemon/small/517.png" alt="Munna" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/munna/">Munna</a></td>
+			<td class="fooinfo">Fog, Overcast</td>
+		</tr><tr>
+			<td class="cen">#518</td>
+			<td class="cen"><a href="/pokedex-swsh/musharna/"><img src="/swordshield/pokemon/small/518.png" alt="Musharna" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/musharna/">Musharna</a></td>
+			<td class="fooinfo">Fog</td>
+		</tr><tr>
+			<td class="cen">#529</td>
+			<td class="cen"><a href="/pokedex-swsh/drilbur/"><img src="/swordshield/pokemon/small/529.png" alt="Drilbur" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/drilbur/">Drilbur</a></td>
+			<td class="fooinfo">Intense Sun, Sandstorm</td>
+		</tr><tr>
+			<td class="cen">#538</td>
+			<td class="cen"><a href="/pokedex-swsh/throh/"><img src="/swordshield/pokemon/small/538.png" alt="Throh" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/throh/">Throh</a></td>
+			<td class="fooinfo">Overcast</td>
+		</tr><tr>
+			<td class="cen">#539</td>
+			<td class="cen"><a href="/pokedex-swsh/sawk/"><img src="/swordshield/pokemon/small/539.png" alt="Sawk" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/sawk/">Sawk</a></td>
+			<td class="fooinfo">Overcast</td>
+		</tr><tr>
+			<td class="cen">#545</td>
+			<td class="cen"><a href="/pokedex-swsh/scolipede/"><img src="/swordshield/pokemon/small/545.png" alt="Scolipede" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/scolipede/">Scolipede</a></td>
+			<td class="fooinfo">Overcast</td>
+		</tr><tr>
+			<td class="cen">#546</td>
+			<td class="cen"><a href="/pokedex-swsh/cottonee/"><img src="/swordshield/pokemon/small/546.png" alt="Cottonee" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/cottonee/">Cottonee</a></td>
+			<td class="fooinfo">Overcast, Normal Weather, Raining</td>
+		</tr><tr>
+			<td class="cen">#547</td>
+			<td class="cen"><a href="/pokedex-swsh/whimsicott/"><img src="/swordshield/pokemon/small/547.png" alt="Whimsicott" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/whimsicott/">Whimsicott</a></td>
+			<td class="fooinfo">Normal Weather, Raining</td>
+		</tr><tr>
+			<td class="cen">#549</td>
+			<td class="cen"><a href="/pokedex-swsh/lilligant/"><img src="/swordshield/pokemon/small/549.png" alt="Lilligant" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/lilligant/">Lilligant</a></td>
+			<td class="fooinfo">Intense Sun, Normal Weather, Sandstorm</td>
+		</tr><tr>
+			<td class="cen">#552</td>
+			<td class="cen"><a href="/pokedex-swsh/krokorok/"><img src="/swordshield/pokemon/small/552.png" alt="Krokorok" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/krokorok/">Krokorok</a></td>
+			<td class="fooinfo">Overcast, Raining, Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#553</td>
+			<td class="cen"><a href="/pokedex-swsh/krookodile/"><img src="/swordshield/pokemon/small/553.png" alt="Krookodile" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/krookodile/">Krookodile</a></td>
+			<td class="fooinfo">Overcast, Raining, Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#554</td>
+			<td class="cen"><a href="/pokedex-swsh/darumaka/"><img src="/swordshield/pokemon/small/554-g.png" alt="Darumaka" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/darumaka/">Darumaka</a></td>
+			<td class="fooinfo">Snowstorm</td>
+		</tr><tr>
+			<td class="cen">#555</td>
+			<td class="cen"><a href="/pokedex-swsh/darmanitan/"><img src="/swordshield/pokemon/small/555-g.png" alt="Darmanitan" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/darmanitan/">Darmanitan</a></td>
+			<td class="fooinfo">Snowstorm, Sandstorm</td>
+		</tr><tr>
+			<td class="cen">#556</td>
+			<td class="cen"><a href="/pokedex-swsh/maractus/"><img src="/swordshield/pokemon/small/556.png" alt="Maractus" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/maractus/">Maractus</a></td>
+			<td class="fooinfo">Intense Sun</td>
+		</tr><tr>
+			<td class="cen">#559</td>
+			<td class="cen"><a href="/pokedex-swsh/scraggy/"><img src="/swordshield/pokemon/small/559.png" alt="Scraggy" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/scraggy/">Scraggy</a></td>
+			<td class="fooinfo">Overcast, Sandstorm, Normal Weather</td>
+		</tr><tr>
+			<td class="cen">#560</td>
+			<td class="cen"><a href="/pokedex-swsh/scrafty/"><img src="/swordshield/pokemon/small/560.png" alt="Scrafty" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/scrafty/">Scrafty</a></td>
+			<td class="fooinfo">Raining, Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#570</td>
+			<td class="cen"><a href="/pokedex-swsh/zorua/"><img src="/swordshield/pokemon/small/570.png" alt="Zorua" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/zorua/">Zorua</a></td>
+			<td class="fooinfo">Overcast, Fog</td>
+		</tr><tr>
+			<td class="cen">#571</td>
+			<td class="cen"><a href="/pokedex-swsh/zoroark/"><img src="/swordshield/pokemon/small/571.png" alt="Zoroark" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/zoroark/">Zoroark</a></td>
+			<td class="fooinfo">Overcast, Fog</td>
+		</tr><tr>
+			<td class="cen">#573</td>
+			<td class="cen"><a href="/pokedex-swsh/cinccino/"><img src="/swordshield/pokemon/small/573.png" alt="Cinccino" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/cinccino/">Cinccino</a></td>
+			<td class="fooinfo">Normal Weather, Overcast, Fog</td>
+		</tr><tr>
+			<td class="cen">#574</td>
+			<td class="cen"><a href="/pokedex-swsh/gothita/"><img src="/swordshield/pokemon/small/574.png" alt="Gothita" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/gothita/">Gothita</a></td>
+			<td class="fooinfo">Fog</td>
+		</tr><tr>
+			<td class="cen">#575</td>
+			<td class="cen"><a href="/pokedex-swsh/gothorita/"><img src="/swordshield/pokemon/small/575.png" alt="Gothorita" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/gothorita/">Gothorita</a></td>
+			<td class="fooinfo">Fog</td>
+		</tr><tr>
+			<td class="cen">#576</td>
+			<td class="cen"><a href="/pokedex-swsh/gothitelle/"><img src="/swordshield/pokemon/small/576.png" alt="Gothitelle" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/gothitelle/">Gothitelle</a></td>
+			<td class="fooinfo">Fog</td>
+		</tr><tr>
+			<td class="cen">#577</td>
+			<td class="cen"><a href="/pokedex-swsh/solosis/"><img src="/swordshield/pokemon/small/577.png" alt="Solosis" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/solosis/">Solosis</a></td>
+			<td class="fooinfo">Fog</td>
+		</tr><tr>
+			<td class="cen">#578</td>
+			<td class="cen"><a href="/pokedex-swsh/duosion/"><img src="/swordshield/pokemon/small/578.png" alt="Duosion" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/duosion/">Duosion</a></td>
+			<td class="fooinfo">Fog</td>
+		</tr><tr>
+			<td class="cen">#579</td>
+			<td class="cen"><a href="/pokedex-swsh/reuniclus/"><img src="/swordshield/pokemon/small/579.png" alt="Reuniclus" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/reuniclus/">Reuniclus</a></td>
+			<td class="fooinfo">Fog</td>
+		</tr><tr>
+			<td class="cen">#582</td>
+			<td class="cen"><a href="/pokedex-swsh/vanillite/"><img src="/swordshield/pokemon/small/582.png" alt="Vanillite" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/vanillite/">Vanillite</a></td>
+			<td class="fooinfo">Snowing, Snowstorm</td>
+		</tr><tr>
+			<td class="cen">#583</td>
+			<td class="cen"><a href="/pokedex-swsh/vanillish/"><img src="/swordshield/pokemon/small/583.png" alt="Vanillish" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/vanillish/">Vanillish</a></td>
+			<td class="fooinfo">Snowing, Snowstorm</td>
+		</tr><tr>
+			<td class="cen">#584</td>
+			<td class="cen"><a href="/pokedex-swsh/vanilluxe/"><img src="/swordshield/pokemon/small/584.png" alt="Vanilluxe" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/vanilluxe/">Vanilluxe</a></td>
+			<td class="fooinfo">Snowing, Snowstorm, Sandstorm</td>
+		</tr><tr>
+			<td class="cen">#589</td>
+			<td class="cen"><a href="/pokedex-swsh/escavalier/"><img src="/swordshield/pokemon/small/589.png" alt="Escavalier" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/escavalier/">Escavalier</a></td>
+			<td class="fooinfo">Sandstorm</td>
+		</tr><tr>
+			<td class="cen">#595</td>
+			<td class="cen"><a href="/pokedex-swsh/joltik/"><img src="/swordshield/pokemon/small/595.png" alt="Joltik" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/joltik/">Joltik</a></td>
+			<td class="fooinfo">Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#605</td>
+			<td class="cen"><a href="/pokedex-swsh/elgyem/"><img src="/swordshield/pokemon/small/605.png" alt="Elgyem" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/elgyem/">Elgyem</a></td>
+			<td class="fooinfo">Normal Weather, Overcast, Fog</td>
+		</tr><tr>
+			<td class="cen">#607</td>
+			<td class="cen"><a href="/pokedex-swsh/litwick/"><img src="/swordshield/pokemon/small/607.png" alt="Litwick" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/litwick/">Litwick</a></td>
+			<td class="fooinfo">Intense Sun, Fog</td>
+		</tr><tr>
+			<td class="cen">#608</td>
+			<td class="cen"><a href="/pokedex-swsh/lampent/"><img src="/swordshield/pokemon/small/608.png" alt="Lampent" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/lampent/">Lampent</a></td>
+			<td class="fooinfo">Intense Sun, Overcast, Fog</td>
+		</tr><tr>
+			<td class="cen">#609</td>
+			<td class="cen"><a href="/pokedex-swsh/chandelure/"><img src="/swordshield/pokemon/small/609.png" alt="Chandelure" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/chandelure/">Chandelure</a></td>
+			<td class="fooinfo">Intense Sun, Overcast, Fog</td>
+		</tr><tr>
+			<td class="cen">#613</td>
+			<td class="cen"><a href="/pokedex-swsh/cubchoo/"><img src="/swordshield/pokemon/small/613.png" alt="Cubchoo" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/cubchoo/">Cubchoo</a></td>
+			<td class="fooinfo">Snowing, Snowstorm</td>
+		</tr><tr>
+			<td class="cen">#614</td>
+			<td class="cen"><a href="/pokedex-swsh/beartic/"><img src="/swordshield/pokemon/small/614.png" alt="Beartic" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/beartic/">Beartic</a></td>
+			<td class="fooinfo">Snowing, Snowstorm, Sandstorm</td>
+		</tr><tr>
+			<td class="cen">#617</td>
+			<td class="cen"><a href="/pokedex-swsh/accelgor/"><img src="/swordshield/pokemon/small/617.png" alt="Accelgor" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/accelgor/">Accelgor</a></td>
+			<td class="fooinfo">Raining, Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#618</td>
+			<td class="cen"><a href="/pokedex-swsh/stunfisk/"><img src="/swordshield/pokemon/small/618-g.png" alt="Stunfisk" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/stunfisk/">Stunfisk</a></td>
+			<td class="fooinfo">Intense Sun, Sandstorm</td>
+		</tr><tr>
+			<td class="cen">#620</td>
+			<td class="cen"><a href="/pokedex-swsh/mienshao/"><img src="/swordshield/pokemon/small/620.png" alt="Mienshao" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/mienshao/">Mienshao</a></td>
+			<td class="fooinfo">Normal Weather</td>
+		</tr><tr>
+			<td class="cen">#624</td>
+			<td class="cen"><a href="/pokedex-swsh/pawniard/"><img src="/swordshield/pokemon/small/624.png" alt="Pawniard" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/pawniard/">Pawniard</a></td>
+			<td class="fooinfo">Snowstorm, Overcast</td>
+		</tr><tr>
+			<td class="cen">#631</td>
+			<td class="cen"><a href="/pokedex-swsh/heatmor/"><img src="/swordshield/pokemon/small/631.png" alt="Heatmor" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/heatmor/">Heatmor</a></td>
+			<td class="fooinfo">Intense Sun</td>
+		</tr><tr>
+			<td class="cen">#632</td>
+			<td class="cen"><a href="/pokedex-swsh/durant/"><img src="/swordshield/pokemon/small/632.png" alt="Durant" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/durant/">Durant</a></td>
+			<td class="fooinfo">Intense Sun</td>
+		</tr><tr>
+			<td class="cen">#633</td>
+			<td class="cen"><a href="/pokedex-swsh/deino/"><img src="/swordshield/pokemon/small/633.png" alt="Deino" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/deino/">Deino</a></td>
+			<td class="fooinfo">Raining</td>
+		</tr><tr>
+			<td class="cen">#634</td>
+			<td class="cen"><a href="/pokedex-swsh/zweilous/"><img src="/swordshield/pokemon/small/634.png" alt="Zweilous" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/zweilous/">Zweilous</a></td>
+			<td class="fooinfo">Sandstorm, Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#636</td>
+			<td class="cen"><a href="/pokedex-swsh/larvesta/"><img src="/swordshield/pokemon/small/636.png" alt="Larvesta" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/larvesta/">Larvesta</a></td>
+			<td class="fooinfo">Intense Sun, Sandstorm</td>
+		</tr><tr>
+			<td class="cen">#637</td>
+			<td class="cen"><a href="/pokedex-swsh/volcarona/"><img src="/swordshield/pokemon/small/637.png" alt="Volcarona" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/volcarona/">Volcarona</a></td>
+			<td class="fooinfo">Intense Sun</td>
+		</tr><tr>
+			<td class="cen">#661</td>
+			<td class="cen"><a href="/pokedex-swsh/fletchling/"><img src="/swordshield/pokemon/small/661.png" alt="Fletchling" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/fletchling/">Fletchling</a></td>
+			<td class="fooinfo">Intense Sun</td>
+		</tr><tr>
+			<td class="cen">#662</td>
+			<td class="cen"><a href="/pokedex-swsh/fletchinder/"><img src="/swordshield/pokemon/small/662.png" alt="Fletchinder" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/fletchinder/">Fletchinder</a></td>
+			<td class="fooinfo">Intense Sun</td>
+		</tr><tr>
+			<td class="cen">#663</td>
+			<td class="cen"><a href="/pokedex-swsh/talonflame/"><img src="/swordshield/pokemon/small/663.png" alt="Talonflame" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/talonflame/">Talonflame</a></td>
+			<td class="fooinfo">Intense Sun</td>
+		</tr><tr>
+			<td class="cen">#678</td>
+			<td class="cen"><a href="/pokedex-swsh/meowstic/"><img src="/swordshield/pokemon/small/678.png" alt="Meowstic" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/meowstic/">Meowstic</a></td>
+			<td class="fooinfo">Fog</td>
+		</tr><tr>
+			<td class="cen">#679</td>
+			<td class="cen"><a href="/pokedex-swsh/honedge/"><img src="/swordshield/pokemon/small/679.png" alt="Honedge" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/honedge/">Honedge</a></td>
+			<td class="fooinfo">Fog, Snowstorm</td>
+		</tr><tr>
+			<td class="cen">#681</td>
+			<td class="cen"><a href="/pokedex-swsh/aegislash/"><img src="/swordshield/pokemon/small/681.png" alt="Aegislash" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/aegislash/">Aegislash</a></td>
+			<td class="fooinfo">Fog</td>
+		</tr><tr>
+			<td class="cen">#682</td>
+			<td class="cen"><a href="/pokedex-swsh/spritzee/"><img src="/swordshield/pokemon/small/682.png" alt="Spritzee" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/spritzee/">Spritzee</a></td>
+			<td class="fooinfo">Fog, Overcast</td>
+		</tr><tr>
+			<td class="cen">#684</td>
+			<td class="cen"><a href="/pokedex-swsh/swirlix/"><img src="/swordshield/pokemon/small/684.png" alt="Swirlix" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/swirlix/">Swirlix</a></td>
+			<td class="fooinfo">Fog, Overcast</td>
+		</tr><tr>
+			<td class="cen">#687</td>
+			<td class="cen"><a href="/pokedex-swsh/malamar/"><img src="/swordshield/pokemon/small/687.png" alt="Malamar" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/malamar/">Malamar</a></td>
+			<td class="fooinfo">Overcast, Raining</td>
+		</tr><tr>
+			<td class="cen">#688</td>
+			<td class="cen"><a href="/pokedex-swsh/binacle/"><img src="/swordshield/pokemon/small/688.png" alt="Binacle" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/binacle/">Binacle</a></td>
+			<td class="fooinfo">Raining, Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#689</td>
+			<td class="cen"><a href="/pokedex-swsh/barbaracle/"><img src="/swordshield/pokemon/small/689.png" alt="Barbaracle" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/barbaracle/">Barbaracle</a></td>
+			<td class="fooinfo">Raining, Overcast, Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#694</td>
+			<td class="cen"><a href="/pokedex-swsh/helioptile/"><img src="/swordshield/pokemon/small/694.png" alt="Helioptile" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/helioptile/">Helioptile</a></td>
+			<td class="fooinfo">Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#700</td>
+			<td class="cen"><a href="/pokedex-swsh/sylveon/"><img src="/swordshield/pokemon/small/700.png" alt="Sylveon" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/sylveon/">Sylveon</a></td>
+			<td class="fooinfo">Fog</td>
+		</tr><tr>
+			<td class="cen">#704</td>
+			<td class="cen"><a href="/pokedex-swsh/goomy/"><img src="/swordshield/pokemon/small/704.png" alt="Goomy" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/goomy/">Goomy</a></td>
+			<td class="fooinfo">Raining, Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#705</td>
+			<td class="cen"><a href="/pokedex-swsh/sliggoo/"><img src="/swordshield/pokemon/small/705.png" alt="Sliggoo" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/sliggoo/">Sliggoo</a></td>
+			<td class="fooinfo">Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#708</td>
+			<td class="cen"><a href="/pokedex-swsh/phantump/"><img src="/swordshield/pokemon/small/708.png" alt="Phantump" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/phantump/">Phantump</a></td>
+			<td class="fooinfo">Overcast</td>
+		</tr><tr>
+			<td class="cen">#709</td>
+			<td class="cen"><a href="/pokedex-swsh/trevenant/"><img src="/swordshield/pokemon/small/709.png" alt="Trevenant" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/trevenant/">Trevenant</a></td>
+			<td class="fooinfo">Overcast, Raining, Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#736</td>
+			<td class="cen"><a href="/pokedex-swsh/grubbin/"><img src="/swordshield/pokemon/small/736.png" alt="Grubbin" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/grubbin/">Grubbin</a></td>
+			<td class="fooinfo">Raining, Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#737</td>
+			<td class="cen"><a href="/pokedex-swsh/charjabug/"><img src="/swordshield/pokemon/small/737.png" alt="Charjabug" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/charjabug/">Charjabug</a></td>
+			<td class="fooinfo">Raining, Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#745</td>
+			<td class="cen"><a href="/pokedex-swsh/lycanroc/"><img src="/swordshield/pokemon/small/745.png" alt="Lycanroc" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/lycanroc/">Lycanroc</a></td>
+			<td class="fooinfo">Normal Weather, Overcast</td>
+		</tr><tr>
+			<td class="cen">#749</td>
+			<td class="cen"><a href="/pokedex-swsh/mudbray/"><img src="/swordshield/pokemon/small/749.png" alt="Mudbray" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/mudbray/">Mudbray</a></td>
+			<td class="fooinfo">Intense Sun, Sandstorm</td>
+		</tr><tr>
+			<td class="cen">#751</td>
+			<td class="cen"><a href="/pokedex-swsh/dewpider/"><img src="/swordshield/pokemon/small/751.png" alt="Dewpider" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/dewpider/">Dewpider</a></td>
+			<td class="fooinfo">Raining, Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#752</td>
+			<td class="cen"><a href="/pokedex-swsh/araquanid/"><img src="/swordshield/pokemon/small/752.png" alt="Araquanid" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/araquanid/">Araquanid</a></td>
+			<td class="fooinfo">Raining, Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#753</td>
+			<td class="cen"><a href="/pokedex-swsh/fomantis/"><img src="/swordshield/pokemon/small/753.png" alt="Fomantis" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/fomantis/">Fomantis</a></td>
+			<td class="fooinfo">Intense Sun</td>
+		</tr><tr>
+			<td class="cen">#754</td>
+			<td class="cen"><a href="/pokedex-swsh/lurantis/"><img src="/swordshield/pokemon/small/754.png" alt="Lurantis" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/lurantis/">Lurantis</a></td>
+			<td class="fooinfo">Intense Sun</td>
+		</tr><tr>
+			<td class="cen">#755</td>
+			<td class="cen"><a href="/pokedex-swsh/morelull/"><img src="/swordshield/pokemon/small/755.png" alt="Morelull" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/morelull/">Morelull</a></td>
+			<td class="fooinfo">Fog</td>
+		</tr><tr>
+			<td class="cen">#756</td>
+			<td class="cen"><a href="/pokedex-swsh/shiinotic/"><img src="/swordshield/pokemon/small/756.png" alt="Shiinotic" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/shiinotic/">Shiinotic</a></td>
+			<td class="fooinfo">Overcast, Raining, Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#758</td>
+			<td class="cen"><a href="/pokedex-swsh/salazzle/"><img src="/swordshield/pokemon/small/758.png" alt="Salazzle" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/salazzle/">Salazzle</a></td>
+			<td class="fooinfo">Intense Sun</td>
+		</tr><tr>
+			<td class="cen">#762</td>
+			<td class="cen"><a href="/pokedex-swsh/steenee/"><img src="/swordshield/pokemon/small/762.png" alt="Steenee" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/steenee/">Steenee</a></td>
+			<td class="fooinfo">Normal Weather</td>
+		</tr><tr>
+			<td class="cen">#770</td>
+			<td class="cen"><a href="/pokedex-swsh/palossand/"><img src="/swordshield/pokemon/small/770.png" alt="Palossand" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/palossand/">Palossand</a></td>
+			<td class="fooinfo">Overcast, Sandstorm, Fog</td>
+		</tr><tr>
+			<td class="cen">#771</td>
+			<td class="cen"><a href="/pokedex-swsh/pyukumuku/"><img src="/swordshield/pokemon/small/771.png" alt="Pyukumuku" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/pyukumuku/">Pyukumuku</a></td>
+			<td class="fooinfo">Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#776</td>
+			<td class="cen"><a href="/pokedex-swsh/turtonator/"><img src="/swordshield/pokemon/small/776.png" alt="Turtonator" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/turtonator/">Turtonator</a></td>
+			<td class="fooinfo">Intense Sun</td>
+		</tr><tr>
+			<td class="cen">#777</td>
+			<td class="cen"><a href="/pokedex-swsh/togedemaru/"><img src="/swordshield/pokemon/small/777.png" alt="Togedemaru" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/togedemaru/">Togedemaru</a></td>
+			<td class="fooinfo">Snowstorm</td>
+		</tr><tr>
+			<td class="cen">#778</td>
+			<td class="cen"><a href="/pokedex-swsh/mimikyu/"><img src="/swordshield/pokemon/small/778.png" alt="Mimikyu" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/mimikyu/">Mimikyu</a></td>
+			<td class="fooinfo">Fog</td>
+		</tr><tr>
+			<td class="cen">#780</td>
+			<td class="cen"><a href="/pokedex-swsh/drampa/"><img src="/swordshield/pokemon/small/780.png" alt="Drampa" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/drampa/">Drampa</a></td>
+			<td class="fooinfo">Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#783</td>
+			<td class="cen"><a href="/pokedex-swsh/hakamo-o/"><img src="/swordshield/pokemon/small/783.png" alt="Hakamo-o" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/hakamo-o/">Hakamo-o</a></td>
+			<td class="fooinfo">Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#821</td>
+			<td class="cen"><a href="/pokedex-swsh/rookidee/"><img src="/swordshield/pokemon/small/821.png" alt="Rookidee" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/rookidee/">Rookidee</a></td>
+			<td class="fooinfo">Overcast</td>
+		</tr><tr>
+			<td class="cen">#829</td>
+			<td class="cen"><a href="/pokedex-swsh/gossifleur/"><img src="/swordshield/pokemon/small/829.png" alt="Gossifleur" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/gossifleur/">Gossifleur</a></td>
+			<td class="fooinfo">Normal Weather, Intense Sun</td>
+		</tr><tr>
+			<td class="cen">#831</td>
+			<td class="cen"><a href="/pokedex-swsh/wooloo/"><img src="/swordshield/pokemon/small/831.png" alt="Wooloo" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/wooloo/">Wooloo</a></td>
+			<td class="fooinfo">Normal Weather, Snowing, Intense Sun</td>
+		</tr><tr>
+			<td class="cen">#838</td>
+			<td class="cen"><a href="/pokedex-swsh/carkol/"><img src="/swordshield/pokemon/small/838.png" alt="Carkol" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/carkol/">Carkol</a></td>
+			<td class="fooinfo">Intense Sun, Sandstorm</td>
+		</tr><tr>
+			<td class="cen">#840</td>
+			<td class="cen"><a href="/pokedex-swsh/applin/"><img src="/swordshield/pokemon/small/840.png" alt="Applin" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/applin/">Applin</a></td>
+			<td class="fooinfo">Normal Weather, Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#843</td>
+			<td class="cen"><a href="/pokedex-swsh/silicobra/"><img src="/swordshield/pokemon/small/843.png" alt="Silicobra" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/silicobra/">Silicobra</a></td>
+			<td class="fooinfo">Sandstorm</td>
+		</tr><tr>
+			<td class="cen">#848</td>
+			<td class="cen"><a href="/pokedex-swsh/toxel/"><img src="/swordshield/pokemon/small/848.png" alt="Toxel" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/toxel/">Toxel</a></td>
+			<td class="fooinfo">Normal Weather, Raining, Thunderstorm</td>
+		</tr><tr>
+			<td class="cen">#850</td>
+			<td class="cen"><a href="/pokedex-swsh/sizzlipede/"><img src="/swordshield/pokemon/small/850.png" alt="Sizzlipede" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/sizzlipede/">Sizzlipede</a></td>
+			<td class="fooinfo">Normal Weather, Intense Sun</td>
+		</tr><tr>
+			<td class="cen">#851</td>
+			<td class="cen"><a href="/pokedex-swsh/centiskorch/"><img src="/swordshield/pokemon/small/851.png" alt="Centiskorch" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/centiskorch/">Centiskorch</a></td>
+			<td class="fooinfo">Normal Weather, Intense Sun</td>
+		</tr><tr>
+			<td class="cen">#856</td>
+			<td class="cen"><a href="/pokedex-swsh/hatenna/"><img src="/swordshield/pokemon/small/856.png" alt="Hatenna" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/hatenna/">Hatenna</a></td>
+			<td class="fooinfo">Fog</td>
+		</tr><tr>
+			<td class="cen">#860</td>
+			<td class="cen"><a href="/pokedex-swsh/morgrem/"><img src="/swordshield/pokemon/small/860.png" alt="Morgrem" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/morgrem/">Morgrem</a></td>
+			<td class="fooinfo">Fog</td>
+		</tr><tr>
+			<td class="cen">#868</td>
+			<td class="cen"><a href="/pokedex-swsh/milcery/"><img src="/swordshield/pokemon/small/868.png" alt="Milcery" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/milcery/">Milcery</a></td>
+			<td class="fooinfo">Fog</td>
+		</tr><tr>
+			<td class="cen">#870</td>
+			<td class="cen"><a href="/pokedex-swsh/falinks/"><img src="/swordshield/pokemon/small/870.png" alt="Falinks" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/falinks/">Falinks</a></td>
+			<td class="fooinfo">Overcast</td>
+		</tr><tr>
+			<td class="cen">#876</td>
+			<td class="cen"><a href="/pokedex-swsh/indeedee/"><img src="/swordshield/pokemon/small/876.png" alt="Indeedee" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/indeedee/">Indeedee</a></td>
+			<td class="fooinfo">Fog, Normal Weather</td>
+		</tr><tr>
+			<td class="cen">#885</td>
+			<td class="cen"><a href="/pokedex-swsh/dreepy/"><img src="/swordshield/pokemon/small/885.png" alt="Dreepy" loading="lazy" /></a></td>
+			<td class="cen"><a href="/pokedex-swsh/dreepy/">Dreepy</a></td>
+			<td class="fooinfo">Overcast, Thunderstorm, Fog</td>
+		</tr></table>
+
+</main></div><!-- END id="content" -->
+
+
+<aside id="rbar">
+	<div class="navheader">Game Names</div>
+<div><a href="#">Pokémon Sword<br />Pokémon Shield</a><br /></div>
+	<div class="navheader">Console</div>
+<div><a href="/games/consoles/nintendoswitch.shtml"><img src="/Toolbar/switch.png"" border=0 alt="Nintendo Switch Image"><br />Nintendo Switch</a><br /></div>
+	<div class="navheader">Game Sections</div>
+<div><ul><li><a href="/swordshield/">Information</a></li>
+<li><a href="/pokedex-swsh">Pokédex</a></li>
+<li><a href="/swordshield/pics.shtml">Pre-Release Screenshots</a></li>
+<li><a href="/swordshield/videos.shtml">Pre-Release Trailers</a></li>
+<li><a href="/swordshield/expansionpass.shtml">Expansion Pass</a></li>
+<li><b>Pokémon</b></li>
+<li><a href="/swordshield/pokemon.shtml">New Pokémon</a></li>
+<li><a href="/swordshield/galarianforms.shtml">Galarian Forms</a></li>
+<li><a href="/swordshield/gigantamax.shtml">Gigantamax Forms</a></li>
+<li><a href="/swordshield/maxsoup.shtml">-Max Soup</a></li>
+<li><a href="/swordshield/galarpokedex.shtml">Available Pokémon</a></li>
+<li><a href="/swordshield/galarpokedex.shtml">-Galar Pokédex</a></li>
+<li><a href="/swordshield/isleofarmordex.shtml">-Isle of Armor Pokédex</a></li>
+<li><a href="/swordshield/thecrowntundradex.shtml">-The Crown Tundra Pokédex</a></li>
+<li><a href="/swordshield/pokemonnotindex.shtml">-Other Available Pokémon</a></li>
+<li><a href="/swordshield/transferonly.shtml">Transfer Only Pokémon</a></li>
+<li><a href="/swordshield/interactable.shtml">Interactable Pokémon</a></li>
+
+<li><a href="/swordshield/expansionreturning.shtml">Expansion Pass Returning Pokémon</a></li>
+<li><a href="/swordshield/unobtainable.shtml">Unavailable Pokémon</a></li>
+<li><a href="/swordshield/evolution.shtml">New Evolution Methods</a></li>
+<li><a href="/swordshield/dynamax.shtml">Dynamax</a></li>
+<li><a href="/swordshield/legendary.shtml">Legendary Pokémon</a></li>
+<li><a href="/swordshield/gift.shtml">Gift Pokémon</a></li>
+<li><a href="/swordshield/ingametrade.shtml">In-Game Trade</a></li>
+<li><a href="/swordshield/maxraidbattles.shtml">Max Raid Battles</a></li>
+<li><a href="/swordshield/maxraidbattledens.shtml">-Den Location Listings</a></li>
+<li><a href="/swordshield/maxraidbattlepartners.shtml">-Partners</a></li>
+<li><a href="/swordshield/dynamaxadventures.shtml">-Dynamax Adventures</a></li>
+<li><a href="/swordshield/dynamaxadventurespokemon.shtml">--Rental & Obtainable Pokémon</a></li>
+<li><a href="/swordshield/abilities.shtml">New Abilities</a></li>
+<li><a href="/swordshield/updatedabilities.shtml">Updated Abilities</a></li>
+<li><a href="/swordshield/updatedstats.shtml">Pokémon with Updated Stats</a></li>
+<li><a href="/swordshield/pokemonabilities.shtml">Pokémon with Updated Abilities</a></li>
+<li><a href="/swordshield/updatedegggroups.shtml">Pokémon in new Egg Groups</a></li>
+<li><a href="/swordshield/hiddenability.shtml">Available Hidden Abilities</a></li>
+<li><a href="/swordshield/formchange.shtml">Form Changing Methods</a></li>
+<li><a href="/swordshield/shinypokemon.shtml">Shiny Pokémon Mechanics</a></li>
+<li><a href="/swordshield/hometm.shtml">Missing Pokémon TM Learnsets</a></li>
+<li><a href="/swordshield/followingpokemon.shtml">Following Pokémon</a></li>
+<li><a href="/swordshield/exclusives.shtml"><b>Version Exclusives</b></li>
+<li>-Pokémon</a></li>
+<li><a href="/swordshield/versionmisc.shtml">-Miscellaneous</a></li>
+<li><b>Items & Moves</b></li>
+<li><a href="/swordshield/attacks.shtml">New Moves</a></li>
+<li><a href="/swordshield/maxmoves.shtml">Max Moves</a></li>
+<li><a href="/swordshield/g-maxmoves.shtml">G-Max Moves</a></li>
+<li><a href="/swordshield/updatedattacks.shtml">Updated Moves</a></li>
+<li><a href="/swordshield/unusableattacks.shtml">Unusable Moves</a></li>
+<li><a href="/swordshield/tm.shtml">Technical Machines (TM)</a></li>
+<li><a href="/swordshield/tr.shtml">Technical Records (TR)</a></li>
+<li><a href="/swordshield/movetutors.shtml">Move Tutors</a></li>
+<li><a href="/swordshield/isleofarmormovetutors.shtml">Isle of Armor Move Tutors</a></li>
+<li><a href="/swordshield/items.shtml">Item Listing</a></li>
+<li><a href="/swordshield/holditems.shtml">Wild Hold Items</a></li>
+<li><a href="/swordshield/newitems.shtml">New Items</a></li>
+<li><a href="/swordshield/updateditems.shtml">Updated  Items</a></li>
+<li><a href="/swordshield/cram-o-matic.shtml">Cram-o-matic  Items</a></li>
+<li><a href="/swordshield/pickup.shtml">Pickup Items</a></li>
+<li><a href="/swordshield/berrytrees.shtml">Berry Trees</a></li>
+<li><b>Region & Characters</b></li>
+<li><a href="/pokearth/galar">The Galar Region</a></li>
+<li><a href="/swordshield/gyms.shtml">Gyms & Gym Leaders</a></li>
+<li><a href="/swordshield/championcup.shtml">Champion Cup</a></li>
+<li><a href="/swordshield/championcuprematch.shtml">Champion Cup Rematches</a></li>
+<li><a href="/swordshield/galarianstartournament.shtml">Galarian Star Tournament</a></li>
+<li><a href="/swordshield/battletower.shtml">Battle Tower</a></li>
+<li><a href="/swordshield/battletower/">-Trainer Catalogue</a></li>
+<li><a href="/swordshield/restrictedsparring.shtml">Restricted Sparring</a></li>
+<li><a href="/swordshield/restrictedsparringpokemon.shtml">-Opponent Catalogue</a></li>
+<li><a href="/swordshield/wildarea.shtml">The Wild Area</a></li>
+<li><a href="/swordshield/dojoupgrades.shtml">Master Dojo Upgrades</a></li>
+<li><a href="/swordshield/weather.shtml">Weather in the Wild Area</a></li>
+<li><a href="/swordshield/characters.shtml">New Characters</a></li>
+<li><a href="/swordshield/bede.shtml">Pokémon Trainer Bede</a></li>
+<li><a href="/swordshield/hop.shtml">Pokémon Trainer Hop</a></li>
+<li><a href="/swordshield/marnie.shtml">Pokémon Trainer Marnie</a></li>
+<li><a href="/swordshield/macrocosmos.shtml">Macro Cosmos</a></li>
+<li><a href="/swordshield/teamyell.shtml">Team Yell</a></li>
+<li><a href="/swordshield/sordwardshielbert.shtml">Sordward & Shielbert</a></li>
+<li><a href="/swordshield/klaraavery.shtml">Pokémon Trainers Klara & Avery</a></li>
+<li><a href="/swordshield/mustard.shtml">Mustard & Master Dojo</a></li>
+<li><a href="/swordshield/useful.shtml">Useful Characters</a></li>
+<li><a href="/swordshield/diglett.shtml">Diglett Hunting</a></li>
+<li><a href="/swordshield/thesacredbondsofsovereignandsteed.shtml">The Sacred Bonds of Sovereign and Steed!</a>	</li>
+<li><a href="/swordshield/theterribletitanslurkinglockedaway.shtml">The Terrible Titans... Lurking Locked Away!</a></li>
+<li><a href="/swordshield/alegendarytreeofalegendarythree.shtml">A Legendary Tree of a Legendary Three!</a></li>
+<li><a href="/swordshield/theycamefromtheultrabeyond.shtml">They Came From The Ultra Beyond!</a></li>
+<li><a href="/swordshield/islecameos.shtml">Isle of Armor Cameos</a></li>
+<li><a href="/swordshield/surprisedens.shtml">Surprise Dynamax Battles</a></li>
+
+<li><a href="/swordshield/footprints.shtml">Footprint Hunting</a></li>
+<li><b>Features & Mechanics</b></li>
+<li><a href="/swordshield/brilliantaura.shtml">Brilliant Aura Pokémon</a></li>
+<li><a href="/swordshield/customisation.shtml">Trainer Customisation</a></li>
+<li><a href="/swordshield/naturechanging.shtml">Nature Altering</a></li>
+<li><a href="/swordshield/pokemoncamp.shtml">Pokémon Camp</a></li>
+<li><a href="/swordshield/currydex.shtml">Curry Dex & Making Curry</a></li>
+<li><a href="/swordshield/ingredients.shtml">-Ingredients</a></li>
+<li><a href="/swordshield/pokejobs.shtml">Poké Jobs</a></li>
+<li><a href="/swordshield/diggingduo.shtml">Digging Duo</a></li>
+<li><a href="/swordshield/diggingpadiggingma.shtml">Digging Pa & Digging Ma</a></li>
+<li><a href="/swordshield/breedingmechanics.shtml">Breeding Mechanics</a></li>
+<li><a href="/swordshield/happiness.shtml">Happiness Mechanics</a></li>
+<li><a href="/swordshield/evtraining.shtml">EV Training</a></li>
+<li><a href="/swordshield/increasedspawns.shtml">Increasing Spawns</a></li>
+<li><a href="/swordshield/dailyevent.shtml">Daily Event</a></li>
+<li><a href="/swordshield/leaguecard.shtml">League Card</a></li>
+<li><a href="/swordshield/leaguecardalbum.shtml">League Card Albums</a></li>
+<li><a href="/swordshield/ycomm.shtml">Y-Comm</a></li>
+<li><a href="/swordshield/ribbons.shtml">Ribbons</a></li>
+<li><a href="/swordshield/marks.shtml">Marks</a></li>
+<li><a href="/swordshield/othergames.shtml">Features unlocked by Other Games</a></li>
+<li><a href="/swordshield/victorystation.shtml">Victory Station</a></li>
+<li><a href="/swordshield/rankedbattle.shtml">-Ranked Battles</a></li>
+<li><a href="/swordshield/rental.shtml">Rental Pokémon</a></li>
+<li><a href="/swordshield/mysterygift.shtml">Mystery Gift</a></li>
+<li><a href="/swordshield/rotomphone.shtml">Rotom Phone</a></li>
+<li><a href="/swordshield/battlebackgrounds.shtml">Battle Backgrounds</a></li>
+<li><a href="/swordshield/musiccustomisation.shtml">Music Customisation</a></li>
+<li><a href="/swordshield/birthdays.shtml">Birthday Features</a></li>
+<li><b>Events & Downloads</b></li>
+<li><a href="/swordshield/expansionpass.shtml">Expansion Pass</a></li>
+<li><a href="/swordshield/expansionpass/theisleofarmor.shtml">-The Isle of Armor</a></li>
+<li><a href="/swordshield/expansionpass/thecrowntundra.shtml">-The Crown Tundra</a></li>
+<li><a href="/swordshield/internetevents.shtml">Internet  Events</a></li>
+<li><a href="/swordshield/serialcode.shtml">Serial Code Events</a></li>
+<li><a href="/swordshield/dynamaxcrystals.shtml">Dynamax Crystal Events</a></li>
+<li><a href="/swordshield/wildareaevents.shtml">Wild Area Events</a></li>
+<li><a href="/swordshield/onlinecompetitions.shtml">Online Competitions</a></li>
+<li><a href="/swordshield/patch.shtml">Patches & Updates</a></li>
+<li><b>Peripherals</b></li>
+<li><a href="/swordshield/pokeballplus.shtml">Poké Ball Plus Connectivity</a></li>
+</ul></div>
+	<div class="navheader">Details</div>
+<div><b>Developer:</b><div align="right"><a href="/pokemon/companies/gamefreak.shtml">GAME FREAK</a></div>
+<b>Genre:</b><div align="right">RPG</div>
+<b>Players:</b><div align="right">1-4</div>
+<b>eShop Download Size:</b><div align="right">12.4GB</div></div>
+
+	<div class="navheader">Release Date</div>
+<div><b>Global</b>: November 15th 2019</div>
+
+
+	</aside>
+
+</div><!-- END id="wrapper" -->
+<footer id="footer">
+	<div class="copyright">
+		<a href="#top" alt="Top of Page" title="Top of Page" class="totop"></a>
+
+		All Content is &copy; Copyright of Serebii.net 1999-2026. |
+		<a href="/privacy.shtml">Privacy Policy</a> |
+		<a class="nn-cmp-show" href="#">Manage Cookie Settings</a><br/>
+		Pokémon and All Respective Names are Trademark &amp; &copy; of Nintendo 1996-2026<br /><br />
+<a href="https://www.patreon.com/serebiinet" target="blank" rel="nofollow"></u>Support us on Patreon</u></a>
+	</div>
+
+	<div style="height:102px">
+		<div id="nn_lb2"></div><div id="nn_mobile_lb2"></div>
+<div id="celtra-reveal-wrapper" style="position:fixed; height: auto; width: 100%">
+<div id="nn_1by1"></div>
+</div>
+	</div>
+<script data-cfasync="false" async src="//cdn.intergient.com/1025662/76683/ramp.js"></script>
+</footer>
+
+
+</body>
+
+</html>

@@ -1,75 +1,46 @@
-# pokedextracker.com
+# Pokédex Tracker (monorepo)
 
-[![CircleCI](https://circleci.com/gh/pokedextracker/pokedextracker.com.svg?style=shield)](https://circleci.com/gh/pokedextracker/pokedextracker.com)
-[![Dependency Status](https://david-dm.org/pokedextracker/pokedextracker.com.svg)](https://david-dm.org/pokedextracker/pokedextracker.com)
+A website to track your completion of a Living Pokédex. This is a fork of
+[pokedextracker.com](https://github.com/pokedextracker/pokedextracker.com) that
+merges the frontend and the API into a single repository:
 
-A website to track your completion of a Living Pokedex.
+| Directory | What it is | Upstream |
+|-----------|------------|----------|
+| [`web/`](web/) | React/TypeScript frontend (webpack, sass) | [pokedextracker/pokedextracker.com](https://github.com/pokedextracker/pokedextracker.com) |
+| [`api/`](api/) | Go API + PostgreSQL schema migrations | [pokedextracker/api.pokedextracker.com](https://github.com/pokedextracker/api.pokedextracker.com) |
 
-## Install
-
-This project has been tested to work with Node.js v5 (at least v5.10) and v6 (though it might work for other versions), so make sure you have one of them installed and active when running this application. This project also relies on the `yarn.lock` file to lock down dependency versions, so we recommend that you use [`yarn`](https://yarnpkg.com/en/) instead of `npm` to avoid "it works on my computer" bugs that are all too common with just a `package.json`.
-
-### Unix
-
-When on Linux or Mac OS X, we recommend using [`nvm`](https://github.com/creationix/nvm) so that you can easily switch between Node versions. This is so that they don't conflict with each other when working on different Node projects.
-
-```sh
-$ nvm install 5
-$ nvm use 5
-$ yarn
-```
-
-If you have [`avn`](https://github.com/wbyoung/avn) or [`nodenv`](https://github.com/nodenv/nodenv) setup, the `.node-version` file should automatically switch the version for you.
-
-Keep in mind though that `nvm` is not required to run this application.
-
-### Windows
-
-While there is [`nvm` for Windows](https://github.com/coreybutler/nvm-windows), we've seen some people having issues with later versions of Node. So instead, it might just be easier to install Node using the [Windows Installer](https://nodejs.org/en/download/current/). Once you have Node installed, then you should be able to just install the dependencies.
-
-```dos
-> yarn
-```
-
-## Running
-
-To run the development server to test it locally, you only need to run:
+Both were merged with their full git history (the API via `git subtree add
+--prefix=api`). To pull upstream changes later:
 
 ```sh
-$ yarn start
+# frontend
+git fetch https://github.com/pokedextracker/pokedextracker.com master
+git merge FETCH_HEAD   # frontend lives in web/, so expect path adjustments
+
+# api
+git subtree pull --prefix=api https://github.com/pokedextracker/api.pokedextracker.com master
 ```
 
-Once the bundle becomes valid, you should be able to go to [http://localhost:8080](http://localhost:8080) to view it.
+## Development
 
-## Linting
-
-To ensure your files are following the preferred style guide, you can run:
+The frontend expects the API on `localhost:8647` (see `web/config/local.ts`),
+and the API expects Postgres on `localhost:9876`.
 
 ```sh
-$ yarn run lint
+# 1. database
+cd api && docker compose up -d postgres
+
+# 2. migrations + API server
+cd api && make db:migrate && make start
+
+# 3. frontend (in another shell)
+cd web && yarn install && NODE_ENV=local yarn start
 ```
 
-This is run on Travis whenever a commit is made so if you're going to [contribute](CONTRIBUTING.md), you should make sure your files pass the linter.
+## Data
 
-## Docker
-
-Every merge into the `master` branch on GitHub triggers a new build for a Docker image. That image will overwrite the `latest` tag, and there will be an explicit tag with the first 7 characters of the commit hash. The server will be listening on port 4939 so if you run a container locally, make sure that traffic is forwarded to that port. For example:
-
-```sh
-$ docker run --rm --publish 3000:4939 --name pokedextracker pokedextracker/pokedextracker.com:latest
-```
-
-## Deployments
-
->Note: you need the necessary permissions to be able to deploy.
-
-The [deploy script](script/deploy.sh) uses [Helm](https://helm.sh/) and the
-[`web-app` Helm
-chart](https://github.com/pokedextracker/charts/tree/master/src/web-app) to
-create a new release in the PokedexTracker Kubernetes cluster. Pass in the
-newly created Docker tag to deploy that version to the cluster.
-
-```sh
-$ yarn deploy:staging 123abcd
-$ yarn deploy:production 123abcd
-```
+The upstream API repo ships schema migrations but **no Pokémon data** — the
+dataset only ever lived in the upstream production/staging databases. This fork
+reconstructs a seed dataset from the public read endpoints of the live API
+(games, dex types, Pokémon, dexes) so the database can be stood up from
+scratch. See [`tools/scrape/`](tools/scrape/) for the scraper and `cd api && make db:seed` to load the generated seed.

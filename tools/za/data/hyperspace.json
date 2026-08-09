@@ -1,0 +1,788 @@
+[
+ {
+  "dex_number": 1,
+  "national_id": 56,
+  "form_suffix": null,
+  "name": "Mankey"
+ },
+ {
+  "dex_number": 2,
+  "national_id": 57,
+  "form_suffix": null,
+  "name": "Primeape"
+ },
+ {
+  "dex_number": 3,
+  "national_id": 979,
+  "form_suffix": null,
+  "name": "Annihilape"
+ },
+ {
+  "dex_number": 4,
+  "national_id": 52,
+  "form_suffix": null,
+  "name": "Meowth"
+ },
+ {
+  "dex_number": 5,
+  "national_id": 53,
+  "form_suffix": null,
+  "name": "Persian"
+ },
+ {
+  "dex_number": 6,
+  "national_id": 863,
+  "form_suffix": null,
+  "name": "Perrserker"
+ },
+ {
+  "dex_number": 7,
+  "national_id": 83,
+  "form_suffix": null,
+  "name": "Farfetch'd"
+ },
+ {
+  "dex_number": 8,
+  "national_id": 865,
+  "form_suffix": null,
+  "name": "Sirfetch'd"
+ },
+ {
+  "dex_number": 9,
+  "national_id": 104,
+  "form_suffix": null,
+  "name": "Cubone"
+ },
+ {
+  "dex_number": 10,
+  "national_id": 105,
+  "form_suffix": null,
+  "name": "Marowak"
+ },
+ {
+  "dex_number": 11,
+  "national_id": 137,
+  "form_suffix": null,
+  "name": "Porygon"
+ },
+ {
+  "dex_number": 12,
+  "national_id": 233,
+  "form_suffix": null,
+  "name": "Porygon2"
+ },
+ {
+  "dex_number": 13,
+  "national_id": 474,
+  "form_suffix": null,
+  "name": "Porygon-Z"
+ },
+ {
+  "dex_number": 14,
+  "national_id": 951,
+  "form_suffix": null,
+  "name": "Capsakid"
+ },
+ {
+  "dex_number": 15,
+  "national_id": 952,
+  "form_suffix": null,
+  "name": "Scovillain"
+ },
+ {
+  "dex_number": 16,
+  "national_id": 957,
+  "form_suffix": null,
+  "name": "Tinkatink"
+ },
+ {
+  "dex_number": 17,
+  "national_id": 958,
+  "form_suffix": null,
+  "name": "Tinkatuff"
+ },
+ {
+  "dex_number": 18,
+  "national_id": 959,
+  "form_suffix": null,
+  "name": "Tinkaton"
+ },
+ {
+  "dex_number": 19,
+  "national_id": 967,
+  "form_suffix": null,
+  "name": "Cyclizar"
+ },
+ {
+  "dex_number": 20,
+  "national_id": 969,
+  "form_suffix": null,
+  "name": "Glimmet"
+ },
+ {
+  "dex_number": 21,
+  "national_id": 970,
+  "form_suffix": null,
+  "name": "Glimmora"
+ },
+ {
+  "dex_number": 22,
+  "national_id": 479,
+  "form_suffix": null,
+  "name": "Rotom"
+ },
+ {
+  "dex_number": 23,
+  "national_id": 971,
+  "form_suffix": null,
+  "name": "Greavard"
+ },
+ {
+  "dex_number": 24,
+  "national_id": 972,
+  "form_suffix": null,
+  "name": "Houndstone"
+ },
+ {
+  "dex_number": 25,
+  "national_id": 769,
+  "form_suffix": null,
+  "name": "Sandygast"
+ },
+ {
+  "dex_number": 26,
+  "national_id": 770,
+  "form_suffix": null,
+  "name": "Palossand"
+ },
+ {
+  "dex_number": 27,
+  "national_id": 352,
+  "form_suffix": null,
+  "name": "Kecleon"
+ },
+ {
+  "dex_number": 28,
+  "national_id": 973,
+  "form_suffix": null,
+  "name": "Flamigo"
+ },
+ {
+  "dex_number": 29,
+  "national_id": 615,
+  "form_suffix": null,
+  "name": "Cryogonal"
+ },
+ {
+  "dex_number": 30,
+  "national_id": 977,
+  "form_suffix": null,
+  "name": "Dondozo"
+ },
+ {
+  "dex_number": 31,
+  "national_id": 978,
+  "form_suffix": null,
+  "name": "Tatsugiri"
+ },
+ {
+  "dex_number": 32,
+  "national_id": 996,
+  "form_suffix": null,
+  "name": "Frigibax"
+ },
+ {
+  "dex_number": 33,
+  "national_id": 997,
+  "form_suffix": null,
+  "name": "Arctibax"
+ },
+ {
+  "dex_number": 34,
+  "national_id": 998,
+  "form_suffix": null,
+  "name": "Baxcalibur"
+ },
+ {
+  "dex_number": 35,
+  "national_id": 999,
+  "form_suffix": null,
+  "name": "Gimmighoul"
+ },
+ {
+  "dex_number": 36,
+  "national_id": 1000,
+  "form_suffix": null,
+  "name": "Gholdengo"
+ },
+ {
+  "dex_number": 37,
+  "national_id": 211,
+  "form_suffix": null,
+  "name": "Qwilfish"
+ },
+ {
+  "dex_number": 38,
+  "national_id": 904,
+  "form_suffix": null,
+  "name": "Overqwil"
+ },
+ {
+  "dex_number": 39,
+  "national_id": 252,
+  "form_suffix": null,
+  "name": "Treecko"
+ },
+ {
+  "dex_number": 40,
+  "national_id": 253,
+  "form_suffix": null,
+  "name": "Grovyle"
+ },
+ {
+  "dex_number": 41,
+  "national_id": 254,
+  "form_suffix": null,
+  "name": "Sceptile"
+ },
+ {
+  "dex_number": 42,
+  "national_id": 255,
+  "form_suffix": null,
+  "name": "Torchic"
+ },
+ {
+  "dex_number": 43,
+  "national_id": 256,
+  "form_suffix": null,
+  "name": "Combusken"
+ },
+ {
+  "dex_number": 44,
+  "national_id": 257,
+  "form_suffix": null,
+  "name": "Blaziken"
+ },
+ {
+  "dex_number": 45,
+  "national_id": 258,
+  "form_suffix": null,
+  "name": "Mudkip"
+ },
+ {
+  "dex_number": 46,
+  "national_id": 259,
+  "form_suffix": null,
+  "name": "Marshtomp"
+ },
+ {
+  "dex_number": 47,
+  "national_id": 260,
+  "form_suffix": null,
+  "name": "Swampert"
+ },
+ {
+  "dex_number": 48,
+  "national_id": 349,
+  "form_suffix": null,
+  "name": "Feebas"
+ },
+ {
+  "dex_number": 49,
+  "national_id": 350,
+  "form_suffix": null,
+  "name": "Milotic"
+ },
+ {
+  "dex_number": 50,
+  "national_id": 433,
+  "form_suffix": null,
+  "name": "Chingling"
+ },
+ {
+  "dex_number": 51,
+  "national_id": 358,
+  "form_suffix": null,
+  "name": "Chimecho"
+ },
+ {
+  "dex_number": 52,
+  "national_id": 876,
+  "form_suffix": null,
+  "name": "Indeedee"
+ },
+ {
+  "dex_number": 53,
+  "national_id": 509,
+  "form_suffix": null,
+  "name": "Purrloin"
+ },
+ {
+  "dex_number": 54,
+  "national_id": 510,
+  "form_suffix": null,
+  "name": "Liepard"
+ },
+ {
+  "dex_number": 55,
+  "national_id": 517,
+  "form_suffix": null,
+  "name": "Munna"
+ },
+ {
+  "dex_number": 56,
+  "national_id": 518,
+  "form_suffix": null,
+  "name": "Musharna"
+ },
+ {
+  "dex_number": 57,
+  "national_id": 538,
+  "form_suffix": null,
+  "name": "Throh"
+ },
+ {
+  "dex_number": 58,
+  "national_id": 539,
+  "form_suffix": null,
+  "name": "Sawk"
+ },
+ {
+  "dex_number": 59,
+  "national_id": 562,
+  "form_suffix": null,
+  "name": "Yamask"
+ },
+ {
+  "dex_number": 60,
+  "national_id": 563,
+  "form_suffix": null,
+  "name": "Cofagrigus"
+ },
+ {
+  "dex_number": 61,
+  "national_id": 867,
+  "form_suffix": null,
+  "name": "Runerigus"
+ },
+ {
+  "dex_number": 62,
+  "national_id": 767,
+  "form_suffix": null,
+  "name": "Wimpod"
+ },
+ {
+  "dex_number": 63,
+  "national_id": 768,
+  "form_suffix": null,
+  "name": "Golisopod"
+ },
+ {
+  "dex_number": 64,
+  "national_id": 827,
+  "form_suffix": null,
+  "name": "Nickit"
+ },
+ {
+  "dex_number": 65,
+  "national_id": 828,
+  "form_suffix": null,
+  "name": "Thievul"
+ },
+ {
+  "dex_number": 66,
+  "national_id": 852,
+  "form_suffix": null,
+  "name": "Clobbopus"
+ },
+ {
+  "dex_number": 67,
+  "national_id": 853,
+  "form_suffix": null,
+  "name": "Grapploct"
+ },
+ {
+  "dex_number": 68,
+  "national_id": 778,
+  "form_suffix": null,
+  "name": "Mimikyu"
+ },
+ {
+  "dex_number": 69,
+  "national_id": 900,
+  "form_suffix": null,
+  "name": "Kleavor"
+ },
+ {
+  "dex_number": 70,
+  "national_id": 877,
+  "form_suffix": null,
+  "name": "Morpeko"
+ },
+ {
+  "dex_number": 71,
+  "national_id": 622,
+  "form_suffix": null,
+  "name": "Golett"
+ },
+ {
+  "dex_number": 72,
+  "national_id": 623,
+  "form_suffix": null,
+  "name": "Golurk"
+ },
+ {
+  "dex_number": 73,
+  "national_id": 821,
+  "form_suffix": null,
+  "name": "Rookidee"
+ },
+ {
+  "dex_number": 74,
+  "national_id": 822,
+  "form_suffix": null,
+  "name": "Corvisquire"
+ },
+ {
+  "dex_number": 75,
+  "national_id": 823,
+  "form_suffix": null,
+  "name": "Corviknight"
+ },
+ {
+  "dex_number": 76,
+  "national_id": 174,
+  "form_suffix": null,
+  "name": "Igglybuff"
+ },
+ {
+  "dex_number": 77,
+  "national_id": 39,
+  "form_suffix": null,
+  "name": "Jigglypuff"
+ },
+ {
+  "dex_number": 78,
+  "national_id": 40,
+  "form_suffix": null,
+  "name": "Wigglytuff"
+ },
+ {
+  "dex_number": 79,
+  "national_id": 926,
+  "form_suffix": null,
+  "name": "Fidough"
+ },
+ {
+  "dex_number": 80,
+  "national_id": 927,
+  "form_suffix": null,
+  "name": "Dachsbun"
+ },
+ {
+  "dex_number": 81,
+  "national_id": 396,
+  "form_suffix": null,
+  "name": "Starly"
+ },
+ {
+  "dex_number": 82,
+  "national_id": 397,
+  "form_suffix": null,
+  "name": "Staravia"
+ },
+ {
+  "dex_number": 83,
+  "national_id": 398,
+  "form_suffix": null,
+  "name": "Staraptor"
+ },
+ {
+  "dex_number": 84,
+  "national_id": 325,
+  "form_suffix": null,
+  "name": "Spoink"
+ },
+ {
+  "dex_number": 85,
+  "national_id": 326,
+  "form_suffix": null,
+  "name": "Grumpig"
+ },
+ {
+  "dex_number": 86,
+  "national_id": 931,
+  "form_suffix": null,
+  "name": "Squawkabilly"
+ },
+ {
+  "dex_number": 87,
+  "national_id": 739,
+  "form_suffix": null,
+  "name": "Crabrawler"
+ },
+ {
+  "dex_number": 88,
+  "national_id": 740,
+  "form_suffix": null,
+  "name": "Crabominable"
+ },
+ {
+  "dex_number": 89,
+  "national_id": 932,
+  "form_suffix": null,
+  "name": "Nacli"
+ },
+ {
+  "dex_number": 90,
+  "national_id": 933,
+  "form_suffix": null,
+  "name": "Naclstack"
+ },
+ {
+  "dex_number": 91,
+  "national_id": 934,
+  "form_suffix": null,
+  "name": "Garganacl"
+ },
+ {
+  "dex_number": 92,
+  "national_id": 316,
+  "form_suffix": null,
+  "name": "Gulpin"
+ },
+ {
+  "dex_number": 93,
+  "national_id": 317,
+  "form_suffix": null,
+  "name": "Swalot"
+ },
+ {
+  "dex_number": 94,
+  "national_id": 41,
+  "form_suffix": null,
+  "name": "Zubat"
+ },
+ {
+  "dex_number": 95,
+  "national_id": 42,
+  "form_suffix": null,
+  "name": "Golbat"
+ },
+ {
+  "dex_number": 96,
+  "national_id": 169,
+  "form_suffix": null,
+  "name": "Crobat"
+ },
+ {
+  "dex_number": 97,
+  "national_id": 935,
+  "form_suffix": null,
+  "name": "Charcadet"
+ },
+ {
+  "dex_number": 98,
+  "national_id": 936,
+  "form_suffix": null,
+  "name": "Armarouge"
+ },
+ {
+  "dex_number": 99,
+  "national_id": 937,
+  "form_suffix": null,
+  "name": "Ceruledge"
+ },
+ {
+  "dex_number": 100,
+  "national_id": 942,
+  "form_suffix": null,
+  "name": "Maschiff"
+ },
+ {
+  "dex_number": 101,
+  "national_id": 943,
+  "form_suffix": null,
+  "name": "Mabosstiff"
+ },
+ {
+  "dex_number": 102,
+  "national_id": 848,
+  "form_suffix": null,
+  "name": "Toxel"
+ },
+ {
+  "dex_number": 103,
+  "national_id": 849,
+  "form_suffix": null,
+  "name": "Toxtricity"
+ },
+ {
+  "dex_number": 104,
+  "national_id": 944,
+  "form_suffix": null,
+  "name": "Shroodle"
+ },
+ {
+  "dex_number": 105,
+  "national_id": 945,
+  "form_suffix": null,
+  "name": "Grafaiai"
+ },
+ {
+  "dex_number": 106,
+  "national_id": 335,
+  "form_suffix": null,
+  "name": "Zangoose"
+ },
+ {
+  "dex_number": 107,
+  "national_id": 336,
+  "form_suffix": null,
+  "name": "Seviper"
+ },
+ {
+  "dex_number": 108,
+  "national_id": 439,
+  "form_suffix": null,
+  "name": "Mime Jr."
+ },
+ {
+  "dex_number": 109,
+  "national_id": 122,
+  "form_suffix": null,
+  "name": "Mr. Mime"
+ },
+ {
+  "dex_number": 110,
+  "national_id": 866,
+  "form_suffix": null,
+  "name": "Mr. Rime"
+ },
+ {
+  "dex_number": 111,
+  "national_id": 590,
+  "form_suffix": null,
+  "name": "Foongus"
+ },
+ {
+  "dex_number": 112,
+  "national_id": 591,
+  "form_suffix": null,
+  "name": "Amoonguss"
+ },
+ {
+  "dex_number": 113,
+  "national_id": 485,
+  "form_suffix": null,
+  "name": "Heatran"
+ },
+ {
+  "dex_number": 114,
+  "national_id": 721,
+  "form_suffix": null,
+  "name": "Volcanion"
+ },
+ {
+  "dex_number": 115,
+  "national_id": 638,
+  "form_suffix": null,
+  "name": "Cobalion"
+ },
+ {
+  "dex_number": 116,
+  "national_id": 639,
+  "form_suffix": null,
+  "name": "Terrakion"
+ },
+ {
+  "dex_number": 117,
+  "national_id": 640,
+  "form_suffix": null,
+  "name": "Virizion"
+ },
+ {
+  "dex_number": 118,
+  "national_id": 647,
+  "form_suffix": null,
+  "name": "Keldeo"
+ },
+ {
+  "dex_number": 119,
+  "national_id": 648,
+  "form_suffix": null,
+  "name": "Meloetta"
+ },
+ {
+  "dex_number": 120,
+  "national_id": 649,
+  "form_suffix": null,
+  "name": "Genesect"
+ },
+ {
+  "dex_number": 121,
+  "national_id": 720,
+  "form_suffix": null,
+  "name": "Hoopa"
+ },
+ {
+  "dex_number": 122,
+  "national_id": 802,
+  "form_suffix": null,
+  "name": "Marshadow"
+ },
+ {
+  "dex_number": 123,
+  "national_id": 808,
+  "form_suffix": null,
+  "name": "Meltan"
+ },
+ {
+  "dex_number": 124,
+  "national_id": 809,
+  "form_suffix": null,
+  "name": "Melmetal"
+ },
+ {
+  "dex_number": 125,
+  "national_id": 491,
+  "form_suffix": null,
+  "name": "Darkrai"
+ },
+ {
+  "dex_number": 126,
+  "national_id": 380,
+  "form_suffix": null,
+  "name": "Latias"
+ },
+ {
+  "dex_number": 127,
+  "national_id": 381,
+  "form_suffix": null,
+  "name": "Latios"
+ },
+ {
+  "dex_number": 128,
+  "national_id": 382,
+  "form_suffix": null,
+  "name": "Kyogre"
+ },
+ {
+  "dex_number": 129,
+  "national_id": 383,
+  "form_suffix": null,
+  "name": "Groudon"
+ },
+ {
+  "dex_number": 130,
+  "national_id": 384,
+  "form_suffix": null,
+  "name": "Rayquaza"
+ },
+ {
+  "dex_number": 131,
+  "national_id": 801,
+  "form_suffix": null,
+  "name": "Magearna"
+ }
+]

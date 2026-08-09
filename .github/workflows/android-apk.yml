@@ -1,0 +1,104 @@
+name: Android APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ['**']
+    paths:
+      - web/**
+      - .github/workflows/android-apk.yml
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+          cache-dependency-path: web/yarn.lock
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Install dependencies
+        working-directory: web
+        run: yarn install --frozen-lockfile
+
+      - name: Build offline web bundle
+        working-directory: web
+        env:
+          LOCAL_APP: '1'
+          NODE_ENV: production
+        run: yarn build
+
+      - name: Generate Android project
+        working-directory: web
+        run: npx cap add android && npx cap sync android
+
+      - name: Generate app icons
+        working-directory: web
+        run: npx capacitor-assets generate --android
+
+      # Sign every build with the keystore committed in the repo so the
+      # signature is stable across builds and the APK installs over the
+      # previous version. Configured explicitly in gradle — relying on the
+      # default ~/.android/debug.keystore location does not work on CI
+      # runners (the lookup gets redirected and a throwaway key is used).
+      - name: Use stable debug keystore
+        run: |
+          cat >> web/android/app/build.gradle <<'EOF'
+
+          android {
+              signingConfigs {
+                  debug {
+                      storeFile rootProject.file("../../.github/android-debug.keystore")
+                      storePassword "android"
+                      keyAlias "androiddebugkey"
+                      keyPassword "android"
+                  }
+              }
+          }
+          EOF
+
+      - name: Build APK
+        working-directory: web/android
+        run: ./gradlew assembleDebug --no-daemon
+
+      - name: Rename APK
+        run: cp web/android/app/build/outputs/apk/debug/app-debug.apk pokedextracker.apk
+
+      # Hard-fail the build if the APK is not signed with the committed
+      # keystore — a silent signature change would break in-place updates.
+      - name: Verify APK signature
+        run: |
+          EXPECTED="B9:CE:CE:62:7C:B1:5F:D7:3D:2C:EA:CD:D0:BC:DF:C1:32:0C:9D:F6:AA:28:7A:BF:AF:DF:C1:29:E2:8F:7D:65"
+          unzip -p pokedextracker.apk 'META-INF/*.RSA' > /tmp/cert.rsa
+          ACTUAL=$(openssl pkcs7 -inform DER -in /tmp/cert.rsa -print_certs | openssl x509 -noout -fingerprint -sha256 | cut -d= -f2)
+          echo "expected: $EXPECTED"
+          echo "actual:   $ACTUAL"
+          test "$ACTUAL" = "$EXPECTED"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pokedextracker-apk
+          path: pokedextracker.apk
+
+      # Keep a fixed release updated with the latest APK so it can be
+      # downloaded and installed straight from a phone's browser.
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: android-apk
+          name: Android APK (latest)
+          prerelease: true
+          files: pokedextracker.apk
+          body: |
+            Latest offline Android build. Download `pokedextracker.apk` on your
+            phone, open it, and allow installing from your browser when asked.
+            All data stays on-device (no account, no server).
